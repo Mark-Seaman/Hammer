@@ -1,0 +1,4 @@
+#!/bin/bash
+# Run functional tests.  Execute all tests for system integration.
+
+x log

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
+from os.path import join
 
 import os
 
@@ -120,3 +121,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+LOGGING = {
+
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'django-file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': join(BASE_DIR, 'log', 'django.log'),
+        },
+        'hammer-file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': join(BASE_DIR, 'log', 'hammer.log'),
+        },
+        'console': {
+           'level': 'DEBUG',
+           'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['django-file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'tool': {
+            'handlers': ['hammer-file'],
+        },
+        'tasks': {
+            'handlers': ['hammer-file'],
+        }
+    },
+    'root': {'level': 'INFO'},
+}

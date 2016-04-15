@@ -7,8 +7,6 @@ from unittest import TestCase, main
 
 #from functional_tests.tests import  FunctionalTestCase
 
-RUN_WEB_BROWSER = True
-
 
 def shell_command(cmd):
     return Popen(cmd.split(), stdout=PIPE).stdout.read()
@@ -52,7 +50,7 @@ class FilesTest(TestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
-        self.assertLess(len(files), 40)
+        self.assertLess(len(files), 50)
 
 
 class SystemTest(TestCase):
@@ -66,14 +64,41 @@ class DjangoTest(TestCase):
 
     def test_django_directory(self):
         files = file_list(join(environ['p'],'hammer'))
-        #print(files)
-        self.assertEqual(len(files), 9)
+        self.assertLess(len(files), 10)
 
     def test_tool_directory(self):
         files = file_list(join(environ['p'],'tool'))
-        #print(files)
-        self.assertEqual(len(files), 11)
+        self.assertLess(len(files), 20)
 
+
+class DocTest(TestCase):
+
+    def test_documents(self):
+        output = len(shell_command('x doc list').split('\n'))
+        expected = 5
+        self.assertEqual(output,expected)
+
+    def test_doc_length(self):
+        output = shell_command('x doc length')
+        expected = "EngineeringLog.md : 27\nFunctionalTest.md : 57\nREADME.md : 22\nToDo.md : 17\n"
+        self.assertEqual(output,expected)
+
+    def test_doc_read(self):
+        output = len(shell_command('x doc read').split('\n'))
+        self.assertEqual(output, 120)
+
+
+class AutomationTest(TestCase):
+
+    def test_automation(self):
+        output = len(shell_command('x test').split('\n'))
+        expected = 10
+        self.assertEqual(output,expected)
+
+    def test_log(self):
+        output = len(shell_command('x log').split('\n'))
+        expected = 100
+        self.assertEqual(output,expected)
 
 
 if __name__ == '__main__': 

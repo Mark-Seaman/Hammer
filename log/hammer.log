@@ -1,0 +1,634 @@
+SCRIPTOR: ss []
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: this ['is', 'it']
+SCRIPTOR: doc []
+SCRIPTOR: doc []
+SCRIPTOR: doc []
+SCRIPTOR: doc []
+SCRIPTOR: doc []
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['list']
+SCRIPTOR: exception doc ['list']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, options)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 49, in doc_command
+    cmd = options[0]
+KeyError: 0
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: exception doc ['list']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 52, in doc_command
+    self.stdout.write(listdir(join(BASE_DIR,'doc')))
+NameError: global name 'join' is not defined
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: exception doc ['list']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 52, in doc_command
+    self.stdout.write(listdir(join(BASE_DIR,'doc')))
+NameError: global name 'join' is not defined
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: exception doc ['list']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 52, in doc_command
+    self.stdout.write(listdir(join(BASE_DIR,'doc')))
+NameError: global name 'BASE_DIR' is not defined
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: exception doc ['list']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 54, in doc_command
+    self.stdout.write(listdir(join(BASE_DIR,'doc')))
+  File "/Users/seaman/Tools/env-python27/lib/python2.7/site-packages/django/core/management/base.py", line 108, in write
+    if ending and not msg.endswith(ending):
+AttributeError: 'list' object has no attribute 'endswith'
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 75, in doc_length
+    self.stdout.write(open(f).read())
+IOError: [Errno 2] No such file or directory: 'EngineeringLog.md'
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 77, in doc_length
+    lines = open().readlines()
+TypeError: Required argument 'name' (pos 1) not found
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 77, in doc_length
+    lines = open().read().split('\n')
+TypeError: Required argument 'name' (pos 1) not found
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 78, in doc_length
+    self.stdout.write(fp + ':' + len(lines))
+TypeError: cannot concatenate 'str' and 'int' objects
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 77, in doc_length
+    lines = open(f).read().split('\n')
+IOError: [Errno 2] No such file or directory: 'EngineeringLog.md'
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 77, in doc_length
+    files = listdir(path)
+NameError: global name 'path' is not defined
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: exception doc ['length']
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 56, in doc_command
+    doc_length(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 77, in doc_length
+    files = listdir(doc_dir())
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 68, in doc_dir
+    return join(BASE_DIR,'doc',f)
+  File "/Users/seaman/Tools/env-python27/lib/python2.7/posixpath.py", line 68, in join
+    if b.startswith('/'):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 51, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: log []
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: exception log []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 22, in handle
+    read_log(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 101, in read_log
+    self.stdout.write(text)
+  File "/Users/seaman/Tools/env-python27/lib/python2.7/site-packages/django/core/management/base.py", line 108, in write
+    if ending and not msg.endswith(ending):
+AttributeError: 'list' object has no attribute 'endswith'
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: exception log []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 22, in handle
+    read_log(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 101, in read_log
+    self.stdout.write(text)
+  File "/Users/seaman/Tools/env-python27/lib/python2.7/site-packages/django/core/management/base.py", line 108, in write
+    if ending and not msg.endswith(ending):
+AttributeError: 'list' object has no attribute 'endswith'
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 53, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 57, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 60, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: s []
+SCRIPTOR: log []
+SCRIPTOR: doc []
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 62, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 25, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 40, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 25, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 40, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 25, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 40, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: doc []
+SCRIPTOR: exception doc []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 18, in handle
+    doc_command(self, args)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 62, in doc_command
+    cmd = options[0]
+IndexError: list index out of range
+
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 28, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 43, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: exception log []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 25, in handle
+    read_log(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 54, in read_log
+    path = join(BASE_DIR,'log','hammer.log')
+NameError: global name 'join' is not defined
+
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: exception log []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 25, in handle
+    read_log(self)
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 54, in read_log
+    path = join(BASE_DIR,'log','hammer.log')
+NameError: global name 'join' is not defined
+
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 30, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 45, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 30, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 38, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
+SCRIPTOR: log []
+SCRIPTOR: test []
+SCRIPTOR: exception test []
+SCRIPTOR: Traceback (most recent call last):
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 30, in handle
+    throw_exception()
+  File "/Users/seaman/Projects/Hammer/tool/management/commands/scriptor.py", line 38, in throw_exception
+    assert(False)
+AssertionError
+
+SCRIPTOR: log []
+SCRIPTOR: doc ['length']
+SCRIPTOR: doc ['read']
+SCRIPTOR: doc ['list']
