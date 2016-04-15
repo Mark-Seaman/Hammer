@@ -1,7 +1,13 @@
-from os import environ, walk
+from os import environ, system, walk
 from os.path import join
+from platform import node
+from selenium import webdriver
 from subprocess import Popen,PIPE
 from unittest import TestCase, main
+
+#from functional_tests.tests import  FunctionalTestCase
+
+RUN_WEB_BROWSER = True
 
 
 def shell_command(cmd):
@@ -46,6 +52,26 @@ class FilesTest(TestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
+        self.assertLess(len(files), 40)
+
+
+class SystemTest(TestCase):
+
+    def test_system_hostname(self):
+        host = node()
+        self.assertIn ('iMac', host)
+
+
+class DjangoTest(TestCase):
+
+    def test_django_directory(self):
+        files = file_list(join(environ['p'],'hammer'))
+        #print(files)
+        self.assertEqual(len(files), 9)
+
+    def test_tool_directory(self):
+        files = file_list(join(environ['p'],'tool'))
+        #print(files)
         self.assertEqual(len(files), 11)
 
 
