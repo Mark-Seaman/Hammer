@@ -10,11 +10,16 @@ Total Investment
 
 4-15-2016 8
 
-* Conceive of this project
-* Build the git repo (hosted at GitHub)
-* Write project goals, functional requirements, engineering log
-* Write READ ME
-* Write Functional Test
-* Write Engineering Log
-* Clone repo
-* Write To Do list
+    Conceive of this project
+    Build the git repo (hosted at GitHub)
+    Write project goals, functional requirements, engineering log
+    Write READ ME
+    Write Functional Test
+    Write Engineering Log
+    Clone repo
+    Write To Do list
+    create command context (bin/bashrc)
+    setup path
+    setup vc command
+    create ft command
+    test for correct python version

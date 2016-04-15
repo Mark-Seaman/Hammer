@@ -5,7 +5,7 @@ export p=$HOME/Projects/Hammer
 
 alias hammer=". $p/bin/bashrc"
 
-cat bin/welcome
+cat $p/bin/welcome
 
 # Path variable
 export PATH=\

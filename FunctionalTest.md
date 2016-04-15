@@ -15,6 +15,7 @@ Acceptance of the product must be based on the testing of each area.
 * Command context
 * Version control
 * Development tools
+* Python Virtualenv
 
 
 ### Hosting

@@ -1,13 +1,12 @@
 # To Do
 
 Create project 
-
-    create command context (bin/bashrc)
-    setup path
-    setup vc command
+    setup virtualenv
 
 Test
-    create ft
+    files in project
+    free space
+    pip list
 
 Django app
 
