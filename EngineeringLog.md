@@ -13,3 +13,8 @@ Total Investment
 * Conceive of this project
 * Build the git repo (hosted at GitHub)
 * Write project goals, functional requirements, engineering log
+* Write READ ME
+* Write Functional Test
+* Write Engineering Log
+* Clone repo
+* Write To Do list

@@ -1,11 +1,12 @@
 # Functional Test
 
-The project is controlled by functional tests.  These begin as a list of items to do, but end an automated test script to
-exercise all product functionality.
+The project is controlled by functional tests.  These begin as a list of items
+to do, but end an automated test script to exercise all product functionality.
 
 ## Requirements
 
-The requirements are defined to address many different areas of functionality.  Acceptance of the product must be based on the testing of each area.
+The requirements are defined to address many different areas of functionality.
+Acceptance of the product must be based on the testing of each area.
 
 
 ### Project

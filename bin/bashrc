@@ -1,0 +1,19 @@
+#!/bin/bash
+# Setup project context
+
+export p=$HOME/Projects/Hammer
+
+alias hammer=". $p/bin/bashrc"
+
+cat bin/welcome
+
+# Path variable
+export PATH=\
+$p/bin:\
+/bin:\
+/sbin:\
+/usr/bin:\
+/usr/local/bin:\
+/opt/local/bin
+
+echo $PATH
