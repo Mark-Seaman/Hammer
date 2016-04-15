@@ -23,3 +23,4 @@ Total Investment
     setup vc command
     create ft command
     test for correct python version
+    setup virtualenv

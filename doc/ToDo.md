@@ -1,7 +1,7 @@
 # To Do
 
 Create project 
-    setup virtualenv
+    
 
 Test
     files in project
