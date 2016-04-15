@@ -17,3 +17,10 @@ $p/bin:\
 /opt/local/bin
 
 echo $PATH
+export _OLD_VIRTUAL_PATH=$PATH
+
+
+[ -f ~/Tools/env-python27/bin/activate ] &&
+. ~/Tools/env-python27/bin/activate
+echo "Active python = `which python`"
+echo

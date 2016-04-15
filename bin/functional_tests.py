@@ -17,8 +17,9 @@ class PythonTest(TestCase):
         from subprocess import Popen,PIPE
         cmd = ['which', 'python']
         output = Popen(cmd, stdout=PIPE).stdout.read()
-        expected = '/usr/bin/python\n'
+        expected = '/Users/seaman/Tools/env-python27/bin/python\n'
         self.assertEqual(output,expected)
+
 
 if __name__ == '__main__': 
     main()
