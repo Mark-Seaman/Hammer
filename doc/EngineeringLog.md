@@ -1,14 +1,16 @@
 # Engineering Log
 
-This log keeps track of the total amount of time that has been invested in the project.   It also provides a detailed history of the work done on the project.
+This log keeps track of the total amount of time that has been invested in the
+project.   It also provides a detailed history of the work done on the project.
 
-This log will be very useful in helping to plan similar project and cost estimates.
+This log will be very useful in helping to plan similar project and cost
+estimates.
 
 ## History
 
-Total Investment
+Total Investment - 8:00
 
-4-15-2016 8
+4-15-2016 - 8
 
     Conceive of this project
     Build the git repo (hosted at GitHub)
@@ -24,3 +26,9 @@ Total Investment
     create ft command
     test for correct python version
     setup virtualenv
+    create basic Django app
+    build tool installed app
+    create management commands
+    debug Scriptor
+    implement doc commands
+    build logging facility
