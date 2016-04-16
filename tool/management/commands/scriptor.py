@@ -15,6 +15,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
+            print(options)
+            return
             cmd = options['script'][0]
             args = options['script'][1:]
             logger = getLogger(__name__)
