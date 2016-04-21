@@ -1,5 +1,13 @@
 # To Do
 
+4-21-2016
+
+    show x command help
+    convert existing app to Hammer (Digital Ocean)
+    build PyCharm project
+    recreate database with new code
+
+---
 
 ## 1. Project
 

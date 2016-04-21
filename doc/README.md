@@ -12,7 +12,7 @@ maximum productivity by controlling the scope.
 * No features are created that are not needed.
 * No features are created before tests.
 * Functional tests start as a requirements doc and evolve into acceptance tests.
-* Unit tests are implemented to collect all the testings during development.
+* Unit tests are implemented to collect all the development testing.
 * All repeated tasks are automated.
 * All small steps are committed to version control.
 * An engineering log tracks the hours invested throughout the project.

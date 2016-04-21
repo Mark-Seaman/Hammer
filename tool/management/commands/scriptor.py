@@ -23,6 +23,8 @@ class Command(BaseCommand):
                 doc_command(self, args)
             elif cmd=='data':
                 self.stdout.write('Data command: %s' % options['script'])
+            elif cmd=='help':
+                self.help()
             elif cmd=='log':
                 log_read(self)
             elif cmd=='test':
@@ -30,9 +32,22 @@ class Command(BaseCommand):
                 throw_exception()
             else:
                 self.stdout.write('**Scriptor Error**: unknown command %s' % options['script'])
+                self.help()
         except:
             log_exception(self,options['script'])
 
+    def help(self):
+        self.stdout.write('''
+
+            usage: x command 
+            
+            command:
+                doc    # work with document files
+                data   # work with database content
+                help   # show command help
+                log    # work with application log
+                test   # run a self test on the system
+        ''')
 
 def throw_exception():
     assert(False)

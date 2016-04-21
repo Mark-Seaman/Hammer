@@ -11,6 +11,8 @@ from unittest import TestCase, main
 def shell_command(cmd):
     return Popen(cmd.split(), stdout=PIPE).stdout.read()
 
+def read_file(path):
+    return open(path).read()
 
 def file_list(path):
     files = []
@@ -21,55 +23,71 @@ def file_list(path):
     return files
 
 
+
+class FunctionalTestCase(TestCase):
+
+    def assertLength(self, output, expected):
+        '''Same length of arguments'''
+        self.assertEqual(len(output), len(expected))
+
+    def assertBetween(self, output, min, max):
+        '''Check that value is within expected bounds'''
+        self.assertLessEqual(output, max)
+        self.assertGreaterEqual(output, min)
+
+    def assertLines(self, output, min, max):
+        '''Check that the number of lines is within bounds'''
+        self.assertBetween(len(output.split('\n')), min, max)
+
+
 class SmokeTest(TestCase):
 
     def test_bad_maths(self):
         self.assertEqual(1 + 1, 2)
 
 
-class PythonTest(TestCase):
+class PythonTest(FunctionalTestCase):
 
     def test_python_version(self):
-        import sys
+        from sys import version_info
         expected = "sys.version_info(major=2, minor=7, micro="
-        self.assertIn(expected, str(sys.version_info))
+        self.assertIn(expected, str(version_info))
 
     def test_virtual_env(self):
-        cmd = ['which', 'python']
-        output = Popen(cmd, stdout=PIPE).stdout.read()
+        output = shell_command ('which python')
         expected = environ['HOME']+'/Tools/env-python27/bin/python\n'
         self.assertEqual(output,expected)
 
     def test_pip_list(self):
         path = join(environ['p'],'bin','pip-list')
-        expected = open(path).read().split('\n')
-        output = shell_command('pip list').split('\n')
-        self.assertEqual(len(output), len(expected))
+        expected = read_file(path)
+        output = shell_command('pip list')
+        self.assertLength(output, expected)
 
 
-class FilesTest(TestCase):
+class FilesTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
-        self.assertLess(len(files), 50)
+        self.assertBetween(len(files), 48,50)
 
 
-class SystemTest(TestCase):
+class SystemTest(FunctionalTestCase):
 
     def test_system_hostname(self):
         host = node()
         self.assertTrue ('iMac' in host or 'macbook' in host)
 
 
-class DjangoTest(TestCase):
+class DjangoTest(FunctionalTestCase):
 
     def test_django_directory(self):
         files = file_list(join(environ['p'],'hammer'))
-        self.assertLess(len(files), 10)
+        self.assertBetween(len(files), 8,10)
 
     def test_tool_directory(self):
         files = file_list(join(environ['p'],'tool'))
-        self.assertLess(len(files), 20)
+        self.assertBetween(len(files), 18,20)
 
     def test_django_version(self):
         expected = 'Django (1.9.4)'
@@ -77,34 +95,28 @@ class DjangoTest(TestCase):
         self.assertIn(expected,output)
 
 
-class DocTest(TestCase):
+class DocTest(FunctionalTestCase):
 
     def test_documents(self):
-        output = len(shell_command('x doc list').split('\n'))
-        expected = 5
-        self.assertEqual(output,expected)
+        self.assertLines(shell_command('x doc list'), 4,5)
 
     def test_doc_length(self):
-        output = shell_command('x doc length').split('\n')
-        expected = 5
-        self.assertEqual(len(output),expected)
+        self.assertLines(shell_command('x doc length'), 4,5)
 
     def test_doc_read(self):
-        output = len(shell_command('x doc read').split('\n'))
-        self.assertLess(output, 300)
+        self.assertLines(shell_command('x doc read'), 270,300)
 
 
-class AutomationTest(TestCase):
+class AutomationTest(FunctionalTestCase):
 
     def test_automation(self):
-        output = len(shell_command('x test').split('\n'))
-        expected = 10
-        self.assertEqual(output,expected)
+        self.assertLines(shell_command('x test'), 4,10)
 
     def test_log(self):
-        output = len(shell_command('x log').split('\n'))
-        expected = 100
-        self.assertEqual(output,expected)
+        self.assertLines(shell_command('x log'), 100,210)
+
+    def test_help(self):
+        self.assertLines(shell_command('x help'), 12,12)
 
 
 if __name__ == '__main__': 
