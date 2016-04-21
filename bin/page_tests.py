@@ -4,10 +4,11 @@ from platform import node
 from selenium import webdriver
 from subprocess import Popen,PIPE
 from unittest import TestCase, main
+from time import sleep
 
-#from functional_tests.tests import  FunctionalTestCase
 
 RUN_WEB_BROWSER = True
+
 
 def run_server():
     system('''
@@ -28,23 +29,30 @@ def webpage_text(browser,url):
     print ('\nTitle: %s\n\n%s\n\n' % (browser.title,text))
     return text
 
-
+    
 
 #---------------------------------------------------------------------------
 
 class PagesTest(TestCase):
 
     # Setup & teardown
-
     def setUp(self):
-        if RUN_WEB_BROWSER:
-            self.browser = webdriver.Firefox()
+        self.open_browser()
 
     def tearDown(self):
-        if RUN_WEB_BROWSER:
-            self.browser.quit()
+        self.close_browser()
+        
 
     # Helpers
+    def open_browser(self):
+        if RUN_WEB_BROWSER:
+            run_server()
+            self.browser = webdriver.Firefox()
+
+    def close_browser(self):
+        if RUN_WEB_BROWSER:
+            self.browser.quit()
+            pass
 
     def assertBetween(self, num, min, max):
         self.assertGreaterEqual(num, min)
@@ -52,6 +60,7 @@ class PagesTest(TestCase):
 
     def assertLineCount(self, text, min=1, max=10):
         self.assertBetween(len(text.split('\n')), min, max)
+
 
     #---------------------------------------------------------------------------
     # Tests
@@ -61,12 +70,13 @@ class PagesTest(TestCase):
     #         self.browser.get('http://google.com')
     #         assert 'Google' in self.browser.title
 
-    def test_simple_page(self):
-        run_server()
-        url = 'localhost:8000'
-        #self.browser.get(url)
-        #print(self.browser.text)
-        webpage_text(self.browser,url)
+    def test_pages(self):
+        pages = ['EngineeringLog', 'FunctionalTest', 'README', 'ToDo']
+        urls = [ 'localhost:8000/%s.md'%p for p in pages ]
+        for url in urls:
+            webpage_text(self.browser,url)
+            sleep(1)
+    
 
 
 

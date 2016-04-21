@@ -15,19 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.http import HttpResponse
 
+from tool.views import home, doc
 
-def home(request):
-    title = "World's Simplest App"
-    text = '''
-    This is the simplest Django app that is possible. All extra stuff has
-    been stripped out. 
-    '''
-    return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
+    url(r'^(?P<title>[\w\/\-_./]+)',    doc),
 ]
