@@ -6,6 +6,7 @@ project.   It also provides a detailed history of the work done on the project.
 This log will be very useful in helping to plan similar project and cost
 estimates.
 
+
 ## History
 
 Total Investment - 18:00
@@ -15,6 +16,13 @@ Total Investment - 18:00
     Better feedback for Scriptor errors
     Refactor functional test code
     Extend scriptor to deal with logs
+    raw document display
+    test for pandoc
+    URL routes for docs
+    load pages from template
+    format output using pandoc
+    page tester
+    build layout page for common look
 
 4-16-2016 - 2
 
