@@ -42,6 +42,9 @@ class FunctionalTestCase(TestCase):
 
     def assertFiles(self, path, min, max):
         self.assertBetween(len(file_list(path)), min, max)
+    
+    def assertShell(self, command, min, max):
+        self.assertLines(shell_command(command), min, max)
 
 
 class SmokeTest(TestCase):
@@ -82,14 +85,18 @@ class SystemTest(FunctionalTestCase):
         host = node()
         self.assertTrue ('iMac' in host or 'macbook' in host)
 
+    def test_pandoc(self):
+        self.assertShell('pandoc -v', 23,23)
+        self.assertShell('pandoc -t html %s/doc/FunctionalTest.md' % environ['p'], 49,49)
+
 
 class DjangoTest(FunctionalTestCase):
 
     def test_django_directory(self):
-        self.assertFiles(join(environ['p'],'hammer'), 8,10)
+        self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 18,21)
+        self.assertFiles(join(environ['p'],'tool'), 18,25)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
