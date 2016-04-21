@@ -1,3 +1,4 @@
 *.pyc
 bin/pip-list
+log/hammer
 

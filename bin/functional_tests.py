@@ -71,6 +71,11 @@ class DjangoTest(TestCase):
         files = file_list(join(environ['p'],'tool'))
         self.assertLess(len(files), 20)
 
+    def test_django_version(self):
+        expected = 'Django (1.9.4)'
+        output = shell_command('pip list')
+        self.assertIn(expected,output)
+
 
 class DocTest(TestCase):
 
@@ -81,12 +86,12 @@ class DocTest(TestCase):
 
     def test_doc_length(self):
         output = shell_command('x doc length').split('\n')
-        expected = 4
+        expected = 5
         self.assertEqual(len(output),expected)
 
     def test_doc_read(self):
         output = len(shell_command('x doc read').split('\n'))
-        self.assertEqual(output, 120)
+        self.assertLess(output, 300)
 
 
 class AutomationTest(TestCase):
