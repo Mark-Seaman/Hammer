@@ -5,16 +5,17 @@ from selenium import webdriver
 from subprocess import Popen,PIPE
 from unittest import TestCase, main
 
-#from functional_tests.tests import  FunctionalTestCase
-
 
 def shell_command(cmd):
+    '''Execute a shell command and return stdout'''
     return Popen(cmd.split(), stdout=PIPE).stdout.read()
 
 def read_file(path):
+    '''Read a file and return the text'''
     return open(path).read()
 
 def file_list(path):
+    '''Return a list of files in the directory tree'''
     files = []
     for root, dirnames, filenames in walk(path):
         if not '.git' in root: 
@@ -38,6 +39,9 @@ class FunctionalTestCase(TestCase):
     def assertLines(self, output, min, max):
         '''Check that the number of lines is within bounds'''
         self.assertBetween(len(output.split('\n')), min, max)
+
+    def assertFiles(self, path, min, max):
+        self.assertBetween(len(file_list(path)), min, max)
 
 
 class SmokeTest(TestCase):
@@ -82,17 +86,13 @@ class SystemTest(FunctionalTestCase):
 class DjangoTest(FunctionalTestCase):
 
     def test_django_directory(self):
-        files = file_list(join(environ['p'],'hammer'))
-        self.assertBetween(len(files), 8,10)
+        self.assertFiles(join(environ['p'],'hammer'), 8,10)
 
     def test_tool_directory(self):
-        files = file_list(join(environ['p'],'tool'))
-        self.assertBetween(len(files), 18,25)
+        self.assertFiles(join(environ['p'],'tool'), 18,21)
 
     def test_django_version(self):
-        expected = 'Django (1.9.4)'
-        output = shell_command('pip list')
-        self.assertIn(expected,output)
+        self.assertIn('Django (1.9.4)', shell_command('pip list'))
 
 
 class DocTest(FunctionalTestCase):

@@ -7,7 +7,8 @@ from hammer.settings import BASE_DIR
 
 def log_command(self, options):
     '''
-    Execute a command script from scriptor.  Parse off command and args and dispatch it.
+    Execute a log command script from scriptor.  
+    Parse off command and args and dispatch it.
     '''
     #self.stdout.write('Log command output %s' % options)
     if options[:]:
