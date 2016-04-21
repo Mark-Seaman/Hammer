@@ -76,7 +76,7 @@ class FilesTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
-        self.assertBetween(len(files), 48,55)
+        self.assertBetween(len(files), 48,60)
 
 
 class SystemTest(FunctionalTestCase):
@@ -96,7 +96,7 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 18,25)
+        self.assertFiles(join(environ['p'],'tool'), 18,30)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
