@@ -5,23 +5,7 @@ from selenium import webdriver
 from subprocess import Popen,PIPE
 from unittest import TestCase, main
 
-
-def shell_command(cmd):
-    '''Execute a shell command and return stdout'''
-    return Popen(cmd.split(), stdout=PIPE).stdout.read()
-
-def read_file(path):
-    '''Read a file and return the text'''
-    return open(path).read()
-
-def file_list(path):
-    '''Return a list of files in the directory tree'''
-    files = []
-    for root, dirnames, filenames in walk(path):
-        if not '.git' in root: 
-            for filename in filenames:
-                files.append(filename)
-    return files
+from shell import shell_command, hostname, read_file, file_list
 
 
 
@@ -72,14 +56,11 @@ class PythonTest(FunctionalTestCase):
         self.assertLength(output, expected)
 
 
-class FilesTest(FunctionalTestCase):
+class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
-        self.assertBetween(len(files), 48,60)
-
-
-class SystemTest(FunctionalTestCase):
+        self.assertBetween(len(files), 48,70)
 
     def test_system_hostname(self):
         host = node()
@@ -105,13 +86,13 @@ class DjangoTest(FunctionalTestCase):
 class DocTest(FunctionalTestCase):
 
     def test_documents(self):
-        self.assertLines(shell_command('x doc list'), 4,5)
+        self.assertLines(shell_command('x doc list'), 4,15)
 
     def test_doc_length(self):
-        self.assertLines(shell_command('x doc length'), 4,5)
+        self.assertLines(shell_command('x doc length'), 4,15)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 270,300)
+        self.assertLines(shell_command('x doc read'), 270,500)
 
 
 class AutomationTest(FunctionalTestCase):
