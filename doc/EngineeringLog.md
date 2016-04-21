@@ -8,7 +8,17 @@ estimates.
 
 ## History
 
-Total Investment - 8:00
+Total Investment - 18:00
+
+4-21-2016 - 8
+
+    Better feedback for Scriptor errors
+    Refactor functional test code
+    Extend scriptor to deal with logs
+
+4-16-2016 - 2
+
+    Plan out project tasks and priorities
 
 4-15-2016 - 8
 

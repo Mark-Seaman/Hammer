@@ -69,7 +69,7 @@ class FilesTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_list(environ['p'])
-        self.assertBetween(len(files), 48,50)
+        self.assertBetween(len(files), 48,55)
 
 
 class SystemTest(FunctionalTestCase):
@@ -87,7 +87,7 @@ class DjangoTest(FunctionalTestCase):
 
     def test_tool_directory(self):
         files = file_list(join(environ['p'],'tool'))
-        self.assertBetween(len(files), 18,20)
+        self.assertBetween(len(files), 18,25)
 
     def test_django_version(self):
         expected = 'Django (1.9.4)'
@@ -113,7 +113,10 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x test'), 4,10)
 
     def test_log(self):
-        self.assertLines(shell_command('x log'), 100,210)
+        self.assertLines(shell_command('x log'), 13,20)
+
+    def test_log_clear(self):
+        self.assertEqual(shell_command('x log clear'), 'Logs cleared\n')
 
     def test_help(self):
         self.assertLines(shell_command('x help'), 12,12)

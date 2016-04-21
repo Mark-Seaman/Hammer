@@ -4,6 +4,7 @@ from logging import getLogger
 from os.path import join
 
 from tool.doc import doc_command
+from tool.log import log_command, log_exception, throw_exception
 from hammer.settings import BASE_DIR
 
 
@@ -26,7 +27,7 @@ class Command(BaseCommand):
             elif cmd=='help':
                 self.help()
             elif cmd=='log':
-                log_read(self)
+                log_command(self, args)
             elif cmd=='test':
                 self.stdout.write('Test command: %s' % options['script'])
                 throw_exception()
@@ -48,29 +49,4 @@ class Command(BaseCommand):
                 log    # work with application log
                 test   # run a self test on the system
         ''')
-
-def throw_exception():
-    assert(False)
-
-
-def log_exception(self,args):
-    self.stdout.write('**Scriptor Exception**')
-    self.stdout.write('exception: %s %s' % (args[0],args[1:]))
-    self.stdout.write('traceback %s' % traceback.format_exc())
-    logger = getLogger(__name__)
-    logger.warning('SCRIPTOR: exception %s %s' % (args[0],args[1:]))
-    logger.warning('SCRIPTOR: %s' % traceback.format_exc())
-
-
-def log_json(response):
-    if response.ok and response.json()['status'] == 'okay':
-       pass
-    else:
-       logger.warning('%s' % response.json())
-
-
-def log_read(self):
-    path = join(BASE_DIR,'log','hammer.log')
-    text = '\n'.join(open(path).read().split('\n')[-100:])
-    self.stdout.write(text)
 
