@@ -2,21 +2,37 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from os.path import join, exists
 from os import listdir
+from subprocess import Popen,PIPE
 
 from hammer.settings import BASE_DIR
 
-def home(request):
-    title = "World's Simplest App"
-    text = '''
-    This is the simplest Django app that is possible. All extra stuff has
-    been stripped out. 
-    '''
-    return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
+
+#----------------------
+# Helpers
+
+def shell_command(cmd):
+    '''Execute a shell command and return stdout'''
+    return Popen(cmd.split(), stdout=PIPE).stdout.read()
 
 
 def format_doc(f):  
     if exists(f):
-        return "<pre>%s</pre>" % open(f).read()
+        return shell_command('pandoc -t html %s' % f)
+
+
+def file_list():
+    directory = join(BASE_DIR, 'doc')
+    if exists(directory):
+        return listdir(directory)
+
+
+#----------------------
+# Views
+
+def home(request):
+    title = "Directory"
+    files = file_list()
+    return render(request, 'dir.html', { 'title': title, 'files': files } )
 
 
 def doc(request, title):
@@ -26,4 +42,4 @@ def doc(request, title):
         text += format_doc(join(directory,title))
     else:
         text = 'Directory missing'
-    return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
+    return render(request, 'doc.html', { 'title': title, 'text': text } )

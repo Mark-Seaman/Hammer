@@ -71,7 +71,7 @@ class PagesTest(TestCase):
     #         assert 'Google' in self.browser.title
 
     def test_pages(self):
-        pages = ['EngineeringLog', 'FunctionalTest', 'README', 'ToDo']
+        pages = [ 'EngineeringLog', 'FunctionalTest', 'README', 'ToDo']
         urls = [ 'localhost:8000/%s.md'%p for p in pages ]
         for url in urls:
             webpage_text(self.browser,url)

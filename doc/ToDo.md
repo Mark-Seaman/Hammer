@@ -2,6 +2,14 @@
 
 4-21-2016
 
+    document display
+        test for pandoc
+        URL routes for docs
+        template
+        format output using pandoc
+        page tester
+        HTML compare
+        
     convert existing app to Hammer (Digital Ocean)
     build PyCharm project
     recreate database with new code
