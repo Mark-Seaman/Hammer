@@ -94,6 +94,9 @@ class DocTest(FunctionalTestCase):
     def test_doc_read(self):
         self.assertLines(shell_command('x doc read'), 270,500)
 
+    def test_doc_help(self):
+        self.assertLines(shell_command('x doc help'), 12,12)        
+
 
 class AutomationTest(FunctionalTestCase):
 

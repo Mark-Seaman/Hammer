@@ -2,9 +2,11 @@
 #-----------------------------------------------------------------------------------------------------------------
 # Command scripts
 
-from os import listdir
+from os import environ, listdir
 from os.path import join
+
 from hammer.settings import BASE_DIR
+from bin.shell import shell_command
 
 
 def doc_command(self, options):
@@ -14,7 +16,9 @@ def doc_command(self, options):
     #self.stdout.write('Doc command output %s' % options)
     cmd = options[0]
     args = options[1:]
-    if cmd=='list':
+    if cmd=='edit':
+        doc_edit(self, args)
+    elif cmd=='list':
         doc_list(self)
     elif cmd=='length':
         doc_length(self)
@@ -28,7 +32,27 @@ def doc_command(self, options):
     #     import_thots()
     # elif cmd=='export':
     #     export_thots()
+    else:
+        doc_help(self)
 
+
+def doc_edit(self, args):
+    path = join(environ['p'], 'doc', args[0])
+    self.stdout.write(shell_command('e %s' % path))
+
+
+def doc_help(self):
+    self.stdout.write('''
+        usage: x doc command
+
+        command:
+            edit     # Edit a specific document file
+            help     # Show the doc commands
+            list     # List the available documents
+            length   # Measure the lines in each documents
+            read     # Show the text from all documents
+
+        ''')
 
 def doc_dir(f=''):
     #if f:
