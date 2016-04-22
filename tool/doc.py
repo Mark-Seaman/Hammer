@@ -6,7 +6,7 @@ from os import environ, listdir
 from os.path import join
 
 from hammer.settings import BASE_DIR
-from bin.shell import shell_command
+from bin.shell import  file_path, file_list, line_count, read_file, shell_command
 
 
 def doc_command(self, options):
@@ -37,7 +37,7 @@ def doc_command(self, options):
 
 
 def doc_edit(self, args):
-    path = join(environ['p'], 'doc', args[0])
+    path = file_path('doc', args[0]+'.md')
     self.stdout.write(shell_command('e %s' % path))
 
 
@@ -54,28 +54,23 @@ def doc_help(self):
 
         ''')
 
-def doc_dir(f=''):
-    #if f:
-        return join(BASE_DIR,'doc',f)
-    # else:
-    #     return join(BASE_DIR,'doc')
 
 def doc_list(self):
-    files = listdir(join(BASE_DIR,'doc'))
+    files = file_list('doc','.md')
     for f in files:
         self.stdout.write(f)
 
+
 def doc_length(self):
-    
-    files = listdir(doc_dir())
+    files = file_list('doc','.md')
     for f in files:
-        fp = doc_dir(f)
-        lines = open(fp).read().split('\n')
-        self.stdout.write('%s : %d' % (f,len(lines)))
+        fp = file_path('doc', f)
+        self.stdout.write('%s : %d' % (f, line_count(fp)))
+
 
 def doc_read(self):
-    path = join(BASE_DIR,'doc')
-    files = listdir(doc_dir())
+    files = file_list('doc','.md')
     for f in files:
-        text = open(doc_dir(f)).read()
+        path = file_path('doc', f)
+        text = read_file(path)
         self.stdout.write(text)

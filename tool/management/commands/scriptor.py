@@ -5,6 +5,7 @@ from os.path import join
 
 from tool.doc import doc_command
 from tool.log import log_command, log_exception, throw_exception
+from tool.cmd import cmd_command
 from hammer.settings import BASE_DIR
 
 
@@ -20,7 +21,9 @@ class Command(BaseCommand):
             args = options['script'][1:]
             logger = getLogger(__name__)
             logger.warning('SCRIPTOR: %s %s' % (cmd,args))
-            if cmd=='doc':
+            if cmd=='cmd':
+                cmd_command(self, args)
+            elif cmd=='doc':
                 doc_command(self, args)
             elif cmd=='data':
                 self.stdout.write('Data command: %s' % options['script'])

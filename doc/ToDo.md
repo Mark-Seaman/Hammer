@@ -1,18 +1,25 @@
 # To Do
 
-4-21-2016
+## Milestone: deployment on Digital Ocean
 
-    document display
-        test for pandoc
-        URL routes for docs
-        template
-        format output using pandoc
-        page tester
-        HTML compare
-        
-    convert existing app to Hammer (Digital Ocean)
-    build PyCharm project
-    recreate database with new code
+Next most important overall objective
+
+Action:
+
+    
+
+
+---
+
+## Project Objectives
+
+* deployment on Digital Ocean
+* data type driven development
+* data management automation
+* clonable project
+* hammer test infrastructure
+* use PyCharm to manage all project files
+
 
 ---
 
@@ -31,7 +38,7 @@
     server run script
     server stop script
 
-* Python Virtualenv
+* Python & Django setup
 
     standardize python setup
     manage pip libraries
@@ -102,7 +109,7 @@
 
 * Data management
 
-    user, note, test, cmd, data, app, server, log
+    user, doc, test, cmd, data, app, server, log
 
 * Automation of data models
 
@@ -122,7 +129,8 @@
 
 * Markdown documents
 
-    write project plan (estimate time to MVP)
+    write project plan (with estimated time to MVP)
+        
 
 * Display of formatted output
 
@@ -157,6 +165,8 @@
         Smoke, Python, Files, System, Django, Doc, Automation, Pages
     move to tests/*.py
     philosophy (integrated,live data,system)
+    page tester (text and HTML compare)
+       
 
 * Unit test
 

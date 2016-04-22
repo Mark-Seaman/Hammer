@@ -1,11 +1,11 @@
-from os import environ, system, walk
+from os import environ, system, walk 
 from os.path import join
 from platform import node
 from selenium import webdriver
 from subprocess import Popen,PIPE
 from unittest import TestCase, main
 
-from shell import shell_command, hostname, read_file, file_list
+from shell import shell_command, hostname, read_file, file_tree_list
 
 
 
@@ -25,7 +25,7 @@ class FunctionalTestCase(TestCase):
         self.assertBetween(len(output.split('\n')), min, max)
 
     def assertFiles(self, path, min, max):
-        self.assertBetween(len(file_list(path)), min, max)
+        self.assertBetween(len(file_tree_list(path)), min, max)
     
     def assertShell(self, command, min, max):
         self.assertLines(shell_command(command), min, max)
@@ -59,8 +59,8 @@ class PythonTest(FunctionalTestCase):
 class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
-        files = file_list(environ['p'])
-        self.assertBetween(len(files), 48,70)
+        files = file_tree_list(environ['p'])
+        self.assertBetween(len(files), 48,80)
 
     def test_system_hostname(self):
         host = node()
@@ -104,13 +104,25 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x test'), 4,10)
 
     def test_log(self):
-        self.assertLines(shell_command('x log'), 13,20)
+        self.assertLines(shell_command('x log'), 13,50)
 
     def test_log_clear(self):
         self.assertEqual(shell_command('x log clear'), 'Logs cleared\n')
 
     def test_help(self):
         self.assertLines(shell_command('x help'), 12,12)
+
+    def test_cmd_list(self):
+        self.assertLines(shell_command('x cmd list'), 4,15)
+
+    def test_cmd_length(self):
+        self.assertLines(shell_command('x cmd length'), 4,15)
+
+    def test_cmd_read(self):
+        self.assertLines(shell_command('x cmd read'), 260,500)
+
+    def test_cmd_help(self):
+        self.assertLines(shell_command('x cmd help'), 12,12)        
 
 
 if __name__ == '__main__': 

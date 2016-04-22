@@ -1,5 +1,7 @@
 #!/bin/bash
 # Run functional tests.  Execute all tests for system integration.
 
-x doc edit EngineeringLog.md
-
+#x cmd list
+#x cmd help
+#x cmd edit doc
+x cmd read
