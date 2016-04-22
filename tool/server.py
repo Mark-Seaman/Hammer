@@ -53,15 +53,15 @@ def server_control(self):
 
 
 def server_deploy(self):
-    def copy_to_remote(directory):
-        cmd = 'rsync -auv %s/%s/ root@%s:/home/django/django_project/%s'
-        cmd = cmd % (environ['p'], directory, DROPLET_IP, directory)
+    def copy_to_remote():
+        cmd = 'rsync -auv %s/ django@%s:/home/django/hammer'
+        cmd = cmd % (environ['p'], DROPLET_IP)
         self.stdout.write('copy to remote (%s)' % cmd)
         self.stdout.write(shell_command(cmd))
-    copy_to_remote('bin')
+    copy_to_remote()
     
 
 
 def server_console(self):
     self.stdout.write('Remote console')
-    system('ssh root@%s' % DROPLET_IP)
+    system('ssh django@%s' % DROPLET_IP)

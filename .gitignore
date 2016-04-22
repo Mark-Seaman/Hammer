@@ -1,4 +1,5 @@
 *.pyc
 bin/pip-list
-log/*.log
+data
 django_project
+log/*.log

@@ -74,14 +74,38 @@ WSGI_APPLICATION = 'hammer.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+from platform import node
+if 'iMac' in node():    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3', 
+            'NAME': 'data/hammer.db',  # Database file
+            'USER': '',             # Not used with sqlite3.
+            'PASSWORD': '',         # Not used with sqlite3.
+            'HOST': '',             # Set to empty string for localhost. 
+            'PORT': '',             # Set to empty string for default. 
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'django',
+            'USER': 'django',
+            'PASSWORD': 'vZIyCeHKwV',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
+
+# # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation

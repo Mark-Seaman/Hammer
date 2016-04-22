@@ -60,7 +60,7 @@ class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_tree_list(environ['p'])
-        self.assertBetween(len(files), 48,80)
+        self.assertBetween(len(files), 48,150)
 
     def test_system_hostname(self):
         host = node()
