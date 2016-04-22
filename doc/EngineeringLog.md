@@ -15,6 +15,13 @@ estimates.
     create doc edit
     build cmd script
     refactor cmd & doc logic into shell
+    create server script
+    implement server commands (console, deploy, command)
+    create Droplet at Digital Ocean
+    setup rsync to server
+    create command context on remote server
+    pull code from Digital Ocean
+    install git on remote server
 
 ---
 

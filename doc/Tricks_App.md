@@ -41,6 +41,36 @@ Create the initial database (developer) -- Create a sqlite DB
     $ dj migrate
 
 
+Create data directory to save database backups
+
+In settings.py file use a database that matches the hosting server
+
+    # Database
+    from platform import node
+    if 'iMac' in node():    
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3', 
+                'NAME': 'data/hammer.db',  # Database file
+                'USER': '',             # Not used with sqlite3.
+                'PASSWORD': '',         # Not used with sqlite3.
+                'HOST': '',             # Set to empty string for localhost. 
+                'PORT': '',             # Set to empty string for default. 
+            }
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': 'django',
+                'USER': 'django',
+                'PASSWORD': 'vZIyCeHKwV',
+                'HOST': 'localhost',
+                'PORT': '',
+            }
+        }
+
+
 ### Views/URLs/Templates
 
 * URL routes for docs

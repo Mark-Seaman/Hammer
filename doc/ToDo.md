@@ -6,9 +6,7 @@ Next most important overall objective
 
 Action:
 
-    create server script
     use one-click setup for Droplet at Digital Ocean
-    setup rsync to server
     create process for updating Django to 1.9.4
     document and automate server management
     move code to remote server
