@@ -103,7 +103,7 @@ class DocTest(FunctionalTestCase):
         self.assertLines(shell_command('x doc length'), 4,15)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 270,500)
+        self.assertLines(shell_command('x doc read'), 500,600)
 
     def test_doc_help(self):
         self.assertLines(shell_command('x doc help'), 12,12)        
@@ -134,6 +134,10 @@ class AutomationTest(FunctionalTestCase):
 
     def test_cmd_help(self):
         self.assertLines(shell_command('x cmd help'), 12,12)        
+
+    def test_version_control(self):
+        print(shell_command('git status'))
+
 
 
 if __name__ == '__main__': 

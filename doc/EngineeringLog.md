@@ -22,6 +22,7 @@ estimates.
     create command context on remote server
     pull code from Digital Ocean
     install git on remote server
+    set up ssh keys on django user
 
 ---
 
