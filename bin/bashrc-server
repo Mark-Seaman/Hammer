@@ -2,11 +2,7 @@
 # Settings for remote server shell
 
 # Vars
-export p='/home/django/django_project'
-export pa="$p/app"
-export pb="$p/bin"
-export pd="$p/docs"
-export pt="$p/test"  
+export p='/home/django/hammer'
 export rediskey='HAMMER'
 
 # Aliases

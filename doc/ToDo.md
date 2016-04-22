@@ -6,8 +6,10 @@ Next most important overall objective
 
 Action:
 
-    use one-click setup for Droplet at Digital Ocean
+    get push from remote server
     create process for updating Django to 1.9.4
+    setup Gunicorn/Nginx for new code
+    use one-click setup for Droplet at Digital Ocean
     document and automate server management
     move code to remote server
     clone Hammer repo on Digital Ocean

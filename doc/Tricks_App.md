@@ -70,6 +70,28 @@ In settings.py file use a database that matches the hosting server
             }
         }
 
+Destroy the old database tables
+
+
+    cat <<EOF  >data-drop-tables
+    drop table auth_group cascade;
+    drop table auth_group_permissions cascade;
+    drop table auth_permission cascade;
+    drop table auth_user cascade;
+    drop table auth_user_groups  cascade;
+    drop table auth_user_user_permissions cascade;
+    drop table contact_contact cascade;
+    drop table django_admin_log  cascade;
+    drop table django_content_type  cascade;
+    drop table django_migrations  cascade;
+    drop table django_session  cascade;
+EOF
+
+    dj dbshell < data-drop-tables
+
+    echo dj makemigrations
+    echo dj migrate 
+
 
 ### Views/URLs/Templates
 
