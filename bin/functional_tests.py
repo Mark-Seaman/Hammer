@@ -53,7 +53,7 @@ class PythonTest(FunctionalTestCase):
         path = join(environ['p'],'bin','pip-list')
         expected = read_file(path)
         output = shell_command('pip list')
-        self.assertLength(output, expected)
+        self.assertEqual(output, expected)
 
 
 class SystemTest(FunctionalTestCase):
