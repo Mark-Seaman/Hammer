@@ -77,10 +77,21 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 18,30)
+        self.assertFiles(join(environ['p'],'tool'), 30,40)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
+
+
+class ServerTest(FunctionalTestCase):
+
+    def test_welcome(self):
+        cmd = 'cat /home/django/django_project/bin/welcome'
+        self.assertLines(shell_command('x server command '+cmd), 7,8)
+
+    def test_hostname(self):
+        self.assertIn('Hammer\n', shell_command('x server command hostname') )
+      
 
 
 class DocTest(FunctionalTestCase):

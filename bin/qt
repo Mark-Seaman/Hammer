@@ -1,7 +1,10 @@
 #!/bin/bash
 # Run functional tests.  Execute all tests for system integration.
 
-#x cmd list
-#x cmd help
-#x cmd edit doc
-x cmd read
+#x server help
+#x server console
+x server command 'hostname'
+
+# cat /home/django/django_project/bin/welcome
+x server command cat /home/django/django_project/bin/bashrc
+x server command cat /home/django/django_project/bin/welcome

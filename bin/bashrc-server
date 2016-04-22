@@ -1,0 +1,44 @@
+#!/bin/bash
+# Settings for remote server shell
+
+# Vars
+export p='/home/django/django_project'
+export pa="$p/app"
+export pb="$p/bin"
+export pd="$p/docs"
+export pt="$p/test"  
+export rediskey='HAMMER'
+
+# Aliases
+alias g='grep'
+alias h='history|tail -40'
+alias home='. ~/.bashrc'
+alias l='ls -al --color=auto'
+alias le='less'
+alias p='python'
+
+
+# Path variable
+export PATH=\
+$p/bin:\
+/sbin:\
+/usr/bin:\
+/usr/local/bin:\
+/usr/local/sbin:\
+/bin
+
+
+# Python context
+cd $p
+cat bin/welcome
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+
+echo "Active python = `which python`"
+echo
+
+path

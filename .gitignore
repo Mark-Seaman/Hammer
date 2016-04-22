@@ -1,4 +1,4 @@
 *.pyc
 bin/pip-list
 log/*.log
-
+django_project

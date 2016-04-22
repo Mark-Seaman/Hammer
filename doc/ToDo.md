@@ -1,12 +1,20 @@
 # To Do
 
-## Milestone: deployment on Digital Ocean
+## Milestone:  Deployment 
 
 Next most important overall objective
 
 Action:
 
-    
+    create server script
+    use one-click setup for Droplet at Digital Ocean
+    setup rsync to server
+    create process for updating Django to 1.9.4
+    document and automate server management
+    move code to remote server
+    clone Hammer repo on Digital Ocean
+    deploy using git pull
+    remote restart of server
 
 
 ---
@@ -74,7 +82,7 @@ Action:
 
 * Django app structure
 
-    decide on plugin dj-apps (thot, tasks, docs, notes, time)
+    decide on plug-in dj-apps (thot, tasks, docs, notes, time)
 
 * Setting management
 
@@ -109,7 +117,17 @@ Action:
 
 * Data management
 
-    user, doc, test, cmd, data, app, server, log
+Command Scripts to create
+    server
+    app
+    test
+    user
+    data
+
+Commands to extent
+    cmd
+    doc
+    log
 
 * Automation of data models
 

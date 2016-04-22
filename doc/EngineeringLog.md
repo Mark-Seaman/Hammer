@@ -13,6 +13,10 @@ estimates.
 4-22-2016 - 8
 
     create doc edit
+    build cmd script
+    refactor cmd & doc logic into shell
+
+---
 
 Total Investment - 18:00
 

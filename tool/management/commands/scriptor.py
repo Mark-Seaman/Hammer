@@ -6,6 +6,7 @@ from os.path import join
 from tool.doc import doc_command
 from tool.log import log_command, log_exception, throw_exception
 from tool.cmd import cmd_command
+from tool.server import server_command
 from hammer.settings import BASE_DIR
 
 
@@ -31,6 +32,8 @@ class Command(BaseCommand):
                 self.help()
             elif cmd=='log':
                 log_command(self, args)
+            elif cmd=='server':
+                server_command(self,args)
             elif cmd=='test':
                 self.stdout.write('Test command: %s' % options['script'])
                 throw_exception()
