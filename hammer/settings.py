@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'hammer.wsgi.application'
 # Database
 
 from platform import node
-if 'iMac' in node():    
+if 'iMac' in node() or 'mac' in node():    
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3', 
