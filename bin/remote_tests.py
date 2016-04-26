@@ -19,7 +19,8 @@ class RemoteTest(FunctionalTestCase):
         self.assertIn('Hammer', node())
 
     def test_version_control(self):
-        self.assertEqual(shell_command('git status'), '')
+        expected = 'On branch master\nYour branch is up-to-date with 'origin/master'.\n\nnothing to commit, working directory clean\n''
+        self.assertEqual(shell_command('git status'), expected)
 
 
 class PythonTest(FunctionalTestCase):

@@ -72,8 +72,11 @@ def server_deploy(self):
         cmd = cmd % (environ['p'], DROPLET_IP)
         self.stdout.write('copy to remote (%s)' % cmd)
         self.stdout.write(shell_command(cmd))
-    copy_to_remote()
-    
+    def remote_pull():
+        self.stdout.write('remote pull')
+        server_remote_command(self,['git pull'])
+    #copy_to_remote()
+    remote_pull()
 
 def server_console(self):
     self.stdout.write('Remote console')
