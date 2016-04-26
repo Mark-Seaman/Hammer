@@ -18,6 +18,9 @@ class RemoteTest(FunctionalTestCase):
         from platform import node
         self.assertIn('Hammer', node())
 
+    def test_version_control(self):
+        self.assertEqual(shell_command('git status'), '')
+
 
 class PythonTest(FunctionalTestCase):
 

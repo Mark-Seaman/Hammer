@@ -4,6 +4,12 @@
 
 Next most important overall objective
 
+
+Done:
+    build PyCharm project
+    interactive local debug
+
+
 Action:
 
    
@@ -30,12 +36,12 @@ Action:
 
 * Version control
 
+    setup git on remote server
+
 * Development tools
 
-    build PyCharm project
-    interactive debug
-    server run script
-    server stop script
+    interactive remote debug
+    command line runserver
 
 * Python & Django setup
 

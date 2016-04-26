@@ -13,10 +13,14 @@ estimates.
 
 4-26-2016 - 8
 
-    create remote_tests.py
+    create remote_tests.py to test:
+        hostname
+        python and django version
+        pip list
     test for pages on remote server
     build simplest app on Digital Ocean single-click install
     setup PyCharm to work with Hammer
+    setup git on remote server
 
 4-25-2016 - 3
 
