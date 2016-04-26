@@ -77,7 +77,7 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 30,40)
+        self.assertFiles(join(environ['p'],'tool'), 28,40)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
