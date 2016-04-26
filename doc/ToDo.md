@@ -6,16 +6,7 @@ Next most important overall objective
 
 Action:
 
-    get push from remote server
-    create process for updating Django to 1.9.4
-    setup Gunicorn/Nginx for new code
-    use one-click setup for Droplet at Digital Ocean
-    document and automate server management
-    move code to remote server
-    clone Hammer repo on Digital Ocean
-    deploy using git pull
-    remote restart of server
-
+   
 
 ---
 
@@ -48,6 +39,7 @@ Action:
 
 * Python & Django setup
 
+    create process for updating Django to 1.9.4
     standardize python setup
     manage pip libraries
     install with requirements.txt
@@ -58,7 +50,10 @@ Action:
 
 * ISP - Digital Ocean
 
+    create one-click setup for Droplet at Digital Ocean
+    get starting code from remote server
     convert existing app to Hammer
+    setup Gunicorn/Nginx for new code
 
 * Domains
 
@@ -68,6 +63,11 @@ Action:
 * Server image
 
 * Deployment
+
+    move code to remote server
+    clone Hammer repo on Digital Ocean
+    deploy using git pull
+    remote restart of server
 
     execute as django user
     upgrade server Django 1.9.4
@@ -114,6 +114,8 @@ Action:
 
     scriptor help
     clone for command dispatch
+    document and automate server management
+
 
 * Data management
 

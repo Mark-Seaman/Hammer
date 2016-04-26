@@ -1,11 +1,9 @@
-from os import environ, system, walk 
+from os import environ
 from os.path import join
 from platform import node
-from selenium import webdriver
-from subprocess import Popen,PIPE
 from unittest import TestCase, main
 
-from shell import shell_command, hostname, read_file, file_tree_list
+from shell import shell_command, read_file, file_tree_list
 
 
 
@@ -25,9 +23,11 @@ class FunctionalTestCase(TestCase):
         self.assertBetween(len(output.split('\n')), min, max)
 
     def assertFiles(self, path, min, max):
+        '''Check that the number of lines is within bounds'''
         self.assertBetween(len(file_tree_list(path)), min, max)
     
     def assertShell(self, command, min, max):
+        '''Check outline of a shell command; num lines is within bounds'''
         self.assertLines(shell_command(command), min, max)
 
 
@@ -140,7 +140,6 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x cmd help'), 12,12)        
 
     def test_version_control(self):
-        print(shell_command('git status'))
         expected = '''On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean

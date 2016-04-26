@@ -10,6 +10,20 @@ estimates.
 ## History
 
 
+
+4-26-2016 - 8
+
+    create remote_tests.py
+    test for pages on remote server
+    build simplest app on Digital Ocean single-click install
+    setup PyCharm to work with Hammer
+
+4-25-2016 - 3
+
+    repurpose existing Digital Ocean Droplet to Hammer host
+    setup git repo and pandoc on Droplet
+    reassign floating IP
+
 4-22-2016 - 8
 
     create doc edit
