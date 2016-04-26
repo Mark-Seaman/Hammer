@@ -32,27 +32,19 @@ def webpage_text(browser,url):
     
 
 #---------------------------------------------------------------------------
+# Test local pages
 
 class PagesTest(TestCase):
 
-    # Setup & teardown
     def setUp(self):
-        self.open_browser()
-
-    def tearDown(self):
-        self.close_browser()
-        
-
-    # Helpers
-    def open_browser(self):
         if RUN_WEB_BROWSER:
             run_server()
             self.browser = webdriver.Firefox()
 
-    def close_browser(self):
+    def tearDown(self):
         if RUN_WEB_BROWSER:
             self.browser.quit()
-            pass
+        
 
     def assertBetween(self, num, min, max):
         self.assertGreaterEqual(num, min)
@@ -62,14 +54,6 @@ class PagesTest(TestCase):
         self.assertBetween(len(text.split('\n')), min, max)
 
 
-    #---------------------------------------------------------------------------
-    # Tests
-
-    # def test_visit_google(self):
-    #     if RUN_WEB_BROWSER:
-    #         self.browser.get('http://google.com')
-    #         assert 'Google' in self.browser.title
-
     def test_pages(self):
         pages = [ 'EngineeringLog', 'FunctionalTest', 'README', 'ToDo']
         urls = [ 'localhost:8000/%s.md'%p for p in pages ]
@@ -77,6 +61,29 @@ class PagesTest(TestCase):
             webpage_text(self.browser,url)
             sleep(1)
     
+#---------------------------------------------------------------------------
+# Test remote pages
+
+class RemoteTest(TestCase):
+
+    def setUp(self):
+        if RUN_WEB_BROWSER:
+            self.browser = webdriver.Firefox()
+
+    def tearDown(self):
+        return
+        if RUN_WEB_BROWSER:
+            self.browser.quit()
+    
+    def test_pages(self):
+        HOST = '159.203.152.201'
+        webpage_text(self.browser,HOST)
+        sleep(3)
+
+    # def test_visit_google(self):
+    #     if RUN_WEB_BROWSER:
+    #         self.browser.get('http://google.com')
+    #         assert 'Google' in self.browser.title
 
 
 

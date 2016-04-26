@@ -92,6 +92,8 @@ class ServerTest(FunctionalTestCase):
     def test_hostname(self):
         self.assertIn('Hammer\n', shell_command('x server command hostname') )
       
+    def test_ip(self):
+        self.assertIn('159.203.152.201', shell_command('x server ip'))
 
 
 class DocTest(FunctionalTestCase):
