@@ -56,9 +56,10 @@ def server_ip(self):
 def server_remote_command(self, args):
     cmd = ' '.join(args)
     bashrc = 'source ~/hammer/bin/bashrc-server>/dev/null'
-    cmd = 'ssh django@%s "%s && %s"' % (DROPLET_IP, bashrc, cmd)
-    self.stdout.write('Remote Execution (%s)' % cmd)
-    system(cmd)
+    script = "%s && %s" % (bashrc, cmd)
+    ssh = 'ssh django@%s -C \"%s\"' % (DROPLET_IP, script)
+    self.stdout.write('Remote Execution (%s)' % ssh)
+    system (ssh)
 
 
 def server_control(self):

@@ -97,6 +97,9 @@ class ServerTest(FunctionalTestCase):
     def test_ip(self):
         self.assertIn('159.203.152.201', shell_command('x server ip'))
 
+    def test_remote_server(self):
+        shell_command('x server command rt')
+
 
 class DocTest(FunctionalTestCase):
 
