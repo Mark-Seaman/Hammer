@@ -1,0 +1,10 @@
+#!/bin/bash
+# Setup the simple web site on the remote server
+
+cd 
+cp hammer/simple.py django_project/django_project/settings.py
+
+echo Restart the server
+
+echo web 159.203.152.201
+
