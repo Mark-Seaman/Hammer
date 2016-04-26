@@ -3,10 +3,15 @@
 
 export p=$HOME/Projects/Hammer
 
-alias hammer=". $p/bin/bashrc"
+alias bl='cd $p/bin && ls *.py'
 alias ce='x cmd edit'
 alias cl='x cmd list'
-alias bl='cd $p/bin && ls *.py'
+alias console='x server console'
+alias de='x doc edit'
+alias deploy='x server deploy'
+alias hammer=". $p/bin/bashrc"
+alias restart='x server restart'
+
 
 function be {
     e $p/bin/${1/.py/}.py
