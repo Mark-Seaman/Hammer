@@ -4,6 +4,13 @@
 export p=$HOME/Projects/Hammer
 
 alias hammer=". $p/bin/bashrc"
+alias ce='x cmd edit'
+alias cl='x cmd list'
+alias bl='cd $p/bin && ls *.py'
+
+function be {
+    e $p/bin/${1/.py/}.py
+}
 
 cat $p/bin/welcome
 
