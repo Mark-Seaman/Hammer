@@ -4,7 +4,7 @@ from os.path import join
 from bin.shell import  file_path, file_list, line_count, read_file, shell_command
 
 
-DROPLET_IP = '45.55.115.15'
+DROPLET_IP = '159.203.152.201'
 
 
 def server_command(self, options):
@@ -22,6 +22,8 @@ def server_command(self, options):
         server_control(self)
     elif server=='deploy':
         server_deploy(self)
+    elif server=='restart':
+        server_restart(self)
     elif server=='root':
         server_root_console(self)
     else:
@@ -37,6 +39,7 @@ def server_help(self):
             console  # Log in to the remote server
             control  # Bring up the remote control panel
             deploy   # Deploy code to the remote server
+            restart  # Restart the remote server
             root     # Log in as root
             help     # Show the doc commands
 
@@ -72,3 +75,7 @@ def server_console(self):
 def server_root_console(self):
     self.stdout.write('Remote console')
     system('ssh root@%s' % DROPLET_IP)
+
+def server_restart(self):
+    self.stdout.write('Remote service restart')
+    system('ssh root@%s -C service gunicorn restart' % DROPLET_IP)

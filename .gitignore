@@ -3,3 +3,4 @@ bin/pip-list
 data
 django_project
 log/*.log
+.idea
