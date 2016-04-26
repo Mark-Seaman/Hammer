@@ -60,7 +60,9 @@ class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_tree_list(environ['p'])
-        self.assertBetween(len(files), 48,150)
+        # for f in files:
+        #     print(f)
+        self.assertBetween(len(files), 48,170)
 
     def test_system_hostname(self):
         host = node()
@@ -86,7 +88,7 @@ class DjangoTest(FunctionalTestCase):
 class ServerTest(FunctionalTestCase):
 
     def test_welcome(self):
-        cmd = 'cat /home/django/django_project/bin/welcome'
+        cmd = 'cat /home/django/hammer/bin/welcome'
         self.assertLines(shell_command('x server command '+cmd), 7,8)
 
     def test_hostname(self):
