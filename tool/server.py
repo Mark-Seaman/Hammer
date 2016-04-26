@@ -22,6 +22,8 @@ def server_command(self, options):
         server_control(self)
     elif server=='deploy':
         server_deploy(self)
+    elif server=='ip':
+        server_ip(self)
     elif server=='restart':
         server_restart(self)
     elif server=='root':
@@ -39,11 +41,16 @@ def server_help(self):
             console  # Log in to the remote server
             control  # Bring up the remote control panel
             deploy   # Deploy code to the remote server
+            ip       # Show the IP address of the server
             restart  # Restart the remote server
             root     # Log in as root
             help     # Show the doc commands
 
         ''')
+
+
+def server_ip(self):
+    self.stdout.write(DROPLET_IP)
 
 
 def server_remote_command(self, args):
