@@ -6,13 +6,18 @@ export p='/home/django/hammer'
 export rediskey='HAMMER'
 
 # Aliases
+alias e='vi'
 alias g='grep'
 alias h='history|tail -40'
 alias home='. ~/.bashrc'
 alias l='ls -al --color=auto'
+alias ll='ls -l'
 alias le='less'
 alias p='python'
-
+alias u='cd ..'
+function d { 
+    echo $1; cd $1 
+}
 
 # Path variable
 export PATH=\

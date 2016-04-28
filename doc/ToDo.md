@@ -58,7 +58,6 @@ Action:
 
     create one-click setup for Droplet at Digital Ocean
     get starting code from remote server
-    convert existing app to Hammer
     setup Gunicorn/Nginx for new code
 
 * Domains
@@ -70,17 +69,8 @@ Action:
 
 * Deployment
 
-    move code to remote server
-    clone Hammer repo on Digital Ocean
-    deploy using git pull
-    remote restart of server
-
-    execute as django user
     upgrade server Django 1.9.4
-    setup ssh key on Droplet
-    copy git repo on Digital Ocean
-    debug git pull
-    rework Gunicorn setup to reflect directory structure
+    rework Gunicorn setup (move django_project to hammer)
 
 ---
 
@@ -88,6 +78,7 @@ Action:
 
 * Django app structure
 
+    convert existing app to Hammer
     decide on plug-in dj-apps (thot, tasks, docs, notes, time)
 
 * Setting management
@@ -118,24 +109,28 @@ Action:
 
 * Scriptor
 
+    move server.py to bin
     scriptor help
     clone for command dispatch
     document and automate server management
 
+    scriptor
+        doc
+        user
+        tasks,thot  (business logic)
+
+    bin
+        app
+        cmd
+        data
+        log
+        src
+        server
+        test (rt, ft, ut, pt)
+
 
 * Data management
 
-Command Scripts to create
-    server
-    app
-    test
-    user
-    data
-
-Commands to extent
-    cmd
-    doc
-    log
 
 * Automation of data models
 
@@ -185,12 +180,9 @@ Commands to extent
     
 * Functional test
 
-    debug ft on macbook
-    test pip list
     test groups: 
         Smoke, Python, Files, System, Django, Doc, Automation, Pages
     move to tests/*.py
-    philosophy (integrated,live data,system)
     page tester (text and HTML compare)
        
 

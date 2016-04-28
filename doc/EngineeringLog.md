@@ -21,6 +21,8 @@ estimates.
     build simplest app on Digital Ocean single-click install
     setup PyCharm to work with Hammer
     setup git on remote server
+    convert to deploy using git pull
+    
 
 4-25-2016 - 3
 

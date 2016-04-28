@@ -2,4 +2,13 @@
 # Run functional tests.  Execute all tests for system integration.
 
 
-x server deploy && x server command rt
+#x server deploy && x server command rt
+#x server restore
+echo x server copy
+
+echo x server console
+
+x server restart && x server web
+
+#x server save
+

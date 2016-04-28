@@ -9,6 +9,11 @@ def shell_command(cmd):
     return Popen(cmd.split(), stdout=PIPE).stdout.read()
 
 
+def shell_command_script(cmd):
+    '''Execute a shell command and return stdout'''
+    return Popen(cmd, stdout=PIPE).stdout.read()
+
+
 def read_file(path):
     '''Read a file and return the text'''
     if not exists(path):
