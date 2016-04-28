@@ -9,6 +9,11 @@ estimates.
 
 ## History
 
+4-28-2016 - 8
+
+    debug setup of simple.py
+    strip out extra files on remote server
+    improve remote command context
 
 
 4-26-2016 - 8

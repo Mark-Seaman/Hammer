@@ -12,6 +12,8 @@ Done:
 
 Action:
 
+    pass remote_tests.py
+    deploy full app
    
 
 ---
