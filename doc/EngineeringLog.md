@@ -14,6 +14,7 @@ estimates.
     debug setup of simple.py
     strip out extra files on remote server
     improve remote command context
+    debug install of full app
 
 
 4-26-2016 - 8

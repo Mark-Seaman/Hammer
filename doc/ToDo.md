@@ -14,6 +14,7 @@ Action:
 
     pass remote_tests.py
     deploy full app
+    rename app from django_project to hammer
    
 
 ---
@@ -203,3 +204,8 @@ Action:
     micro test for inner dev loop
     
 
+---
+
+# New Action Items
+
+reconcile todo.py in hammer and bin
