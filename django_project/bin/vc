@@ -1,8 +1,0 @@
-#!/bin/bash
-# Commit all files to Git repo
-
-git add -A $p &&
-git commit -m"$*" &&
-git pull &&
-git push 
-
