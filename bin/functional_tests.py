@@ -70,7 +70,7 @@ class SystemTest(FunctionalTestCase):
 
     def test_pandoc(self):
         self.assertShell('pandoc -v', 23,23)
-        self.assertShell('pandoc -t html %s/doc/FunctionalTest.md' % environ['p'], 49,49)
+        self.assertShell('pandoc -t html %s/doc/FunctionalTest.md' % environ['p'], 120,130)
 
 
 class DjangoTest(FunctionalTestCase):
@@ -110,14 +110,14 @@ class DocTest(FunctionalTestCase):
         self.assertLines(shell_command('x doc length'), 4,15)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 500,700)
+        self.assertLines(shell_command('x doc read'), 700,800)
 
     def test_doc_help(self):
         self.assertLines(shell_command('x doc help'), 12,12)        
 
     def test_todo_list(self):
         f = join(environ['p'], 'doc', 'ToDo.md')
-        self.assertLines(open(f).read(), 200,220)
+        self.assertLines(open(f).read(), 190,220)
 
 
 class AutomationTest(FunctionalTestCase):

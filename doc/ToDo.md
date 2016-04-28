@@ -4,17 +4,8 @@
 
 Next most important overall objective
 
-
-Done:
-    build PyCharm project
-    interactive local debug
-
-
 Action:
 
-    pass remote_tests.py
-    deploy full app
-    rename app from django_project to hammer
    
 
 ---
@@ -39,16 +30,12 @@ Action:
 
 * Version control
 
-    setup git on remote server
-
 * Development tools
 
     interactive remote debug
-    command line runserver
 
 * Python & Django setup
 
-    create process for updating Django to 1.9.4
     standardize python setup
     manage pip libraries
     install with requirements.txt
@@ -59,7 +46,6 @@ Action:
 
 * ISP - Digital Ocean
 
-    create one-click setup for Droplet at Digital Ocean
     get starting code from remote server
     setup Gunicorn/Nginx for new code
 
