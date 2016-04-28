@@ -72,8 +72,8 @@ def server_control(self):
 
 
 def server_copy(self):
-    #rsync = 'rsync -auv --delete %s/simple/ django@%s:/home/django/django_project'
-    rsync = 'rsync -auv --delete %s/ django@%s:/home/django/hammer'
+    rsync = 'rsync -auv %s/django_project/ django@%s:/home/django/django_project'
+    #rsync = 'rsync -auv --delete %s/ django@%s:/home/django/hammer'
     cmd = rsync % (environ['p'], DROPLET_IP)
     self.stdout.write('copy to remote (%s)' % cmd)
     self.stdout.write(shell_command(cmd))
