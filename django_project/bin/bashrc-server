@@ -1,0 +1,57 @@
+#!/bin/bash
+# Settings for remote server shell
+
+# Vars
+export p='/home/django/hammer'
+export rediskey='HAMMER'
+
+# Aliases
+
+alias bl='cd $p/bin && ls *.py'
+alias ce='x cmd edit'
+alias cl='x cmd list'
+alias console='x server console'
+alias de='x doc edit'
+alias deploy='x server deploy'
+alias e='vi'
+alias g='grep'
+alias gs='git status'
+alias h='history|tail -40'
+alias hammer=". $p/bin/bashrc"
+alias home='. ~/.bashrc'
+alias l='ls -al --color=auto'
+alias le='less'
+alias ll='ls -l'
+alias p='python'
+alias restart='x server restart'
+alias todo='c todo'
+alias u='cd ..'
+
+function d { 
+    echo $1; cd $1 
+}
+
+# Path variable
+export PATH=\
+$p/bin:\
+/sbin:\
+/usr/bin:\
+/usr/local/bin:\
+/usr/local/sbin:\
+/bin
+
+
+# Python context
+cd $p
+cat bin/welcome
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+
+echo "Active python = `which python`"
+echo
+
+path

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <!-- 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script> 
+        -->
+        {% load static %}
+        <link  href="{% static "hammer.css" %}" rel="stylesheet"/>
+        <!-- <link  href="{{STATIC_URL}}/hammer.css" rel="stylesheet" /> -->
+        <link rel="shortcut icon" type="image/png" href="{{STATIC_URL}}/favicon.ico"/>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+
+    <div class="page dropshadow">
+        {% block content %} 
+        {% endblock %}
+    </div>
+
+    {% block footer %} 
+    <div class="footer">
+        <img src="http://localhost:8000/static/SWS_Globe_small.jpg">
+        <center><div class="footer-logo"></div></center>
+        Powered by <b>Shrinking World Solutions</b>
+    </div>
+    {% endblock %}
+
+    </body>
+</html>
