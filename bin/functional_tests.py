@@ -119,6 +119,7 @@ class DocTest(FunctionalTestCase):
         f = join(environ['p'], 'doc', 'ToDo.md')
         self.assertLines(open(f).read(), 200,220)
 
+
 class AutomationTest(FunctionalTestCase):
 
     def test_automation(self):
@@ -143,7 +144,11 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x cmd read'), 260,500)
 
     def test_cmd_help(self):
-        self.assertLines(shell_command('x cmd help'), 12,12)        
+        self.assertLines(shell_command('x cmd help'), 12,12)
+
+    def test_c_command(self):
+        expected = 'usage: c cmd [args]\nExample: c server ip\n'
+        self.assertEqual(shell_command('c'), expected)
 
     def test_version_control(self):
         expected = '''On branch master
