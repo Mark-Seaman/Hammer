@@ -115,6 +115,9 @@ class DocTest(FunctionalTestCase):
     def test_doc_help(self):
         self.assertLines(shell_command('x doc help'), 12,12)        
 
+    def test_todo_list(self):
+        f = join(environ['p'], 'doc', 'ToDo.md')
+        self.assertLines(open(f).read(), 200,220)
 
 class AutomationTest(FunctionalTestCase):
 
