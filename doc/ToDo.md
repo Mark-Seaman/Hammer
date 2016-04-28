@@ -67,6 +67,9 @@ Action:
 
 * Server image
 
+    build simple web site at Digital Ocean
+    manually install full Django app
+
 * Deployment
 
     upgrade server Django 1.9.4
@@ -109,6 +112,7 @@ Action:
 
 * Scriptor
 
+    create todo list tool
     move server.py to bin
     scriptor help
     clone for command dispatch
@@ -127,6 +131,7 @@ Action:
         src
         server
         test (rt, ft, ut, pt)
+        todo
 
 
 * Data management
@@ -195,3 +200,4 @@ Action:
 
     micro test for inner dev loop
     
+

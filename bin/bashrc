@@ -11,7 +11,7 @@ alias de='x doc edit'
 alias deploy='x server deploy'
 alias hammer=". $p/bin/bashrc"
 alias restart='x server restart'
-
+alias todo='c todo'
 
 function be {
     e $p/bin/${1/.py/}.py
