@@ -104,16 +104,16 @@ class ServerTest(FunctionalTestCase):
 class DocTest(FunctionalTestCase):
 
     def test_documents(self):
-        self.assertLines(shell_command('x doc list'), 4,15)
+        self.assertLines(shell_command('c doc list'), 4,15)
 
     def test_doc_length(self):
-        self.assertLines(shell_command('x doc length'), 4,15)
+        self.assertLines(shell_command('c doc length'), 4,15)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 700,800)
+        self.assertLines(shell_command('c doc read'), 700,800)
 
     def test_doc_help(self):
-        self.assertLines(shell_command('x doc help'), 12,12)        
+        self.assertLines(shell_command('c doc help'), 12,12)
 
     def test_todo_list(self):
         f = join(environ['p'], 'doc', 'ToDo.md')
@@ -123,7 +123,7 @@ class DocTest(FunctionalTestCase):
 class AutomationTest(FunctionalTestCase):
 
     def test_log(self):
-        self.assertLines(shell_command('c log'), 11,50)
+        self.assertLines(shell_command('c log'), 7,50)
 
     def test_log_clear(self):
         self.assertEqual(shell_command('c log clear'), 'Logs cleared\n')
@@ -138,7 +138,7 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('c cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('c cmd read'), 260,600)
+        self.assertLines(shell_command('c cmd read'), 600,700)
 
     def test_cmd_help(self):
         self.assertLines(shell_command('c cmd help'), 12,12)

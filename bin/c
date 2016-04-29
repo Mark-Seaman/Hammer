@@ -6,11 +6,14 @@ from sys import argv
 from cmd import cmd_command
 from tool import tool_command
 from log import log_command
+from doc import doc_command
 
 
 def execute_command(cmd,args):
     if cmd=='cmd':
         cmd_command(args)
+    elif cmd=='doc':
+        doc_command(args)
     elif cmd=='tool':
         tool_command(args)
     elif cmd=='log':
