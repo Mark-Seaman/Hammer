@@ -79,7 +79,7 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 28,40)
+        self.assertFiles(join(environ['p'],'tool'), 27,30)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
@@ -89,16 +89,16 @@ class ServerTest(FunctionalTestCase):
 
     def test_welcome(self):
         cmd = 'cat /home/django/hammer/bin/welcome'
-        self.assertLines(shell_command('x server command '+cmd), 7,8)
+        self.assertLines(shell_command('c server command '+cmd), 7,8)
 
     def test_hostname(self):
-        self.assertIn('Hammer\n', shell_command('x server command hostname') )
+        self.assertIn('Hammer\n', shell_command('c server command hostname') )
       
     def test_ip(self):
-        self.assertIn('159.203.152.201', shell_command('x server ip'))
+        self.assertIn('159.203.152.201', shell_command('c server ip'))
 
     def test_remote_server(self):
-        shell_command('x server command rt')
+        shell_command('c server command rt')
 
 
 class DocTest(FunctionalTestCase):
@@ -129,7 +129,7 @@ class AutomationTest(FunctionalTestCase):
         self.assertEqual(shell_command('c log clear'), 'Logs cleared\n')
 
     def test_help(self):
-        self.assertLines(shell_command('x help'), 11,14)
+        self.assertLines(shell_command('x help'), 9,9)
 
     def test_cmd_list(self):
         self.assertLines(shell_command('c cmd list'), 4,15)
@@ -138,14 +138,14 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('c cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('c cmd read'), 600,700)
+        self.assertLines(shell_command('c cmd read'), 600,800)
 
     def test_cmd_help(self):
         self.assertLines(shell_command('c cmd help'), 12,12)
 
     def test_c_command(self):
         expected = 'usage: c cmd [args]\nExample: c server ip\n'
-        self.assertEqual(shell_command('c'), expected)
+        self.assertShell('c', 16, 16)
 
     def test_version_control(self):
         expected = '''On branch master

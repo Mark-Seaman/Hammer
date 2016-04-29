@@ -1,14 +1,12 @@
-from os import environ, listdir
-from os.path import join
-
 from shell import  file_path, file_list, line_count, read_file, shell_command
+from log import log
 
 
 def cmd_command(options):
     '''
     Execute a command script from scriptor.  Parse off command and args and dispatch it.
     '''
-    #self.stdout.write('Cmd command output %s' % options)
+    log('Cmd command output %s' % options)
     cmd = options[0]
     args = options[1:]
     if cmd=='edit':

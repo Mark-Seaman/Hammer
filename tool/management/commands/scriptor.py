@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
 
-from tool.doc import doc_command
 from tool.log import log_exception, log
 from tool.server import server_command
 
@@ -16,14 +15,10 @@ class Command(BaseCommand):
             cmd = options['script'][0]
             args = options['script'][1:]
             log('SCRIPTOR: %s %s' % (cmd,args))
-            if cmd=='doc':
-                doc_command(self, args)
-            elif cmd=='data':
+            if cmd=='data':
                 self.stdout.write('Data command: %s' % options['script'])
             elif cmd=='help':
                 self.help()
-            elif cmd=='log':
-                log_command(self, args)
             elif cmd=='server':
                 server_command(self,args)
             else:
@@ -38,9 +33,7 @@ class Command(BaseCommand):
             usage: x command 
             
             command:
-                doc    # work with document files
                 data   # work with database content
                 help   # show command help
-                log    # work with application log
         ''')
 
