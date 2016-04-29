@@ -9,6 +9,13 @@ estimates.
 
 ## History
 
+4-29-2016 - 8
+
+    create todo list tool
+    move doc.py, cmd.py, tool.py server.py to bin
+    scriptor help and command dispatch
+    pass all functional tests
+    
 4-28-2016 - 8
 
     setup git on remote server

@@ -6,7 +6,6 @@ Next most important overall objective
 
 Action:
 
-reconcile todo.py in hammer and bin
 
    
 
@@ -98,27 +97,10 @@ reconcile todo.py in hammer and bin
 
 * Scriptor
 
-    create todo list tool
-    move server.py to bin
-    scriptor help
-    clone for command dispatch
+    reconcile todo.py in hammer and bin   
     document and automate server management
-
-    scriptor
-        doc
-        user
-        tasks
-        thot
-
-    c (command scripts)
-        app
-        cmd
-        data
-        log
-        src
-        server
-        test (rt, ft, ut, pt)
-        todo
+    scriptor tools: user, tasks, thot
+    command scripts: app, data, src
 
 
 * Data management
@@ -168,6 +150,7 @@ reconcile todo.py in hammer and bin
     manage expected results
     build approval command script
     enumerate tests
+    test commands (rt, ft, ut, pt)
  
 * Functional test
 
