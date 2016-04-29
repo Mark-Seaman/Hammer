@@ -6,6 +6,8 @@ Next most important overall objective
 
 Action:
 
+reconcile todo.py in hammer and bin
+
    
 
 ---
@@ -56,13 +58,9 @@ Action:
 
 * Server image
 
-    build simple web site at Digital Ocean
-    manually install full Django app
-
 * Deployment
 
-    upgrade server Django 1.9.4
-    rework Gunicorn setup (move django_project to hammer)
+    document Gunicorn setup
 
 ---
 
@@ -70,7 +68,6 @@ Action:
 
 * Django app structure
 
-    convert existing app to Hammer
     decide on plug-in dj-apps (thot, tasks, docs, notes, time)
 
 * Setting management
@@ -110,9 +107,10 @@ Action:
     scriptor
         doc
         user
-        tasks,thot  (business logic)
+        tasks
+        thot
 
-    bin
+    c (command scripts)
         app
         cmd
         data
@@ -170,8 +168,7 @@ Action:
     manage expected results
     build approval command script
     enumerate tests
-
-    
+ 
 * Functional test
 
     test groups: 
@@ -179,19 +176,19 @@ Action:
     move to tests/*.py
     page tester (text and HTML compare)
        
-
 * Unit test
 
+    setup unit tests for Django code
     create unit test for notes
     philosophy (internal, isolated, stateless)
 
-* Quick test
+* Page test
 
-    micro test for inner dev loop
+    capture pages: / /ToDo.md
+    compare page text with expected
     
 
 ---
 
 # New Action Items
 
-reconcile todo.py in hammer and bin

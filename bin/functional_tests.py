@@ -122,29 +122,26 @@ class DocTest(FunctionalTestCase):
 
 class AutomationTest(FunctionalTestCase):
 
-    def test_automation(self):
-        self.assertLines(shell_command('x test'), 4,10)
-
     def test_log(self):
-        self.assertLines(shell_command('x log'), 13,50)
+        self.assertLines(shell_command('c log'), 11,50)
 
     def test_log_clear(self):
-        self.assertEqual(shell_command('x log clear'), 'Logs cleared\n')
+        self.assertEqual(shell_command('c log clear'), 'Logs cleared\n')
 
     def test_help(self):
-        self.assertLines(shell_command('x help'), 12,12)
+        self.assertLines(shell_command('x help'), 11,14)
 
     def test_cmd_list(self):
-        self.assertLines(shell_command('x cmd list'), 4,15)
+        self.assertLines(shell_command('c cmd list'), 4,15)
 
     def test_cmd_length(self):
-        self.assertLines(shell_command('x cmd length'), 4,15)
+        self.assertLines(shell_command('c cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('x cmd read'), 260,500)
+        self.assertLines(shell_command('c cmd read'), 260,600)
 
     def test_cmd_help(self):
-        self.assertLines(shell_command('x cmd help'), 12,12)
+        self.assertLines(shell_command('c cmd help'), 12,12)
 
     def test_c_command(self):
         expected = 'usage: c cmd [args]\nExample: c server ip\n'

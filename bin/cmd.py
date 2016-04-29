@@ -1,10 +1,10 @@
 from os import environ, listdir
 from os.path import join
 
-from bin.shell import  file_path, file_list, line_count, read_file, shell_command
+from shell import  file_path, file_list, line_count, read_file, shell_command
 
 
-def cmd_command(self, options):
+def cmd_command(options):
     '''
     Execute a command script from scriptor.  Parse off command and args and dispatch it.
     '''
@@ -12,24 +12,24 @@ def cmd_command(self, options):
     cmd = options[0]
     args = options[1:]
     if cmd=='edit':
-        cmd_edit(self, args)
+        cmd_edit(args)
     elif cmd=='list':
-        cmd_list(self)
+        cmd_list()
     elif cmd=='length':
-        cmd_length(self)
+        cmd_length()
     elif cmd=='read':
-        cmd_read(self,args)
+        cmd_read(args)
     else:
-        cmd_help(self)
+        cmd_help()
 
 
-def cmd_edit(self, args):
-    path = file_path('tool', args[0]+'.py')
-    self.stdout.write(shell_command('e %s' % path))
+def cmd_edit(args):
+    path = file_path('bin', args[0]+'.py')
+    print(shell_command('e %s' % path))
     
 
-def cmd_help(self):
-    self.stdout.write('''
+def cmd_help():
+    print('''
         usage: x cmd command
 
         command:
@@ -42,32 +42,32 @@ def cmd_help(self):
         ''')
 
 
-def cmd_list(self):
-    files = file_list('tool','.py')
+def cmd_list():
+    files = file_list('bin','.py')
     files = [f for f in files if f!='__init__.py']
     for f in files:
-        self.stdout.write(f)
+        print(f)
 
 
-def cmd_length(self):
-    files = file_list('tool','.py')
+def cmd_length():
+    files = file_list('bin','.py')
     files = [f for f in files if f!='__init__.py']
     for f in files:
-        fp = file_path('tool', f)
-        self.stdout.write('%s : %d' % (f, line_count(fp)))
+        fp = file_path('bin', f)
+        print('%s : %d' % (f, line_count(fp)))
 
 
-def cmd_read(self, args):
+def cmd_read(args):
     if args:
-        path = file_path('tool', args[0]+'.py')
+        path = file_path('bin', args[0]+'.py')
         text = read_file (path)
-        self.stdout.write(text)
+        print(text)
     else:
-        files = file_list('tool','.py')
+        files = file_list('bin','.py')
         files = [f for f in files if f!='__init__.py']
         for f in files:
-            path = file_path('tool', f)
+            path = file_path('bin', f)
             text = read_file(path)
-            self.stdout.write(text)
+            print(text)
 
 
