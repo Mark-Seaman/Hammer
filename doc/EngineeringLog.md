@@ -10,6 +10,7 @@ estimates.
 ## History
 
 
+Total Investment - 37:00
 
 4-26-2016 - 8
 
@@ -41,10 +42,6 @@ estimates.
     pull code from Digital Ocean
     install git on remote server
     set up ssh keys on django user
-
----
-
-Total Investment - 18:00
 
 4-21-2016 - 8
 
