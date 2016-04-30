@@ -4,13 +4,8 @@
 
 Next most important overall objective
 
-
-Done:
-    build PyCharm project
-    interactive local debug
-
-
 Action:
+
 
    
 
@@ -36,16 +31,12 @@ Action:
 
 * Version control
 
-    setup git on remote server
-
 * Development tools
 
     interactive remote debug
-    command line runserver
 
 * Python & Django setup
 
-    create process for updating Django to 1.9.4
     standardize python setup
     manage pip libraries
     install with requirements.txt
@@ -56,9 +47,7 @@ Action:
 
 * ISP - Digital Ocean
 
-    create one-click setup for Droplet at Digital Ocean
     get starting code from remote server
-    convert existing app to Hammer
     setup Gunicorn/Nginx for new code
 
 * Domains
@@ -70,17 +59,7 @@ Action:
 
 * Deployment
 
-    move code to remote server
-    clone Hammer repo on Digital Ocean
-    deploy using git pull
-    remote restart of server
-
-    execute as django user
-    upgrade server Django 1.9.4
-    setup ssh key on Droplet
-    copy git repo on Digital Ocean
-    debug git pull
-    rework Gunicorn setup to reflect directory structure
+    document Gunicorn setup
 
 ---
 
@@ -118,24 +97,14 @@ Action:
 
 * Scriptor
 
-    scriptor help
-    clone for command dispatch
+    reconcile todo.py in hammer and bin   
     document and automate server management
+    scriptor tools: user, tasks, thot
+    command scripts: app, data, src
 
 
 * Data management
 
-Command Scripts to create
-    server
-    app
-    test
-    user
-    data
-
-Commands to extent
-    cmd
-    doc
-    log
 
 * Automation of data models
 
@@ -181,25 +150,28 @@ Commands to extent
     manage expected results
     build approval command script
     enumerate tests
-
-    
+    test commands (rt, ft, ut, pt)
+ 
 * Functional test
 
-    debug ft on macbook
-    test pip list
     test groups: 
         Smoke, Python, Files, System, Django, Doc, Automation, Pages
     move to tests/*.py
-    philosophy (integrated,live data,system)
     page tester (text and HTML compare)
        
-
 * Unit test
 
+    setup unit tests for Django code
     create unit test for notes
     philosophy (internal, isolated, stateless)
 
-* Quick test
+* Page test
 
-    micro test for inner dev loop
+    capture pages: / /ToDo.md
+    compare page text with expected
     
+
+---
+
+# New Action Items
+

@@ -9,6 +9,24 @@ estimates.
 
 ## History
 
+4-29-2016 - 8
+
+    create todo list tool
+    move doc.py, cmd.py, tool.py server.py to bin
+    scriptor help and command dispatch
+    pass all functional tests
+    
+4-28-2016 - 8
+
+    setup git on remote server
+    debug setup of simple.py
+    strip out extra files on remote server
+    improve remote command context
+    debug install of full app
+    pass remote_tests.py
+    deploy full app
+    rename app from django_project to hammer
+    create process for updating Django to 1.9.4
 
 Total Investment - 37:00
 
@@ -20,8 +38,12 @@ Total Investment - 37:00
         pip list
     test for pages on remote server
     build simplest app on Digital Ocean single-click install
+    build PyCharm project
     setup PyCharm to work with Hammer
     setup git on remote server
+    convert to deploy using git pull
+    interactive local debug
+    
 
 4-25-2016 - 3
 

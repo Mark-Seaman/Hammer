@@ -1,0 +1,6 @@
+#!/bin/bash
+# Copy a recursive directory and Filter the output of rsync
+
+nice rsync -auv "$1/" "$2" | 
+egrep -v '(^sending )|(^$)|(^sent )|(^total)|(\/$)'
+

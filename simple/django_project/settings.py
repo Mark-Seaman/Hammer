@@ -4,9 +4,11 @@ from django.conf.urls import patterns, url
 from django.http import HttpResponse
 
 # Required Django Setup
+DEBUG=True
 SECRET_KEY = 'KDqYibgo1ZI4QIHOFInXmTy6wknXxWiii5DBal825FQgCXo5zA'
 MIDDLEWARE_CLASSES = ()
 ROOT_URLCONF = 'django_project.settings'
+ALLOWED_HOSTS = ['*']
 
 def home(request):
     title = "World's Simplest App"

@@ -1,13 +1,7 @@
-import sys, traceback
-from django.core.management.base import BaseCommand, CommandError
-from logging import getLogger
-from os.path import join
+from django.core.management.base import BaseCommand
 
-from tool.doc import doc_command
-from tool.log import log_command, log_exception, throw_exception
-from tool.cmd import cmd_command
+from tool.log import log_exception, log
 from tool.server import server_command
-from hammer.settings import BASE_DIR
 
 
 class Command(BaseCommand):
@@ -20,23 +14,13 @@ class Command(BaseCommand):
         try:
             cmd = options['script'][0]
             args = options['script'][1:]
-            logger = getLogger(__name__)
-            logger.warning('SCRIPTOR: %s %s' % (cmd,args))
-            if cmd=='cmd':
-                cmd_command(self, args)
-            elif cmd=='doc':
-                doc_command(self, args)
-            elif cmd=='data':
+            log('SCRIPTOR: %s %s' % (cmd,args))
+            if cmd=='data':
                 self.stdout.write('Data command: %s' % options['script'])
             elif cmd=='help':
                 self.help()
-            elif cmd=='log':
-                log_command(self, args)
             elif cmd=='server':
                 server_command(self,args)
-            elif cmd=='test':
-                self.stdout.write('Test command: %s' % options['script'])
-                throw_exception()
             else:
                 self.stdout.write('**Scriptor Error**: unknown command %s' % options['script'])
                 self.help()
@@ -49,10 +33,7 @@ class Command(BaseCommand):
             usage: x command 
             
             command:
-                doc    # work with document files
                 data   # work with database content
                 help   # show command help
-                log    # work with application log
-                test   # run a self test on the system
         ''')
 
