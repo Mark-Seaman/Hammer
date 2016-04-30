@@ -9,12 +9,14 @@ estimates.
 
 ## History
 
-4-29-2016 - 8
+4-29-2016 - 6 (8-2)
 
     create todo list tool
     move doc.py, cmd.py, tool.py server.py to bin
     scriptor help and command dispatch
     pass all functional tests
+    convert server.py script
+    create tool/log.py & bin/log.py
     
 4-28-2016 - 8
 
