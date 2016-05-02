@@ -9,12 +9,14 @@ estimates.
 
 ## History
 
-4-29-2016 - 8
+4-29-2016 - 6 (8-2)
 
     create todo list tool
     move doc.py, cmd.py, tool.py server.py to bin
     scriptor help and command dispatch
     pass all functional tests
+    convert server.py script
+    create tool/log.py & bin/log.py
     
 4-28-2016 - 8
 
@@ -28,6 +30,7 @@ estimates.
     rename app from django_project to hammer
     create process for updating Django to 1.9.4
 
+Total Investment - 37:00
 
 4-26-2016 - 8
 
@@ -63,10 +66,6 @@ estimates.
     pull code from Digital Ocean
     install git on remote server
     set up ssh keys on django user
-
----
-
-Total Investment - 18:00
 
 4-21-2016 - 8
 
