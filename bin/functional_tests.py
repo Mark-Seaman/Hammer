@@ -104,10 +104,10 @@ class ServerTest(FunctionalTestCase):
 class DocTest(FunctionalTestCase):
 
     def test_documents(self):
-        self.assertLines(shell_command('x doc list'), 4,15)
+        self.assertLines(shell_command('x doc list'), 17, 25)
 
     def test_doc_length(self):
-        self.assertLines(shell_command('x doc length'), 4,15)
+        self.assertLines(shell_command('x doc length'), 17,25)
 
     def test_doc_read(self):
         self.assertLines(shell_command('x doc read'), 700,800)
@@ -117,7 +117,7 @@ class DocTest(FunctionalTestCase):
 
     def test_todo_list(self):
         f = join(environ['p'], 'doc', 'ToDo.md')
-        self.assertLines(open(f).read(), 170,220)
+        self.assertLines(open(f).read(), 30,40)
 
 
 class AutomationTest(FunctionalTestCase):
