@@ -2,5 +2,11 @@
 # Execute a Django management command script
 
 cd $p
-python manage.py scriptor $*
 
+[ -f $p/bin/$1.py ] &&
+python bin/c.py $*  &&
+exit 1
+
+[ -f $p/tool/$1.py ] &&
+python manage.py scriptor $*  &&
+exit 1

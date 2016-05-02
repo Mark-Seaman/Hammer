@@ -5,7 +5,8 @@
 Next most important overall objective
 
 Action:
-
+    attach stylesheet from HTML5up
+    streamline command script execution
 
    
 

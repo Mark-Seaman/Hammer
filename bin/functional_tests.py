@@ -79,7 +79,7 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 27,30)
+        self.assertFiles(join(environ['p'],'tool'), 24,30)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
@@ -89,31 +89,31 @@ class ServerTest(FunctionalTestCase):
 
     def test_welcome(self):
         cmd = 'cat /home/django/hammer/bin/welcome'
-        self.assertLines(shell_command('c server command '+cmd), 7,8)
+        self.assertLines(shell_command('x server command '+cmd), 7,8)
 
     def test_hostname(self):
-        self.assertIn('Hammer\n', shell_command('c server command hostname') )
+        self.assertIn('Hammer\n', shell_command('x server command hostname') )
       
     def test_ip(self):
-        self.assertIn('159.203.152.201', shell_command('c server ip'))
+        self.assertIn('159.203.152.201', shell_command('x server ip'))
 
     def test_remote_server(self):
-        shell_command('c server command rt')
+        shell_command('x server command rt')
 
 
 class DocTest(FunctionalTestCase):
 
     def test_documents(self):
-        self.assertLines(shell_command('c doc list'), 4,15)
+        self.assertLines(shell_command('x doc list'), 4,15)
 
     def test_doc_length(self):
-        self.assertLines(shell_command('c doc length'), 4,15)
+        self.assertLines(shell_command('x doc length'), 4,15)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('c doc read'), 700,800)
+        self.assertLines(shell_command('x doc read'), 700,800)
 
     def test_doc_help(self):
-        self.assertLines(shell_command('c doc help'), 12,12)
+        self.assertLines(shell_command('x doc help'), 12,12)
 
     def test_todo_list(self):
         f = join(environ['p'], 'doc', 'ToDo.md')
@@ -123,29 +123,22 @@ class DocTest(FunctionalTestCase):
 class AutomationTest(FunctionalTestCase):
 
     def test_log(self):
-        self.assertLines(shell_command('c log'), 7,50)
+        self.assertLines(shell_command('x log'), 7,50)
 
     def test_log_clear(self):
-        self.assertEqual(shell_command('c log clear'), 'Logs cleared\n')
-
-    def test_help(self):
-        self.assertLines(shell_command('x help'), 9,9)
+        self.assertEqual(shell_command('x log clear'), 'Logs cleared\n')
 
     def test_cmd_list(self):
-        self.assertLines(shell_command('c cmd list'), 4,15)
+        self.assertLines(shell_command('x cmd list'), 4,15)
 
     def test_cmd_length(self):
-        self.assertLines(shell_command('c cmd length'), 4,15)
+        self.assertLines(shell_command('x cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('c cmd read'), 600,900)
+        self.assertLines(shell_command('x cmd read'), 600,900)
 
     def test_cmd_help(self):
-        self.assertLines(shell_command('c cmd help'), 12,12)
-
-    def test_c_command(self):
-        expected = 'usage: c cmd [args]\nExample: c server ip\n'
-        self.assertShell('c', 16, 16)
+        self.assertLines(shell_command('x cmd help'), 12,12)
 
     def test_version_control(self):
         expected = '''On branch master

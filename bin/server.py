@@ -126,7 +126,7 @@ def server_save():
 
 def server_web():
     print('Remote web page')
-    cmd = 'open -a "Google Chrome" http://'+DROPLET_IP
+    cmd = 'c web page http://'+DROPLET_IP
     system(cmd)
 
 

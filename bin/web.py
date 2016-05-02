@@ -13,6 +13,8 @@ def web_command(options):
         args = options[1:]
         if cmd=='file':
             web_file(args[0])
+        elif cmd=='firefox':
+            web_firefox(args[0])
         elif cmd=='page':
             web_page(args[0])
         else:
@@ -46,9 +48,15 @@ def web_page(page):
     url = page
     if not page.startswith('http://') and not page.startswith('https://'):
         url = 'http://' + page
-    # Use the correct invocation
     if 'mac' in node() or 'iMac' in node() or 'us-west' in node():
         system('open -a "Google Chrome" '+url)
     else:
         system('rbg google-chrome '+url)
+
+
+def web_firefox(page):
+    if 'mac' in node() or 'iMac' in node() or 'us-west' in node():
+        system('open -a "Firefox" '+page)
+    else:
+        system('rbg firefox '+page)
 
