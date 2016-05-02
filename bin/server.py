@@ -126,7 +126,7 @@ def server_save():
 
 def server_web():
     print('Remote web page')
-    cmd = 'c web page http://'+DROPLET_IP
+    cmd = 'x web page http://'+DROPLET_IP
     system(cmd)
 
 

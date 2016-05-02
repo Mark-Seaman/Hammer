@@ -24,6 +24,12 @@ def execute_command(cmd,args):
         tool_command(args)
     elif cmd=='web':
         web_command(args)
+    elif cmd=='script':
+        system('''
+        [ -f $p/tool/$1.py ] &&
+        python manage.py scriptor $* 
+        ''')
+
     else:
         command_help(cmd,args)
 

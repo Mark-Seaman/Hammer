@@ -9,7 +9,7 @@
 
 # x server console
 
-c server restart && c server web
+x server restart && x server web
 
 #x server save
 
