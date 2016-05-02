@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Execute a python script as a command
 
+from os import system
 from sys import argv
 
 from cmd import cmd_command
@@ -25,10 +26,7 @@ def execute_command(cmd,args):
     elif cmd=='web':
         web_command(args)
     elif cmd=='script':
-        system('''
-        [ -f $p/tool/$1.py ] &&
-        python manage.py scriptor $* 
-        ''')
+        system('python manage.py scriptor %s' % ' '.join(args))
 
     else:
         command_help(cmd,args)

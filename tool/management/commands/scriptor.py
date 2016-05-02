@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand
 
 from tool.log import log_exception, log
-from tool.server import server_command
 
 
 class Command(BaseCommand):
@@ -19,8 +18,6 @@ class Command(BaseCommand):
                 self.stdout.write('Data command: %s' % options['script'])
             elif cmd=='help':
                 self.help()
-            elif cmd=='server':
-                server_command(self,args)
             else:
                 self.stdout.write('**Scriptor Error**: unknown command %s' % options['script'])
                 self.help()

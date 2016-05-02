@@ -140,6 +140,9 @@ class AutomationTest(FunctionalTestCase):
     def test_cmd_help(self):
         self.assertLines(shell_command('x cmd help'), 12,12)
 
+    def test_script_help(self):
+        self.assertLines(shell_command('x script help'), 9,12)
+
     def test_version_control(self):
         expected = '''On branch master
 Your branch is up-to-date with 'origin/master'.
