@@ -71,7 +71,6 @@ class RemoteTest(TestCase):
             self.browser = webdriver.Firefox()
 
     def tearDown(self):
-        return
         if RUN_WEB_BROWSER:
             self.browser.quit()
     

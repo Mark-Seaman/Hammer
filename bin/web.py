@@ -15,8 +15,12 @@ def web_command(options):
             web_file(args[0])
         elif cmd=='firefox':
             web_firefox(args[0])
+        elif cmd=='index':
+            web_page('http://localhost:8000/README.md')
         elif cmd=='page':
             web_page(args[0])
+        elif cmd=='todo':
+            web_page('http://localhost:8000/ToDo.md')
         else:
             web_help()
     else:
@@ -25,11 +29,14 @@ def web_command(options):
 
 def web_help():
     print('''
-        usage: c web [command]
+        usage: x web [command]
 
         command:
             file [file] # Show a file in the browser
+            firefox     # Run the firefox browser
+            index       # Show the README page
             page [page] # Show the remote page in the browser
+            todo        # Show the todo list
 
         ''')
 
