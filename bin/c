@@ -8,6 +8,7 @@ from tool import tool_command
 from log import log_command
 from doc import doc_command
 from server import server_command
+from web import web_command
 
 
 def execute_command(cmd,args):
@@ -21,6 +22,8 @@ def execute_command(cmd,args):
         server_command(args)
     elif cmd=='tool':
         tool_command(args)
+    elif cmd=='web':
+        web_command(args)
     else:
         command_help(cmd,args)
 
