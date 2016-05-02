@@ -9,6 +9,7 @@ from tool import tool_command
 from log import log_command
 from doc import doc_command
 from server import server_command
+from todo import todo_command
 from web import web_command
 
 
@@ -21,6 +22,8 @@ def execute_command(cmd,args):
         log_command(args)
     elif cmd=='server':
         server_command(args)
+    elif cmd=='todo':
+        todo_command(args)
     elif cmd=='tool':
         tool_command(args)
     elif cmd=='web':
@@ -43,6 +46,7 @@ def command_help(cmd,args):
             cmd    # Manage command scripts
             doc    # Manage project documents
             log    # Manage logs
+            todo   # To do list command
             tool   # Manage django tool scripts
             server # Manage server at Digital Ocean
 

@@ -21,6 +21,7 @@ Action:
 * hammer test infrastructure
 * use PyCharm to manage all project files
 
+[Project](Project)
 
 ---
 

@@ -1,6 +1,0 @@
-#!/bin/bash
-# Execute a Django script
-
-cd $p && 
-python ./manage.py $*
-

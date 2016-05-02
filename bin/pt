@@ -1,6 +1,0 @@
-#!/bin/bash
-# Run functional tests.  Execute all tests for system integration.
-
-cd $p/bin
-python page_tests.py
-
