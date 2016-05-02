@@ -138,7 +138,7 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('c cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('c cmd read'), 600,800)
+        self.assertLines(shell_command('c cmd read'), 600,900)
 
     def test_cmd_help(self):
         self.assertLines(shell_command('c cmd help'), 12,12)
