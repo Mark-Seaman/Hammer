@@ -29,10 +29,10 @@
 
 # New Action Items
 
-
-Next most important overall objective
-
-Action:
-    attach stylesheet from HTML5up
-    streamline command script execution
+attach stylesheet from HTML5up
+streamline command script execution
+Setup redis
+Add diff test runner
+improve stylesheet
+create layout.html
 

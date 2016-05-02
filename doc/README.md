@@ -1,5 +1,4 @@
-# Hammer
-Technology showcase application
+# Technology showcase application
 
 ## Project Goals
 
@@ -8,6 +7,7 @@ maximum productivity by controlling the scope.
 
 
 ## Rules of Hammer
+Hammer is constructed according to the following guidelines.
 
 * No features are created that are not needed.
 * No features are created before tests.
@@ -21,9 +21,8 @@ maximum productivity by controlling the scope.
 
 ## Hammer Documents
 
+* [Directory of Documents](/)
 * [To Do List](ToDo.md)
 * [Technical Tricks](Tricks.md)
-
-
 
 

@@ -18,6 +18,8 @@ def shell_command(cmd):
 def format_doc(f):  
     if exists(f):
         return shell_command('pandoc -t html %s' % f)
+    else:
+        return '<h1>File is missing, %s</h1>' % f
 
 
 def file_list():
@@ -38,8 +40,8 @@ def home(request):
 def doc(request, title):
     directory = join(BASE_DIR, 'doc')
     if exists(directory):
-        text = 'Directory exists : %s' % ', '.join(listdir(directory))
-        text += format_doc(join(directory,title))
+        #text = 'Directory exists : %s' % ', '.join(listdir(directory))
+        text = format_doc(join(directory,title))
     else:
         text = 'Directory missing'
     return render(request, 'doc.html', { 'title': title, 'text': text } )

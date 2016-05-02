@@ -1,31 +1,75 @@
 <!doctype html>
 <html>
     <head>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <!-- 
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap Style -->
+        <!--  
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+            rel="stylesheet">
+
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script> 
-        -->
+         -->
+
+        <!-- Identity Style -->
         {% load static %}
-        <link  href="{% static "hammer.css" %}" rel="stylesheet"/>
+        <link rel="stylesheet" href="{% static "identity/assets/css/main.css" %}" />
+        <noscript><link rel="stylesheet" href="identity/assets/css/noscript.css" /></noscript>
+
+        <!-- <link  href="{% static "hammer.css" %}" rel="stylesheet"/> -->
         <!-- <link  href="{{STATIC_URL}}/hammer.css" rel="stylesheet" /> -->
+
         <link rel="shortcut icon" type="image/png" href="{{STATIC_URL}}/favicon.ico"/>
         <title>{{ title }}</title>
+
     </head>
-    <body>
+    <body class="is-loading">
 
-    <div class="page dropshadow">
-        {% block content %} 
-        {% endblock %}
-    </div>
+        <!-- Wrapper -->
+        <div id="wrapper">
 
-    {% block footer %} 
-    <div class="footer">
-        <img src="http://localhost:8000/static/SWS_Globe_small.jpg">
-        <center><div class="footer-logo"></div></center>
-        Powered by <b>Shrinking World Solutions</b>
-    </div>
-    {% endblock %}
+            <!-- Main -->
+            <section id="main">
+                <header>
+                    <h1><a href="/README.md">Hammer Technology</a></h1>
+                    <span class="avatar"><img src="{% static "SWS_Globe_small.jpg" alt="" %}"/></span>
+                </header>
+
+                <blockquote>
+                    {% block content %} 
+                    {% endblock %}
+                </blockquote>
+
+                <footer>
+                    <ul class="icons">
+                        <li><a href="#" class="fa-twitter">Twitter</a></li>
+                        <li><a href="#" class="fa-instagram">Instagram</a></li>
+                        <li><a href="#" class="fa-facebook">Facebook</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Footer -->
+            {% block footer %} 
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>&copy; Shrinking World Solutions</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+            {% endblock %}
+
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            }
+        </script>
 
     </body>
 </html>
