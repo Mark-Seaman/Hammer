@@ -19,5 +19,11 @@ maximum productivity by controlling the scope.
 * All development is done in small steps.
 * Recipes are used to teach others how to repeat all the steps.
 
+## Hammer Documents
+
+* [To Do List](ToDo.md)
+* [Technical Tricks](Tricks.md)
+
+
 
 

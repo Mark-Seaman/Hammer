@@ -103,16 +103,15 @@ Unsorted functional requirements
 
 * Django app structure
 * Setting management
-* Database
 * Views/URLs/Templates
+* Style
+* JavaScript
+
+### Data
+
+* Database
 * Data models
-
-### Script
-
-* Scriptor
 * Data management
-* Automation of data models
-* Logging
 
 ### Doc
 
@@ -120,6 +119,12 @@ Unsorted functional requirements
 * Display of formatted output
 * Import/export
 * Dynamic content editing
+
+### Script
+
+* Scriptor
+* Automation of data models
+* Logging
 
 ### Test
 
