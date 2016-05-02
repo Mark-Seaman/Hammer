@@ -103,6 +103,7 @@ def server_remote_command(args):
 def server_restart():
     print('Remote service restart')
     system('ssh root@%s -C service gunicorn restart' % DROPLET_IP)
+    #system('ssh root@%s -C service nginx restart' % DROPLET_IP)
 
 
 def server_restore():
