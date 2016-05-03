@@ -16,9 +16,7 @@ class Command(BaseCommand):
             cmd = options['script'][0]
             args = options['script'][1:]
             log('SCRIPTOR: %s %s' % (cmd,args))
-            if cmd=='data':
-                self.stdout.write('Data command: %s' % options['script'])
-            elif cmd=='help':
+            if cmd=='help':
                 self.help()
             elif cmd=='tst':
                 tst_command(self, args)
@@ -35,7 +33,6 @@ class Command(BaseCommand):
             usage: x command 
             
             command:
-                data   # work with database content
                 help   # show command help
                 tst    # perform diff testing
         ''')

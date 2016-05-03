@@ -5,6 +5,7 @@ from os import system
 from sys import argv
 
 from cmd import cmd_command
+from data import data_command
 from tool import tool_command
 from log import log_command
 from doc import doc_command
@@ -16,6 +17,8 @@ from web import web_command
 def execute_command(cmd,args):
     if cmd=='cmd':
         cmd_command(args)
+    elif cmd=='data':
+        data_command(args)
     elif cmd=='doc':
         doc_command(args)
     elif cmd=='log':
@@ -28,6 +31,8 @@ def execute_command(cmd,args):
         todo_command(args)
     elif cmd=='tool':
         tool_command(args)
+    elif cmd=='tst':
+        system('python manage.py scriptor %s %s' % (cmd, ' '.join(args)))
     elif cmd=='web':
         web_command(args)
 
@@ -39,7 +44,7 @@ def command_help(cmd,args):
     print('''
         Command not found, %s %s
 
-        usage: c cmd [args]
+        usage: x cmd [args]
 
         cmd
 
@@ -48,6 +53,7 @@ def command_help(cmd,args):
             log    # Manage logs
             todo   # To do list command
             tool   # Manage django tool scripts
+            tst    # Run tests with expected results
             server # Manage server at Digital Ocean
 
         Example: c server ip

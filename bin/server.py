@@ -1,6 +1,6 @@
-from os import environ, listdir, system
+from os import environ, system
 
-from shell import  file_path, file_list, line_count, read_file, shell_command
+from shell import  shell_command
 from log import log
 
 DROPLET_IP = '159.203.152.201'
@@ -10,7 +10,7 @@ def server_command(options):
     '''
     Execute a command script from scriptor.  Parse off command and args and dispatch it.
     '''
-    log('server command output %s' % options)
+    log('server command %s' % options)
     if options[0:]:
         cmd = options[0]
         args = options[1:]

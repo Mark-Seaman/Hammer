@@ -8,7 +8,7 @@ def doc_command(options):
     '''
     Execute a command script from scriptor.  Parse off command and args and dispatch it.
     '''
-    log('doc command output %s' % options)
+    log('doc command %s' % options)
     doc = options[0]
     args = options[1:]
     if doc=='edit':
