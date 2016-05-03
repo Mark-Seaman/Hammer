@@ -27,6 +27,7 @@ alias tlist='x script tst list'
 alias tout='x script tst output'
 alias trun='x script tst run'
 alias tres='x script tst results'
+alias tlike='x script tst like'
 
 alias web='x web'
 

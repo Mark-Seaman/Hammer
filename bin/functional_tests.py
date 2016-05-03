@@ -60,8 +60,6 @@ class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_tree_list(environ['p'])
-        # for f in files:
-        #     print(f)
         self.assertBetween(len(files), 160,180)
 
     def test_system_hostname(self):
@@ -101,7 +99,7 @@ class ServerTest(FunctionalTestCase):
         shell_command('x server command bin/remote_tests.py')
 
     def test_tst(self):
-        shell_command('x tst list')
+        self.assertShell('x script tst list', 3,3)
 
 
 class DocTest(FunctionalTestCase):
