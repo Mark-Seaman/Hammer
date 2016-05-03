@@ -64,9 +64,10 @@ def tst_like(self,args):
         tests = Test.objects.all()
         if tests:
             for t in tests:
-                t.expected = t.output
-                t.save()
-                self.stdout.write("Like: "+t.name)
+                if t.output != t.expected:
+                    t.expected = t.output
+                    t.save()
+                    self.stdout.write("Like: "+t.name)
         else:
             self.stdout.write('no tests found')
 
