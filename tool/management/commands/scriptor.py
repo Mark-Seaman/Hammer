@@ -1,6 +1,8 @@
 from django.core.management.base import BaseCommand
+import traceback
 
 from tool.log import log_exception, log
+from tool.tst import tst_command
 
 
 class Command(BaseCommand):
@@ -18,11 +20,14 @@ class Command(BaseCommand):
                 self.stdout.write('Data command: %s' % options['script'])
             elif cmd=='help':
                 self.help()
+            elif cmd=='tst':
+                tst_command(self, args)
             else:
                 self.stdout.write('**Scriptor Error**: unknown command %s' % options['script'])
                 self.help()
         except:
-            log_exception(self,options['script'])
+            log_exception(self)
+            self.stdout.write('**Scriptor Exception**:  %s' % traceback.format_exc())
 
     def help(self):
         self.stdout.write('''
@@ -32,5 +37,6 @@ class Command(BaseCommand):
             command:
                 data   # work with database content
                 help   # show command help
+                tst    # perform diff testing
         ''')
 

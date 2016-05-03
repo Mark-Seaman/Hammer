@@ -62,7 +62,7 @@ class SystemTest(FunctionalTestCase):
         files = file_tree_list(environ['p'])
         # for f in files:
         #     print(f)
-        self.assertBetween(len(files), 48,170)
+        self.assertBetween(len(files), 160,180)
 
     def test_system_hostname(self):
         host = node()

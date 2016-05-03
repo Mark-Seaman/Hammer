@@ -20,6 +20,8 @@ def execute_command(cmd,args):
         doc_command(args)
     elif cmd=='log':
         log_command(args)
+    elif cmd=='script':
+        system('python manage.py scriptor %s' % ' '.join(args))
     elif cmd=='server':
         server_command(args)
     elif cmd=='todo':
@@ -28,8 +30,6 @@ def execute_command(cmd,args):
         tool_command(args)
     elif cmd=='web':
         web_command(args)
-    elif cmd=='script':
-        system('python manage.py scriptor %s' % ' '.join(args))
 
     else:
         command_help(cmd,args)

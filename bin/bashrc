@@ -23,6 +23,11 @@ alias server='x server'
 alias todo='x todo'
 alias tl='x tool list'
 alias te='x tool edit'
+alias tlist='x script tst list'
+alias tout='x script tst output'
+alias trun='x script tst run'
+alias tres='x script tst results'
+
 alias web='x web'
 
 function be {
