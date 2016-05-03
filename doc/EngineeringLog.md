@@ -9,7 +9,20 @@ estimates.
 
 ## History
 
-4-29-2016 - 6 (8-2)
+**Total Investment - 59:00**
+
+5-2-2016 - 8 
+
+    investigate stylesheets at HTML5UP
+    hook up CSS and static assets
+    create separate docs for each ToDo list (7 functional areas)
+    build document display logic for new style
+    create layout.html template
+    automatic test for collecting pages
+    simplify design of command scripts
+    move to aliases from scripts
+
+4-29-2016 - 6 
 
     create todo list tool
     move doc.py, cmd.py, tool.py server.py to bin
@@ -30,7 +43,6 @@ estimates.
     rename app from django_project to hammer
     create process for updating Django to 1.9.4
 
-Total Investment - 37:00
 
 4-26-2016 - 8
 

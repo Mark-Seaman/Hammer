@@ -29,10 +29,24 @@
 
 # New Action Items
 
-attach stylesheet from HTML5up
-streamline command script execution
-Setup redis
-Add diff test runner
-improve stylesheet
-create layout.html
+Project
+Hosting
+App
+Data
+Doc
+Script
+Test
+
+    streamline command script execution
+    Setup redis
+    Add diff test runner
+    improve stylesheet
+    create layout.html
+
+    build test infrastructure
+    save test records in app database
+    define data model
+    sort accomplishments into requirements lists
+    build project checklist
+
 
