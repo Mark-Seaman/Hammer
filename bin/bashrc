@@ -3,7 +3,7 @@
 
 export p=$HOME/Projects/Hammer
 
-. bash-alias
+. $p/bin/bash-alias
 
 cat $p/bin/welcome
 
