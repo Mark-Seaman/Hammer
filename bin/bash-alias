@@ -1,0 +1,46 @@
+# Aliases
+
+alias bl='cd $p/bin && ls *.py'
+alias ce='x cmd edit'
+alias cl='x cmd list'
+alias cmd='x cmd'
+alias console='x server console'
+alias de='x doc edit'
+alias deploy='x server deploy'
+alias dj='cd $p && python ./manage.py'
+alias dl='x doc list'
+alias doc='x doc'
+alias e='vi'
+alias ft='python $p/bin/functional_tests.py'
+alias g='grep'
+alias gs='git status'
+alias h='history|tail -40'
+alias hammer=". $p/bin/bashrc"
+alias home='. ~/.bashrc'
+alias l='ls -al --color=auto'
+alias le='less'
+alias ll='ls -l'
+alias log='x log'
+alias p='python'
+alias pt='cd $p/bin && python page_tests.py'
+alias restart='x server restart'
+alias rt='cd $p/bin && python remote_tests.py'
+alias server='x server'
+alias te='x tool edit'
+alias tl='x tool list'
+alias tlike='x script tst like'
+alias tlist='x script tst list'
+alias todo='x todo'
+alias tout='x script tst output'
+alias tres='x script tst results'
+alias trun='x script tst run'
+alias u='cd ..'
+alias web='x web'
+
+function d {
+    echo $1; cd $1 
+}
+
+function be {
+    e $p/bin/${1/.py/}.py
+}

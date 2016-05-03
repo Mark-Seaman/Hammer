@@ -5,31 +5,7 @@
 export p='/home/django/hammer'
 export rediskey='HAMMER'
 
-# Aliases
-
-alias bl='cd $p/bin && ls *.py'
-alias ce='x cmd edit'
-alias cl='x cmd list'
-alias console='x server console'
-alias de='x doc edit'
-alias deploy='x server deploy'
-alias e='vi'
-alias g='grep'
-alias gs='git status'
-alias h='history|tail -40'
-alias hammer=". $p/bin/bashrc"
-alias home='. ~/.bashrc'
-alias l='ls -al --color=auto'
-alias le='less'
-alias ll='ls -l'
-alias p='python'
-alias restart='x server restart'
-alias todo='c todo'
-alias u='cd ..'
-
-function d { 
-    echo $1; cd $1 
-}
+. bash-alias
 
 # Path variable
 export PATH=\
