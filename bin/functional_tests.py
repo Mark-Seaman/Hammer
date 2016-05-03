@@ -77,7 +77,7 @@ class DjangoTest(FunctionalTestCase):
         self.assertFiles(join(environ['p'],'hammer'), 7,10)
 
     def test_tool_directory(self):
-        self.assertFiles(join(environ['p'],'tool'), 24,30)
+        self.assertFiles(join(environ['p'],'tool'), 30,35)
 
     def test_django_version(self):
         self.assertIn('Django (1.9.4)', shell_command('pip list'))
@@ -99,7 +99,7 @@ class ServerTest(FunctionalTestCase):
         shell_command('x server command bin/remote_tests.py')
 
     def test_tst(self):
-        self.assertShell('x script tst list', 3,3)
+        self.assertShell('x script tst list', 3,4)
 
 
 class DocTest(FunctionalTestCase):
@@ -143,14 +143,6 @@ class AutomationTest(FunctionalTestCase):
 
     def test_script_help(self):
         self.assertLines(shell_command('x script help'), 9,12)
-
-    def test_version_control(self):
-        expected = '''On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean
-'''
-        self.assertEqual(shell_command('git status'), expected)
-
 
 
 if __name__ == '__main__': 

@@ -1,8 +1,8 @@
-from os import environ
-
-from models import Test
-from bin.shell import shell_command, file_tree_list, differences, banner
+from bin.shell import differences, banner
 from log import log
+from models import Test
+from tool.test_cases import test_cases
+
 
 #------------------------------------------------------------------------------------
 # Test Commands
@@ -31,12 +31,11 @@ def tst_run(self,args):
     self.stdout.write("running tests ...")
     for t in Test.objects.all():
         self.stdout.write("    %s" % t.name)
-        t.output = tests[t.name] ()
+        t.output = test_cases[t.name] ()
         t.save()
 
 
 def tst_list(self,args):
-    register_tests()
     tests = Test.objects.all()
     if tests:
         for t in tests:
@@ -84,31 +83,9 @@ def tst_results(self,args):
         self.stdout.write('no tests found')
 
 
-#------------------------------------------------------------------------------------
-# Test Cases
-
-def pip_test():
-    return shell_command ('pip list')
-
-
-def version_test():
-    return shell_command('git status')
-
-
-def files_test():
-    return '\n'.join(file_tree_list(environ['p']))
-
-
-#------------------------------------------------------------------------------------
-# Test Registry
-
-tests = {
-    'pip_test': pip_test,
-    'version_test': version_test,
-    'files_test': files_test,
-}
-
-def register_tests():
+def tst_register(tests):
     for t in tests:
         if not Test.objects.filter(name=t):
             Test.objects.create(name=t)
+
+
