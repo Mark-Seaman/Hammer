@@ -4,16 +4,6 @@ from platform import node
 from subprocess import Popen,PIPE
 
 
-def shell_command(cmd):
-    '''Execute a shell command and return stdout'''
-    return Popen(cmd.split(), stdout=PIPE).stdout.read()
-
-
-def shell_command_script(cmd):
-    '''Execute a shell command and return stdout'''
-    return Popen(cmd, stdout=PIPE).stdout.read()
-
-
 def read_file(path):
     '''Read a file and return the text'''
     if not exists(path):
@@ -51,5 +41,39 @@ def file_path (d=None, f=None):
     return path
 
 
+def differences(answer,correct):
+    '''   Calculate the diff of two strings   '''
+    if answer!=correct:
+        t1 = '/tmp/diff1'
+        t2 = '/tmp/diff2'
+        with open(t1,'wt') as file1:
+            #print (answer)
+            file1.write(str(answer)+'\n')
+        with open(t2,'wt') as file2:
+            file2.write(str(correct)+'\n')
+        diffs = shell_command('diff %s %s' %(t1, t2))
+        if diffs:
+            #print('Differences detected:     < actual     > expected')
+            #print (diffs)
+            return diffs
+
+
 def hostname():
     return node()
+
+
+def banner(name):
+    '''Show a banner for this file in the output'''
+    return '\n%s\n%s%s\n%s\n' % ('-'*80, ' '*30, name,'-'*80)
+
+
+def shell_command(cmd):
+    '''Execute a shell command and return stdout'''
+    return Popen(cmd.split(), stdout=PIPE).stdout.read()
+
+
+def shell_command_script(cmd):
+    '''Execute a shell command and return stdout'''
+    return Popen(cmd, stdout=PIPE).stdout.read()
+
+
