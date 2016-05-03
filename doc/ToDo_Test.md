@@ -2,13 +2,19 @@
 
 * Hammer test
     
-    setup redis
+    create ft for tst
+    create tst script
     build scriptor test command
+    remember module, function, title for each test
+    add diff test runner
+    list failing tests
     manage expected results
+    compare with expected results
     build approval command script
     enumerate tests
-    test commands (rt, ft, ut, pt)
- 
+    cache long tests
+    display test status as web page
+     
 * Functional test
 
     test groups: 
@@ -25,6 +31,8 @@
 * Page test
 
     capture pages: / /ToDo.md
-    compare page text with expected
+    compare page with expected text
+    compare page with expected HTML
+    setup page test as diff test
     
 

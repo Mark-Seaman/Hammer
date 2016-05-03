@@ -27,26 +27,7 @@
 
 ---
 
-# New Action Items
+# Action Items
 
-Project
-Hosting
-App
-Data
-Doc
-Script
-Test
-
-    streamline command script execution
-    Setup redis
-    Add diff test runner
-    improve stylesheet
-    create layout.html
-
-    build test infrastructure
-    save test records in app database
-    define data model
-    sort accomplishments into requirements lists
-    build project checklist
-
-
+build hammer tests
+create data script

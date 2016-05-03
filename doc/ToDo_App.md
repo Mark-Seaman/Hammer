@@ -9,12 +9,11 @@
     git ignore db.py
     db.py plug-in
 
-* Database
-
-    recreate database with new code
-
 * Views/URLs/Templates
 
+    improve stylesheet
+    create layout.html
+    select additional stylesheet
     select initial data type - note
     build routes
     build views

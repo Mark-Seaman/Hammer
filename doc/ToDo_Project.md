@@ -15,3 +15,6 @@
     standardize python setup
     manage pip libraries
     install with requirements.txt
+
+    build checklist for each functional area
+    
