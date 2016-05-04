@@ -1,0 +1,10 @@
+<h1>Tasks</h1>
+
+{% for t in object_list %}
+    <h2>{{ t.name }}</h2>
+    <ul>
+        <li>{{ t.id }}</li>
+        <li>{{ t.name }}</li>
+        <li>{{ t.date }}</li>
+    </ul>
+{% endfor %}
