@@ -101,7 +101,7 @@ class ServerTest(FunctionalTestCase):
         shell_command('x server command bin/remote_tests.py')
 
     def test_tst(self):
-        self.assertShell('x tst list', 3,4)
+        self.assertShell('x tst list', 3,7)
 
 
 class DocTest(FunctionalTestCase):
@@ -113,14 +113,14 @@ class DocTest(FunctionalTestCase):
         self.assertLines(shell_command('x doc length'), 17,25)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 750,850)
+        self.assertLines(shell_command('x doc read'), 850,900)
 
     def test_doc_help(self):
         self.assertLines(shell_command('x doc help'), 12,12)
 
     def test_todo_list(self):
         f = join(environ['p'], 'doc', 'ToDo.md')
-        self.assertLines(open(f).read(), 30,40)
+        self.assertLines(open(f).read(), 50,70)
 
     def test_data(self):
         f = join(environ['p'], 'data', 'dev-data.json')
