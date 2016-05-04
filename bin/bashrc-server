@@ -6,6 +6,8 @@ export p='/home/django/hammer'
 export rediskey='HAMMER'
 
 . $p/bin/bash-alias
+alias e='vi'
+
 
 # Path variable
 export PATH=\

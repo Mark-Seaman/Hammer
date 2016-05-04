@@ -1,6 +1,8 @@
 # To Do
+There are seven functional areas that must be developed in parallel to complete
+a software project.  Once the problems have been identified the progress can
+be tracked throughout the course.
 
-## Milestone:  Deployment 
 
 ---
 
@@ -27,7 +29,29 @@
 
 ---
 
-# Action Items
+## Next Objective
+Build a Task Master application for project planning
 
-build hammer tests
-create data script
+* Create initial data model
+    Django app
+    Django model
+    Tasks script
+* Create generic form input
+    List,Detail,Edit,New,Delete
+* Import/export
+    Save JSON
+    Load JSON
+    Export CSV
+    Import CSV
+* Beautify the views
+
+
+---
+
+## Action Items
+
+create master project plan
+merge stderr and stdout from process
+
+
+

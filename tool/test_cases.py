@@ -18,6 +18,10 @@ def files_test():
     return '\n'.join(file_tree_list(environ['p']))
 
 
+def functional_test():
+    return shell_command('functional_tests.py')
+
+
 #------------------------------------------------------------------------------------
 # Test Registry
 
@@ -25,6 +29,7 @@ test_cases = {
     'pip_test': pip_test,
     'version_test': version_test,
     'files_test': files_test,
+    'functional_test': functional_test,
 }
 
 

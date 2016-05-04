@@ -10,7 +10,6 @@ alias deploy='x server deploy'
 alias dj='cd $p && python ./manage.py'
 alias dl='x doc list'
 alias doc='x doc'
-alias e='vi'
 alias ft='python $p/bin/functional_tests.py'
 alias g='grep'
 alias gs='git status'
@@ -44,3 +43,8 @@ function d {
 function be {
     e $p/bin/${1/.py/}.py
 }
+
+function show {
+    e `which $1`
+}
+

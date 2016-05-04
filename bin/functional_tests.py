@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from os import environ
 from os.path import join
 from platform import node

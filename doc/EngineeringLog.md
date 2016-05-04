@@ -9,7 +9,24 @@ estimates.
 
 ## History
 
-**Total Investment - 59:00**
+5-3-2016 - 8 
+
+    run ft as diff test
+    plan out tasks application
+    
+
+**Total Investment - 67:00**
+
+5-3-2016 - 8 
+
+    update project plan and documents
+    build basic test runner
+    create database entries for diff tests
+    calculate test output differences from expected
+    show all failing test results
+    build data script for save, load, migrate
+    restructure command aliases 
+    approve current test output (using tlike)
 
 5-2-2016 - 8 
 
