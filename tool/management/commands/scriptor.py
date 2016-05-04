@@ -3,6 +3,7 @@ import traceback
 
 from tool.log import log_exception, log
 from tool.tst import tst_command
+from tasks.task import task_command
 
 
 class Command(BaseCommand):
@@ -18,6 +19,8 @@ class Command(BaseCommand):
             log('SCRIPTOR: %s %s' % (cmd,args))
             if cmd=='help':
                 self.help()
+            elif cmd=='task':
+                task_command(self, args)
             elif cmd=='tst':
                 tst_command(self, args)
             else:
@@ -34,6 +37,7 @@ class Command(BaseCommand):
             
             command:
                 help   # show command help
+                task   # work with tasks for user
                 tst    # perform diff testing
         ''')
 

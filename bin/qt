@@ -1,11 +1,14 @@
 #!/bin/bash
 # Run functional tests.  Execute all tests for system integration.
 
-# Simplify the 'x script tst' into 'x tst'
-#x script tst list
-#x script tst run
-#x script tst output
+# x task help
+x task add xxx
+x task add
+x task add yyy
+x task delete
 
-#x data save
-#x data count
-x data load
+x task get 5
+x task get 62
+x task edit 62 'Buy Milk'
+
+x task list

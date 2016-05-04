@@ -23,16 +23,16 @@ def execute_command(cmd,args):
         doc_command(args)
     elif cmd=='log':
         log_command(args)
-    elif cmd=='script':
-        system('python manage.py scriptor %s' % ' '.join(args))
     elif cmd=='server':
         server_command(args)
+    elif cmd=='task':
+        command_scriptor(cmd, args)
     elif cmd=='todo':
         todo_command(args)
     elif cmd=='tool':
         tool_command(args)
     elif cmd=='tst':
-        system('python manage.py scriptor %s %s' % (cmd, ' '.join(args)))
+        command_scriptor(cmd, args)
     elif cmd=='web':
         web_command(args)
 
@@ -56,9 +56,14 @@ def command_help(cmd,args):
             tst    # Run tests with expected results
             server # Manage server at Digital Ocean
 
-        Example: c server ip
+        Example: x server ip
+                 x doc list
+                 x tst run
         ''' % (cmd,args))
 
+
+def command_scriptor(cmd, args):
+    system('python manage.py scriptor %s %s' % (cmd, ' '.join(args)))
 
 
 if argv[1:]:
