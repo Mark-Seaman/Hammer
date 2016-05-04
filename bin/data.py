@@ -53,6 +53,7 @@ def data_load():
 def data_migrate():
     system ('''
         cd $p &&
+        python ./manage.py makemigrations
         python ./manage.py migrate
         ''')
 
