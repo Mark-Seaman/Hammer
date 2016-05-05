@@ -62,7 +62,7 @@ class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):
         files = file_tree_list(environ['p'])
-        self.assertBetween(len(files), 160,180)
+        self.assertBetween(len(files), 190,210)
 
     def test_system_hostname(self):
         host = node()
@@ -124,7 +124,7 @@ class DocTest(FunctionalTestCase):
 
     def test_data(self):
         f = join(environ['p'], 'data', 'dev-data.json')
-        self.assertLines(open(f).read(), 270,280)
+        self.assertLines(open(f).read(), 270,330)
 
 
 class AutomationTest(FunctionalTestCase):
@@ -148,7 +148,7 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x cmd help'), 12,12)
 
     def test_script_help(self):
-        self.assertLines(shell_command('x script help'), 9,12)
+        self.assertLines(shell_command('x script help'), 9,22)
 
 
 if __name__ == '__main__': 

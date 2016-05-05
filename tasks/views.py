@@ -1,6 +1,4 @@
-from django.views.generic import ListView
-
-# from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
 from tasks.models import Task
 
@@ -13,3 +11,14 @@ from tasks.models import Task
 class TaskList(ListView):
     model = Task
     template_name = 'task.html'
+
+
+#-----------------------------------------------------------------------------
+# Detail view
+
+# Basic detail view
+class TaskDetail(DetailView):
+
+
+    model = Task
+    template_name = 'task_detail.html'
