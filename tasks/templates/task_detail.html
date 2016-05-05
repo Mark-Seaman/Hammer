@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>Task Detail {{ task.pk }}</h2>
-<p>
-    Name: {{ task.name }}
-</p>
-<p>
-    ID: {{ task.pk }}
-</p>
-<p>
-    Date: {{ task.date }}
-</p>
-
-</body>
-</html>
+{% extends "task_layout.html" %}
 
 
+{% block content %}
 
+    <a href="/task/">Task List</a>
+    <hr>
+    <h1 class="task_page_title">Task Detail: {{ task.name }}</h1>
+    <div class="task_page">
+
+
+        <h2 class="task_name">{{ task.name }}</h2>
+        <ul>
+            <li class="task_attribute">{{ task.id }}</li>
+            <li class="task_attribute">Name: {{ task.name }}</li>
+            <li class="task_attribute">{{ task.date }}</li>
+            <li class="task_attribute"><a href="/task/{{ task.id }}/edit">Edit</a></li>
+            <li class="task_attribute"><a href="/task/{{ task.id }}/delete">Delete</a></li>
+
+        </ul>
+
+
+    </div>
+{% endblock %}

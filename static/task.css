@@ -1,0 +1,30 @@
+
+header a h1 {
+    color: green;
+}
+
+.task_page-title {
+    color: blue;
+    font-size: larger;
+}
+
+.task_name {
+    color: red;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.task_attribute {
+    color: blue;
+}
+
+.task_page{
+    text-align: left;
+}
+
+.task_item {
+    border: solid 2px green;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 20px;
+}
