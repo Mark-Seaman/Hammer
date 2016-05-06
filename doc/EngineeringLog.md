@@ -9,13 +9,28 @@ estimates.
 
 ## History
 
-5-3-2016 - 8 
+**Total Investment - 81:00**
 
-    run ft as diff test
-    plan out tasks application
-    
+5-5-2016 - 6
 
-**Total Investment - 67:00**
+    Implement task edit, add, and delete views
+    Add task list and details views
+    Debug setting of styles in CSS
+    Build tasks app in django
+    Debug edit, add, and delete views
+    Create reusable views
+    Full user experience for tasks
+    Build project planning tool (7x7 tricks)
+
+5-4-2016 - 8 
+
+    Create view to list the tasks
+    Build simplest possible view for tasks
+    Build task command script
+    Add tasks app to Hammer
+    Build functional test under tst
+    Extend application logic
+    Improve CSS logic
 
 5-3-2016 - 8 
 
@@ -27,6 +42,7 @@ estimates.
     build data script for save, load, migrate
     restructure command aliases 
     approve current test output (using tlike)
+    Develop data management scripts
 
 5-2-2016 - 8 
 
