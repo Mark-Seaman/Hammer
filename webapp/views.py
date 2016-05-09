@@ -24,6 +24,7 @@ class WebAppDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(WebAppDetail, self).get_context_data(**kwargs)
         context['title'] = "Web App Detail"
+        context['docs'] = [ 'Project', 'Hosting', 'App', 'Data', 'Doc', 'Script', 'Test' ]
         return context
 
 

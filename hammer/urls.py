@@ -20,14 +20,14 @@ from tool.views import home, doc
 import tasks.urls
 import webapp.urls
 
-from django.http import HttpResponse
-def home(request):
-    title = "World's Simplest App"
-    text = '''
-    This is the simplest Django app that is possible. All extra stuff has
-    been stripped out. Only essential code remains. .
-    '''
-    return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
+# from django.http import HttpResponse
+# def home(request):
+#     title = "World's Simplest App"
+#     text = '''
+#     This is the simplest Django app that is possible. All extra stuff has
+#     been stripped out. Only essential code remains. .
+#     '''
+#     return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
 
 
 urlpatterns = [
