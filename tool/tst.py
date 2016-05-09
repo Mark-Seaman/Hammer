@@ -75,6 +75,7 @@ def tst_results(self,args):
     tests = Test.objects.all()
     if tests:
         for t in tests:
+            #print('test ' + t.name)
             if t.output != t.expected:
                 self.stdout.write(banner(t.name))
                 diffs = differences(t.output, t.expected)

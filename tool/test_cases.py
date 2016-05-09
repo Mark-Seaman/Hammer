@@ -25,21 +25,21 @@ def webapp_test():
     return shell_command('x app list')
 
 def curl_test():
-    return shell_command('curl http://159.203.152.201/app')
+    return shell_command('curl -s http://159.203.152.201/app')
 
 #------------------------------------------------------------------------------------
 # Test Registry
 
 test_cases = {
-    'pip_test': pip_test,
-    'version_test': version_test,
-    'files_test': files_test,
-    'functional_test': functional_test,
-    'webapp_test':webapp_test,
-    'curl_test': curl_test,
+    'pip': pip_test,
+    'version': version_test,
+    'files': files_test,
+    'functional': functional_test,
+    'webapp':webapp_test,
+    'curl': curl_test,
 }
 
-
+#Test.objects.all().delete()
 for t in test_cases:
     if not Test.objects.filter(name=t):
         Test.objects.create(name=t)

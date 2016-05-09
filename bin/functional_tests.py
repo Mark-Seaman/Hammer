@@ -101,7 +101,7 @@ class ServerTest(FunctionalTestCase):
         shell_command('x server command bin/remote_tests.py')
 
     def test_tst(self):
-        self.assertShell('x tst list', 3,7)
+        self.assertShell('x tst list', 3,9)
 
 
 class DocTest(FunctionalTestCase):
@@ -142,7 +142,7 @@ class AutomationTest(FunctionalTestCase):
         self.assertLines(shell_command('x cmd length'), 4,15)
 
     def test_cmd_read(self):
-        self.assertLines(shell_command('x cmd read'), 900,1000)
+        self.assertLines(shell_command('x cmd read'), 900,1300)
 
     def test_cmd_help(self):
         self.assertLines(shell_command('x cmd help'), 12,12)
