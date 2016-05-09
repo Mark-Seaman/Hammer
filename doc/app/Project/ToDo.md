@@ -42,12 +42,12 @@ Done  5-9-2016
 * Data model & Database table
 * Create script for app
 * Create functional test
+* Create page test for app
+* Define app docs structure
+* Format from Markdown
 
 To Do
 
-* Create page test for app
-* Define app docs
-* Format from Markdown
 * Define user interaction
 * Create master project plan (built around 7 systems)
 

@@ -7,7 +7,7 @@ from webapp.models import WebApp
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from os.path import join, exists
+from os.path import join, exists, dirname
 from os import listdir
 from subprocess import Popen,PIPE
 
@@ -17,11 +17,15 @@ from tool.views import format_doc
 def doc(request, title):
     directory = join(BASE_DIR, 'doc')
     if exists(directory):
+        path = join(directory,'app',title)
+        docs = listdir(dirname(path))
         #text = 'Directory exists : %s' % ', '.join(listdir(directory))
-        text = format_doc(join(directory,'app',title))
+        text = format_doc(path)
     else:
+        docs = None
         text = 'Directory missing'
-    return render(request, 'doc.html', { 'title': title, 'text': text } )
+    data = { 'title': title, 'text': text, 'docs': docs }
+    return render(request, 'webapp_doc.html', data )
 
 
 

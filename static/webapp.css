@@ -21,6 +21,8 @@ header a h1 {
 
 .webapp_attribute {
     /*color: blue;*/
+    text-align: left;
+    margin: 0 1em 0 1em;
 }
 
 .webapp_page{
