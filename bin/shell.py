@@ -22,7 +22,7 @@ def file_tree_list(path):
     for root, dirnames, filenames in walk(path):
         if not '.git' in root: 
             for filename in filenames:
-                files.append(filename)
+                files.append(join(root, filename))
     return files
 
 

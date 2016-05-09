@@ -1,7 +1,7 @@
 from os import environ, listdir
 from os.path import join
 
-from shell import  file_path, file_list, line_count, read_file, shell_command
+from shell import  file_path, file_tree_list, line_count, read_file, shell_command
 from log import log
 
 def doc_command(options):
@@ -41,15 +41,19 @@ def doc_help():
 
         ''')
 
+def list_documents():
+    files = file_tree_list('doc')
+    files = [ f[4:] for f in files if f.endswith('.md') ]
+    return files
+
 
 def doc_list():
-    files = file_list('doc','.md')
-    for f in files:
+    for f in list_documents():
         print(f)
 
 
 def doc_length():
-    files = file_list('doc','.md')
+    files = list_documents()
     for f in files:
         fp = file_path('doc', f)
         print('%s : %d' % (f, line_count(fp)))
@@ -61,7 +65,7 @@ def doc_read(args):
         text = read_file (path)
         print(text)
     else:
-        files = file_list('doc','.md')
+        files = list_documents()
         for f in files:
             path = file_path('doc', f)
             text = read_file(path)

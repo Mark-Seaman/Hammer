@@ -45,6 +45,8 @@ Done  5-9-2016
 * Create page test for app
 * Define app docs structure
 * Format from Markdown
+* Create doc display
+* Move existing docs
 
 To Do
 
@@ -73,4 +75,5 @@ To Do
 
 merge stderr and stdout from process
 Create dj code for book
+
 
