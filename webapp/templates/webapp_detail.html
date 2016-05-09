@@ -17,10 +17,10 @@
             <li class="webapp_attribute"><a href="/app/{{ webapp.id }}/delete">Delete</a></li>
         </ul>
 
-        <h2 class="webapp_name">Documents</h2>
+        <h2 class="webapp_Docs">Documents</h2>
         <ul>
             {% for d in docs %}
-            <li class="webapp_attribute"><a href="/app/{{ d }}.md">{{ d }}</a></li>
+                <li class="webapp_attribute"><a href="/app/{{ d }}/{{ d }}.md">{{ d }}</a></li>
             {% endfor %}
         </ul>
 

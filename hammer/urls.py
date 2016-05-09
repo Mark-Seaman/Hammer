@@ -1,33 +1,11 @@
-"""Hammer URL Configuration
+# Hammer URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.9/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
 from django.conf.urls import url, include
 from django.contrib import admin
 
 from tool.views import home, doc
 import tasks.urls
 import webapp.urls
-
-# from django.http import HttpResponse
-# def home(request):
-#     title = "World's Simplest App"
-#     text = '''
-#     This is the simplest Django app that is possible. All extra stuff has
-#     been stripped out. Only essential code remains. .
-#     '''
-#     return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
 
 
 urlpatterns = [
