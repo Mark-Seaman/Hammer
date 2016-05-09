@@ -33,23 +33,22 @@ be tracked throughout the course.
 
 ### Create App Master code
 
-Done
+Done  5-9-2016
 
 * Create dj code for app
-
-To Do
-
 * Define URL (http://host/app/page)
 * Define home view
 * Create templates
-* Data model
-* Database table
+* Data model & Database table
+
+To Do
+
+* Create script for app
+* Create functional test
+* Create page test for app
 * Define app docs
 * Format from Markdown
 * Define user interaction
-* Create page test for app
-* Create script for app
-* Create functional test
 * Create master project plan (built around 7 systems)
 
 ### Build a Task Master application for project planning
@@ -74,3 +73,4 @@ To Do
 
 merge stderr and stdout from process
 Create dj code for book
+

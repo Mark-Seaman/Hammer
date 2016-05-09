@@ -15,7 +15,9 @@ from web import web_command
 
 
 def execute_command(cmd,args):
-    if cmd=='cmd':
+    if cmd=='app':
+        command_scriptor(cmd, args)
+    elif cmd=='cmd':
         cmd_command(args)
     elif cmd=='data':
         data_command(args)

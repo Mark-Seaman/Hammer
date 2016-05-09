@@ -21,6 +21,9 @@ def files_test():
 def functional_test():
     return shell_command('functional_tests.py')
 
+def webapp_test():
+    return shell_command('x app list')
+
 
 #------------------------------------------------------------------------------------
 # Test Registry
@@ -30,6 +33,7 @@ test_cases = {
     'version_test': version_test,
     'files_test': files_test,
     'functional_test': functional_test,
+    'webapp_test':webapp_test,
 }
 
 

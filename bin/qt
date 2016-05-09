@@ -1,14 +1,22 @@
 #!/bin/bash
 # Run functional tests.  Execute all tests for system integration.
 
-# x task help
-x task add xxx
-x task add
-x task add yyy
-x task delete
+# # x task help
+# x task add xxx
+# x task add
+# x task add yyy
+# x task delete
 
-x task get 5
-x task get 62
-x task edit 62 'Buy Milk'
+# x task get 5
+# x task get 62
+# x task edit 62 'Buy Milk'
 
-x task list
+# x task list
+
+x app add 'Test Master'
+x app get 21
+x app edit 21 'Dummy Object'
+x app delete 21
+x app list
+
+#x log

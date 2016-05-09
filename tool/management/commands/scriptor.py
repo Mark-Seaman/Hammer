@@ -4,6 +4,7 @@ import traceback
 from tool.log import log_exception, log
 from tool.tst import tst_command
 from tasks.task import task_command
+from webapp.app import webapp_command
 
 
 class Command(BaseCommand):
@@ -17,7 +18,9 @@ class Command(BaseCommand):
             cmd = options['script'][0]
             args = options['script'][1:]
             log('SCRIPTOR: %s %s' % (cmd,args))
-            if cmd=='help':
+            if cmd=='app':
+                webapp_command(self,args)
+            elif cmd=='help':
                 self.help()
             elif cmd=='task':
                 task_command(self, args)
