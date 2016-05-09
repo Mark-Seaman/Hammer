@@ -17,12 +17,23 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from tool.views import home, doc
-import  tasks.urls
+import tasks.urls
+import webapp.urls
+
+from django.http import HttpResponse
+def home(request):
+    title = "World's Simplest App"
+    text = '''
+    This is the simplest Django app that is possible. All extra stuff has
+    been stripped out. Only essential code remains. .
+    '''
+    return HttpResponse("<h1>%s</h1><p>%s</p>" % (title,text))
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^task/', include(tasks.urls)),
+    url(r'^app/', include(webapp.urls)),
     url(r'^$', home),
     url(r'^(?P<title>[\w\/\-_./]+)',    doc),
 ]

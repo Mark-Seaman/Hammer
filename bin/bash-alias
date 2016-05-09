@@ -16,7 +16,7 @@ alias gs='git status'
 alias h='history|tail -40'
 alias hammer=". $p/bin/bashrc"
 alias home='. ~/.bashrc'
-alias l='ls -al --color=auto'
+alias l='ls -al'
 alias le='less'
 alias ll='ls -l'
 alias log='x log'

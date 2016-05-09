@@ -1,0 +1,24 @@
+{% extends "webapp_layout.html" %}
+
+
+{% block content %}
+
+    <a href="/app/">webapp List</a>
+    <hr>
+    <h1 class="webapp_page_title">Applications Detail: {{ webapp.name }}</h1>
+    <div class="webapp_page">
+
+
+        <h2 class="webapp_name">{{ webapp.name }}</h2>
+        <ul>
+            <li class="webapp_attribute">{{ webapp.id }}</li>
+            <li class="webapp_attribute">Name: {{ webapp.name }}</li>
+            <li class="webapp_attribute">{{ webapp.date }}</li>
+            <li class="webapp_attribute"><a href="/app/{{ webapp.id }}/edit">Edit</a></li>
+            <li class="webapp_attribute"><a href="/app/{{ webapp.id }}/delete">Delete</a></li>
+
+        </ul>
+
+
+    </div>
+{% endblock %}

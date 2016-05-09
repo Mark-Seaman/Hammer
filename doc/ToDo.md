@@ -30,7 +30,29 @@ be tracked throughout the course.
 ---
 
 ## Next Objective
-Build a Task Master application for project planning
+
+### Create App Master code
+
+Done
+
+* Create dj code for app
+
+To Do
+
+* Define URL (http://host/app/page)
+* Define home view
+* Create templates
+* Data model
+* Database table
+* Define app docs
+* Format from Markdown
+* Define user interaction
+* Create page test for app
+* Create script for app
+* Create functional test
+* Create master project plan (built around 7 systems)
+
+### Build a Task Master application for project planning
 
 * Create initial data model
     Django app
@@ -50,9 +72,5 @@ Build a Task Master application for project planning
 
 ## Action Items
 
-create master project plan
 merge stderr and stdout from process
-
-
-
-
+Create dj code for book

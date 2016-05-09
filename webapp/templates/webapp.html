@@ -1,0 +1,28 @@
+{% extends "webapp_layout.html" %}
+
+
+{% block content %}
+
+    <a href="/app/add">Add webapp</a>
+
+    <h1 class="webapp_page_title">{{ title }}</h1>
+
+    <div class="webapp_page">
+
+        <table>
+            {% for t in object_list %}
+
+            <tr>
+                <h2><a class="webapp_name" href="/app/{{ t.pk }}">{{ t.name }}</a></h2>
+                
+                <td class="webapp_attribute">{{ t.id }}</td>
+                <td class="webapp_attribute"><a href="/app/{{ t.id }}">{{ t.name }}</a></td>
+                <td class="webapp_attribute">{{ t.date }}</td>
+                <td class="webapp_attribute"><a href="/app/{{ t.id }}/edit">Edit</a></td>
+            </tr>
+
+            {% endfor %}
+        </table>
+
+    </div>
+{% endblock %}
