@@ -82,9 +82,11 @@ def server_copy():
     print('copy to remote (%s)' % cmd)
     print(shell_command(cmd))
 
+
 def server_deploy():
     print('remote pull')
     server_remote_command(['git pull'])
+    server_restart()
 
 
 def server_ip():
