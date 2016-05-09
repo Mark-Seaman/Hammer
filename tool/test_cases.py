@@ -24,6 +24,8 @@ def functional_test():
 def webapp_test():
     return shell_command('x app list')
 
+def curl_test():
+    return shell_command('curl http://159.203.152.201/app')
 
 #------------------------------------------------------------------------------------
 # Test Registry
@@ -34,6 +36,7 @@ test_cases = {
     'files_test': files_test,
     'functional_test': functional_test,
     'webapp_test':webapp_test,
+    'curl_test': curl_test,
 }
 
 

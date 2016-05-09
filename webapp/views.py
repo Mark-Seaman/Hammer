@@ -22,7 +22,7 @@ class WebAppDetail(DetailView):
     template_name = 'webapp_detail.html'
     
     def get_context_data(self, **kwargs):
-        context = super(WebAppList, self).get_context_data(**kwargs)
+        context = super(WebAppDetail, self).get_context_data(**kwargs)
         context['title'] = "Web App Detail"
         return context
 
@@ -35,7 +35,7 @@ class WebAppCreate(CreateView):
     success_url = reverse_lazy('webapp_list')
 
     def get_context_data(self, **kwargs):
-        context = super(WebAppList, self).get_context_data(**kwargs)
+        context = super(WebAppCreate, self).get_context_data(**kwargs)
         context['title'] = "Add New Web App"
         return context
 
@@ -48,7 +48,7 @@ class WebAppUpdate(UpdateView):
     success_url = reverse_lazy('webapp_list')
 
     def get_context_data(self, **kwargs):
-        context = super(WebAppList, self).get_context_data(**kwargs)
+        context = super(WebAppUpdate, self).get_context_data(**kwargs)
         context['title'] = "Edit Web App Info"
         return context
 
@@ -59,7 +59,7 @@ class WebAppDelete(DeleteView):
     template_name = 'webapp_delete.html'
 
     def get_context_data(self, **kwargs):
-        context = super(WebAppList, self).get_context_data(**kwargs)
+        context = super(WebAppDelete, self).get_context_data(**kwargs)
         context['title'] = "Delete Web App"
         return context
 

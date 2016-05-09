@@ -40,11 +40,11 @@ Done  5-9-2016
 * Define home view
 * Create templates
 * Data model & Database table
+* Create script for app
+* Create functional test
 
 To Do
 
-* Create script for app
-* Create functional test
 * Create page test for app
 * Define app docs
 * Format from Markdown
