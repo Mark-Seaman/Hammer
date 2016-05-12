@@ -47,11 +47,11 @@ Done  5-9-2016
 * Format from Markdown
 * Create doc display
 * Move existing docs
+* Define user interaction
+* Create master project plan (built around 7 systems)
 
 To Do
 
-* Define user interaction
-* Create master project plan (built around 7 systems)
 
 ### Build a Task Master application for project planning
 
@@ -75,5 +75,6 @@ To Do
 
 merge stderr and stdout from process
 Create dj code for book
+
 
 

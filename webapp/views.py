@@ -15,7 +15,7 @@ from hammer.settings import BASE_DIR
 from tool.views import format_doc
 
 def doc(request, title):
-    directory = join(BASE_DIR, 'doc')
+    directory = join(BASE_DIR, 'Documents')
     if exists(directory):
         path = join(directory,'app',title)
         docs = listdir(dirname(path))
