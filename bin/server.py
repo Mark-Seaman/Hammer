@@ -52,7 +52,7 @@ def server_help():
             control  # Bring up the remote control panel
             copy     # Copy the django code to the server
             deploy   # Deploy code to the remote server
-            help     # Show the doc commands
+            help     # Show the Documents commands
             ip       # Show the IP address of the server
             restart  # Restart the remote server
             restore  # Bring back the old files to the server

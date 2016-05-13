@@ -32,10 +32,10 @@ def cmd_help():
 
         command:
             edit     # Edit a specific document file
-            help     # Show the doc commands
-            list     # List the available documents
-            length   # Measure the lines in each documents
-            read     # Show the text from all documents
+            help     # Show the commands
+            list     # List the available commands
+            length   # Measure the lines in each doc
+            read     # Show the text from all document
 
         ''')
 

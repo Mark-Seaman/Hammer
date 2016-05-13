@@ -23,7 +23,7 @@ def format_doc(f):
 
 
 def file_list():
-    directory = join(BASE_DIR, 'doc')
+    directory = join(BASE_DIR, 'Documents')
     if exists(directory):
         return listdir(directory)
 
@@ -38,7 +38,7 @@ def home(request):
 
 
 def doc(request, title):
-    directory = join(BASE_DIR, 'doc')
+    directory = join(BASE_DIR, 'Documents')
     if exists(directory):
         #text = 'Directory exists : %s' % ', '.join(listdir(directory))
         text = format_doc(join(directory,title))

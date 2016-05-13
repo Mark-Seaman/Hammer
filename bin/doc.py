@@ -8,7 +8,7 @@ def doc_command(options):
     '''
     Execute a command script from scriptor.  Parse off command and args and dispatch it.
     '''
-    log('doc command %s' % options)
+    log('Documents command %s' % options)
     doc = options[0]
     args = options[1:]
     if doc=='edit':
@@ -24,17 +24,17 @@ def doc_command(options):
 
 
 def doc_edit(args):
-    path = file_path('doc', args[0]+'.md')
+    path = file_path('Documents', args[0]+'.md')
     print(shell_command('e %s' % path))
     
 
 def doc_help():
     print('''
-        usage: x doc command
+        usage: x Documents command
 
         command:
             edit     # Edit a specific document file
-            help     # Show the doc commands
+            help     # Show the Documents commands
             list     # List the available documents
             length   # Measure the lines in each documents
             read     # Show the text from all documents
@@ -42,7 +42,7 @@ def doc_help():
         ''')
 
 def list_documents():
-    files = file_tree_list('doc')
+    files = file_tree_list('Documents')
     files = [ f[4:] for f in files if f.endswith('.md') ]
     return files
 
@@ -55,19 +55,19 @@ def doc_list():
 def doc_length():
     files = list_documents()
     for f in files:
-        fp = file_path('doc', f)
+        fp = file_path('Documents', f)
         print('%s : %d' % (f, line_count(fp)))
 
 
 def doc_read(args):
     if args:
-        path = file_path('doc', args[0]+'.md')
+        path = file_path('Documents', args[0]+'.md')
         text = read_file (path)
         print(text)
     else:
         files = list_documents()
         for f in files:
-            path = file_path('doc', f)
+            path = file_path('Documents', f)
             text = read_file(path)
             print(text)
 

@@ -31,7 +31,7 @@ def tool_help(self):
 
         command:
             edit     # Edit a specific document file
-            help     # Show the doc commands
+            help     # Show the Documents commands
             list     # List the available documents
             length   # Measure the lines in each documents
             read     # Show the text from all documents

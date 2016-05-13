@@ -11,7 +11,7 @@ def todo_command(options):
     print('To Do List: ' + text)
 
     # Append to file
-    f = join(environ['p'], 'doc', 'app', 'Project', 'ToDo.md')
+    f = join(environ['p'], 'Documents', 'app', 'Project', 'ToDo.md')
     open(f, 'a').write(text+'\n')
 
     # Show the items
