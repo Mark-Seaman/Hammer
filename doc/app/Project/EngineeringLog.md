@@ -9,7 +9,48 @@ estimates.
 
 ## History
 
-**Total Investment - 81:00**
+**Total Investment - 111:00**
+
+
+Fri, 05-13 - 6
+
+    build notes for Hammer Core
+    build notes for Hammer Extension Apps
+    debug MyBook Apps
+
+Thu, 05-12 - 8
+
+    create new git project
+    create clone of Hammer for MyBook
+    move in old code from existing MyBook project
+    create project context
+    successful deployment to Digital Ocean
+    debugging of pandoc path
+    simplified MyBook business logic
+    debugging on new business logic
+    move across MyBook stylesheet
+
+Wed, 05-11 - 8
+
+    theme & fonts for PyCharm
+    update deployment of MyBook
+    save current data
+    destroy DB
+    upgrade MyBook online to Django 1.9.4
+    rebuild tables
+    test & debug application settings
+    debug Gunicorn configuration
+    test deployment
+
+Mon, 05-09 - 8
+
+    create App Master web app
+    create initial doc content files for App Master
+    build out application structure
+    5-views: list, detail, add, edit, delete
+    clone generic app structure
+    plug in custom CSS
+    investigate setup of CSS logic
 
 5-5-2016 - 6
 

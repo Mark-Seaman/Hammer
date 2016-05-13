@@ -1,27 +1,37 @@
-## 3. App
+# Hammer Core - App
 
-* Django app structure
+## Django App Structure of Source Code
+        
+Django Directory Structure
 
-    decide on plug-in dj-apps (thot, tasks, docs, notes, time)
+* Remove webapp Django app
+* Rename Documents directory from doc
+* Add second theme set
 
-* Setting management
 
-    git ignore db.py
-    db.py plug-in
+Django Source code files
 
-* Views/URLs/Templates
+* Consolidate Documents files
+* Review app source code 
+        
 
-    improve stylesheet
-    create layout.html
-    select additional stylesheet
-    select initial data type - note
-    build routes
-    build views
-    import bootstrap
-    base layout
+## Settings management
 
-* Data models
+* Test database connection file db.py
 
-    note - model code
-    form input for editing
 
+## Views/URLs/Templates
+
+* Improve stylesheet look & feel
+* Create layout.html
+* Select additional stylesheet
+* Select initial data type - note
+* Import bootstrap
+* Base layout
+* Configure Angular JS
+
+
+## Data models
+
+* Build out tasks data type
+* Capture general form input for editing data models
