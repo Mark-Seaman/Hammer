@@ -1,6 +1,8 @@
 body * {
     font-size: 14pt;
     font-family: Candara, Arial, sans-serif;
+    text-transform: none;
+    text-align: left;
 }
 
 h1 {
@@ -25,6 +27,7 @@ h3 {
 
 p {
     margin:  0em 2em 0em 2em;
+    text-transform: none;
 }
 
 li {
@@ -33,4 +36,10 @@ li {
 
 pre {
     margin:  0em 2em 0em 2em;
+}
+
+.doc {
+    color: red;
+    text-align: left;
+    text-transform: none;
 }
