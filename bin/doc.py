@@ -43,7 +43,7 @@ def doc_help():
 
 def list_documents():
     files = file_tree_list('Documents')
-    files = [ f[4:] for f in files if f.endswith('.md') ]
+    files = [ f[10:] for f in files if f.endswith('.md') ]
     return files
 
 

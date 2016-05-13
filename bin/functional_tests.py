@@ -113,7 +113,7 @@ class DocTest(FunctionalTestCase):
         self.assertLines(shell_command('x doc length'), 17,30)
 
     def test_doc_read(self):
-        self.assertLines(shell_command('x doc read'), 850,940)
+        self.assertLines(shell_command('x doc read'), 1200,1300)
 
     def test_doc_help(self):
         self.assertLines(shell_command('x doc help'), 12,12)
