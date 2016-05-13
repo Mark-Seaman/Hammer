@@ -21,7 +21,7 @@ def execute_command(cmd,args):
         cmd_command(args)
     elif cmd=='data':
         data_command(args)
-    elif cmd=='Documents':
+    elif cmd=='doc':
         doc_command(args)
     elif cmd=='log':
         log_command(args)
@@ -51,7 +51,7 @@ def command_help(cmd,args):
         cmd
 
             cmd    # Manage command scripts
-            Documents    # Manage project documents
+            doc    # Manage project documents
             log    # Manage logs
             todo   # To do list command
             tool   # Manage django tool scripts
@@ -59,7 +59,7 @@ def command_help(cmd,args):
             server # Manage server at Digital Ocean
 
         Example: x server ip
-                 x Documents list
+                 x doc list
                  x tst run
         ''' % (cmd,args))
 
