@@ -13,5 +13,5 @@ urlpatterns = [
     url(r'^task/', include(tasks.urls)),
     url(r'^app/', include(webapp.urls)),
     url(r'^$', home),
-    url(r'^(?P<title>[\w\/\-_./]+)',    doc),
+    url(r'^(?P<title>[\w/\-_.]+)',    doc),
 ]

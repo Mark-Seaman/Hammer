@@ -5,30 +5,6 @@ from django.core.urlresolvers import reverse_lazy
 from webapp.models import WebApp
 
 
-from django.shortcuts import render
-from django.http import HttpResponse
-from os.path import join, exists, dirname
-from os import listdir
-from subprocess import Popen,PIPE
-
-from hammer.settings import BASE_DIR
-#from tool.views import format_doc
-
-# def doc(request, title):
-#     directory = join(BASE_DIR, 'Documents')
-#     if exists(directory):
-#         path = join(directory,'app',title)
-#         docs = listdir(dirname(path))
-#         #text = 'Directory exists : %s' % ', '.join(listdir(directory))
-#         text = format_doc(path)
-#     else:
-#         docs = None
-#         text = 'Directory missing'
-#     data = { 'title': title, 'text': text, 'docs': docs }
-#     return render(request, 'webapp_doc.html', data )
-#
-
-
 # List view:  Basic list view with using a template
 class WebAppList(ListView):
     model = WebApp
