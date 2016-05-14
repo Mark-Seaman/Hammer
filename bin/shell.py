@@ -69,7 +69,7 @@ def banner(name):
 
 def shell_command(cmd):
     '''Execute a shell command and return stdout'''
-    return Popen(cmd.split(), stdout=PIPE).stdout.read()
+    return Popen(cmd.split(), stdout=PIPE).stdout.read().decode('utf-8')
 
 
 def shell_command_script(cmd):

@@ -30,7 +30,7 @@ class Command(BaseCommand):
                 self.stdout.write('**Scriptor Error**: unknown command %s' % options['script'])
                 self.help()
         except:
-            log_exception(self)
+            log_exception()
             self.stdout.write('**Scriptor Exception**:  %s' % traceback.format_exc())
 
     def help(self):

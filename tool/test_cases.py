@@ -25,7 +25,7 @@ def webapp_test():
     return shell_command('x app list')
 
 def curl_test():
-    return shell_command('curl -s http://159.203.152.201/app')
+    return shell_command('curl -s http://159.203.152.201/app/App/App')
 
 #------------------------------------------------------------------------------------
 # Test Registry
