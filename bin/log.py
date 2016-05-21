@@ -3,7 +3,7 @@ from os.path import join
 
 
 def log_path():
-    return join(environ['p'],'log','hammer.log')
+    return join(environ['pa'],'log','hammer.log')
 
 
 def log_command(options):
