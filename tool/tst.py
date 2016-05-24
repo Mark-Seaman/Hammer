@@ -25,7 +25,9 @@ def tst_command(self,args):
             tst_results(self,args)
         else:
             self.stdout.write("usage: x script tst [ like | list | output | results | run ]")
-
+    else:
+        tst_run(self,args)
+        tst_results(self,args)
 
 def tst_run(self,args):
     self.stdout.write("running tests ...")

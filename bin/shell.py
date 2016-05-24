@@ -4,6 +4,13 @@ from platform import node
 from subprocess import Popen,PIPE
 
 
+def shell_lines(cmd, min=0, max=10):
+    lines = shell_command(cmd).split('\n')
+    if len(lines) < min or len(lines)> max:
+        message = '%s is %d (should be between %d and %d'
+        return (message % (cmd, len(lines), min, max))
+
+
 def read_file(path):
     '''Read a file and return the text'''
     if not exists(path):
@@ -69,7 +76,11 @@ def banner(name):
 
 def shell_command(cmd):
     '''Execute a shell command and return stdout'''
-    return Popen(cmd.split(), stdout=PIPE).stdout.read().decode('utf-8')
+    text = Popen(cmd.split(), stdout=PIPE).stdout.read()
+    text = str(text)
+    #text = unicode(text)
+    text.decode('utf-8', 'ignore')
+    return text 
 
 
 def shell_command_script(cmd):

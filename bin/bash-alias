@@ -33,6 +33,7 @@ alias todo='x todo'
 alias tout='x tst output'
 alias tres='x tst results'
 alias trun='x tst run'
+alias tst='x tst run'
 alias u='cd ..'
 alias web='x web'
 
