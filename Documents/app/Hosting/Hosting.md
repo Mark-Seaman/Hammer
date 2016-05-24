@@ -21,7 +21,7 @@ and recipes for creating a simple Django app.
         Django 14.04 in One-click Apps
         Size $5  - 512 MB Memory / 20 GB Disk / NYC3
         Add SSH Keys
-        Hostname "Women2Women" ("W2W-Staging")
+        Hostname "Hammer" ("W2W-Staging")
 
     Networking:
 

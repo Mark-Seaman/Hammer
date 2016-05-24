@@ -51,12 +51,6 @@ class PythonTest(FunctionalTestCase):
         expected = environ['HOME']+'/Tools/env-python27/bin/python\n'
         self.assertEqual(output,expected)
 
-    def test_pip_list(self):
-        path = join(environ['p'],'bin','pip-list')
-        expected = read_file(path)
-        output = shell_command('pip list')
-        self.assertEqual(output, expected)
-
 
 class SystemTest(FunctionalTestCase):
 
