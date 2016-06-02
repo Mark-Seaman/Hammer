@@ -3,6 +3,11 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 
 from webapp.models import WebApp
+from tool.views import doc
+
+
+def webapp_doc(request,title):
+    return doc(request, 'app/'+title)
 
 
 # List view:  Basic list view with using a template

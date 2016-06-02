@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from webapp.views import WebAppList, WebAppDetail, WebAppCreate, WebAppUpdate, WebAppDelete
-#from webapp.views import doc
+from webapp.views import webapp_doc
 
 urlpatterns = [
 
@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'(?P<pk>\d+)/delete$', WebAppDelete.as_view(), name='webapp_delete'),
 
     # # Document view
-    # url(r'^(?P<title>[\w\/\-_./]+)',    doc),
+    url(r'^(?P<title>[\w\/\-_./]+)',    webapp_doc),
 ]

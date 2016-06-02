@@ -7,14 +7,17 @@
 
     <div class="dir">
         <ul>
+
             <li>
-                <a href="/{{ dir }}">{{ dir }}</a>
+                <a href="/{{ dir }}">{{ dir }}/</a>
             </li>
+
             {% for f in files %}
                 <li>
                     <a href="/{{ dir }}/{{ f }}">{{ f }}</a>
                 </li>
             {% endfor %}
+
         </ul>
     </div>
 
