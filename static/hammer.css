@@ -1,6 +1,6 @@
 body * {
     font-size: 14pt;
-    font-family: Candara, Arial, sans-serif;
+    font-family: Ubuntu, Arial, sans-serif;
     text-transform: none;
     text-align: left;
 }
@@ -38,8 +38,13 @@ pre {
     margin:  0em 2em 0em 2em;
 }
 
+.dir {
+    background-color: #c8cccf;
+    border: solid 1px black;
+}
+
 .doc {
-    color: red;
+    color: green;
     text-align: left;
     text-transform: none;
 }

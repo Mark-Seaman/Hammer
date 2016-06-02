@@ -5,12 +5,17 @@
 
     <h1>{{ title }}</h1>
 
-    <ul>
-        {% for f in files %}
-             <li>
-                <a href="/{{ f }}">{{ f }}</a>
-             </li>
-        {% endfor %}
-    </ul>
+    <div class="dir">
+        <ul>
+            <li>
+                <a href="/{{ dir }}">{{ dir }}</a>
+            </li>
+            {% for f in files %}
+                <li>
+                    <a href="/{{ dir }}/{{ f }}">{{ f }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 
 {% endblock %}
