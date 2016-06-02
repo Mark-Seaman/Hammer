@@ -15,18 +15,20 @@
 
     <!-- Identity Style -->
     {% load static %}
+
     <!--  -->
     <link rel="stylesheet" href="{% static "identity/assets/css/main.css" %}"/>
     <noscript>
         <link rel="stylesheet" href="identity/assets/css/noscript.css"/>
     </noscript>
 
+    <link  href="{% static hammer.css %}" rel="stylesheet" />
     <link rel="stylesheet" href="{% static "task.css" %}"/>
 
 
-    <!-- <link  href="{{STATIC_URL}}/hammer.css" rel="stylesheet" /> -->
+    <!--  -->
 
-    <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="{% static favicon.ico %}"/>
     <title>{{ title }}</title>
 
 </head>
