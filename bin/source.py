@@ -1,3 +1,6 @@
+from os import environ
+from os.path import join
+
 from log import log
 from shell import file_tree_list
 
@@ -12,7 +15,9 @@ def source_command(options):
     else:
         cmd = options[0]
         args = options[1:]
-        if cmd=='list':
+        if cmd=='diff':
+            source_diff(args)
+        elif cmd=='list':
             source_list(args)
         else:
             source_help()
@@ -34,5 +39,32 @@ def source_help():
 
 
 def source_list(args):
-    print('source list', args)
-    print(file_tree_list('bin')
+
+    def collect_files(files, base, directory=None, filetype=None):
+        return set(file_tree_list(join(base, directory), filetype))
+
+    def relative_paths(base,files):
+        return [f.replace(base+'/','') for f in sorted(files)]
+
+    if args:
+        base = args[0]
+    else:
+        base = environ['p']+'/'
+
+    files = set()
+    files |= collect_files(files, base, 'bin')
+    files |= collect_files(files, base, '', '.py')
+    files |= collect_files(files, base, '', '.html')
+    files |= collect_files(files, base, '', '.css')
+    files = [x for x in files if not x.endswith('.pyc')]
+
+    for f in relative_paths(base, files):
+        print(f)
+
+    print('%d files ' % len(files))
+
+
+def source_diff(args):
+    print('source diff ', args)
+
+

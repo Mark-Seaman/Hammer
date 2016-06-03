@@ -6,6 +6,10 @@ from tool.models import Test
 #------------------------------------------------------------------------------------
 # Test Cases
 
+
+def curl_test():
+    return shell_command('curl -s http://159.203.152.201/app/App/App')
+
 def doc_test():
     return shell_command('x doc list')
 
@@ -24,27 +28,24 @@ def files_test():
 def functional_test():
     return shell_command('functional_tests.py')
 
-def webapp_test():
-    return shell_command('x app list')
+def source_test():
+    return shell_command('x source list /Users/markseaman/Projects/MyBook')
 
-def curl_test():
-    return shell_command('curl -s http://159.203.152.201/app/App/App')
 
 #------------------------------------------------------------------------------------
 # Test Registry
 
 test_cases = {
+    'curl': curl_test,
     'doc': doc_test,
     'doc-read': doc_read_test,
-    'pip': pip_test,
-    'version': version_test,
     'files': files_test,
     'functional': functional_test,
-    #'webapp':webapp_test,
-    'curl': curl_test,
+    'pip': pip_test,
+    'source': source_test,
+    'version': version_test,
 }
 
-#Test.objects.all().delete()
 for t in test_cases:
     if not Test.objects.filter(name=t):
         Test.objects.create(name=t)
