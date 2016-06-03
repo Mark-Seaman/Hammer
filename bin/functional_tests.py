@@ -39,19 +39,6 @@ class SmokeTest(TestCase):
         self.assertEqual(1 + 1, 2)
 
 
-class PythonTest(FunctionalTestCase):
-
-    def test_python_version(self):
-        from sys import version_info
-        expected = "sys.version_info(major=2, minor=7, micro="
-        self.assertIn(expected, str(version_info))
-
-    def test_virtual_env(self):
-        output = shell_command ('which python')
-        expected = environ['HOME']+'/Tools/env-python27/bin/python\n'
-        self.assertEqual(output,expected)
-
-
 class SystemTest(FunctionalTestCase):
 
     def test_file_count(self):

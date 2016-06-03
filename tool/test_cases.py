@@ -31,6 +31,9 @@ def functional_test():
 def source_test():
     return shell_command('x source list /Users/markseaman/Projects/MyBook')
 
+def virtual_env_test():
+    return shell_command ('which python')
+
 
 #------------------------------------------------------------------------------------
 # Test Registry
@@ -44,6 +47,7 @@ test_cases = {
     'pip': pip_test,
     'source': source_test,
     'version': version_test,
+    'virtualenv': virtual_env_test,
 }
 
 for t in test_cases:
