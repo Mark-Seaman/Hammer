@@ -10,6 +10,7 @@ from tool import tool_command
 from log import log_command
 from doc import doc_command
 from server import server_command
+from source import source_command
 from todo import todo_command
 from web import web_command
 
@@ -27,6 +28,8 @@ def execute_command(cmd,args):
         log_command(args)
     elif cmd=='server':
         server_command(args)
+    elif cmd=='source':
+        source_command(args)
     elif cmd=='task':
         command_scriptor(cmd, args)
     elif cmd=='todo':

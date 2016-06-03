@@ -46,5 +46,5 @@ pre {
 .doc {
     color: green;
     text-align: left;
-    text-transform: none;
+    /*text-transform: none;*/
 }

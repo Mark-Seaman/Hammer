@@ -14,7 +14,11 @@
 
             {% for f in files %}
                 <li>
+                {% if dir %}
                     <a href="/{{ dir }}/{{ f }}">{{ f }}</a>
+                {% else %}
+                     <a href="/{{ f }}">{{ f }}</a>
+                {% endif %}
                 </li>
             {% endfor %}
 

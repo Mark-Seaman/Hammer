@@ -2,10 +2,14 @@
 
 ## Objectives
 
+* Script to compare project code
+* Finish conversion of functional tests
 * Create list of key projects for Hammer Core
 * Create list of Hammer Vertical Apps
 * Create page.py automation script
 * Create webtst.py
 * Templates to show theme specific logic blocks
 * Standard page navigation
+* Build task management system
+
 

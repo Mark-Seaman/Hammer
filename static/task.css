@@ -11,7 +11,7 @@ header a h1 {
 .task_name {
     color: red;
     font-weight: 900;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 .task_attribute {
