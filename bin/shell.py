@@ -23,13 +23,13 @@ def line_count(path):
     return len(read_file(path).split('\n'))
 
 
-def file_tree_list(path, suffix=None):
+def file_tree_list(path, filetype=None):
     '''Return a list of files in the directory tree'''
     files = []
     for root, dirnames, filenames in walk(path):
         if not '.git' in root: 
             for filename in filenames:
-                if not suffix or filename.endswith(suffix):
+                if not filetype or filename.endswith(filetype):
                     files.append(join(root, filename))
     return files
 

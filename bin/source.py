@@ -1,4 +1,5 @@
 from log import log
+from shell import file_tree_list
 
 
 def source_command(options):
@@ -34,3 +35,4 @@ def source_help():
 
 def source_list(args):
     print('source list', args)
+    print(file_tree_list('bin')
