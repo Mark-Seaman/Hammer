@@ -18,10 +18,6 @@ def doc_read_test():
     return shell_lines('x doc read ToDo',55,55)
 
 
-def doc_status_test():
-    return shell('x doc status')
-
-
 def doc_summary_test():
     return shell('x doc summary')
 
