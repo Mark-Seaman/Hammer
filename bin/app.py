@@ -52,9 +52,9 @@ def list_files():
 def run_server():
     system('''
             cd $p;
-            rbg python manage.py runserver %s;
-            sleep 2
-            # echo x web http://127.0.0.1:%s/;
+            echo python manage.py runserver %s;
+            echo sleep 2
+            echo x web http://127.0.0.1:%s/;
            ''' % (APP_PORT, APP_PORT))
 
 

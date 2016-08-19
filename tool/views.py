@@ -5,7 +5,6 @@ from os.path import join, exists
 from bin.doc import doc_redirect, doc_random_select
 from hammer.settings import BASE_DIR
 from log import log
-from tasks.models import Task
 from tool.document import doc_text
 from tool.domain import domain_directory
 

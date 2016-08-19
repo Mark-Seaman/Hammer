@@ -1,0 +1,318 @@
+[
+    {
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "app_label": "tool",
+            "model": "test"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "app_label": "tasks",
+            "model": "task"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "expected": "amqp (1.4.9)\nanyjson (0.3.3)\nappnope (0.1.0)\nbackports-abc (0.4)\nbackports.ssl-match-hostname (3.5.0.1)\nbilliard (3.3.0.22)\nbinaryornot (0.4.0)\nboto (2.39.0)\ncelery (3.1.20)\ncertifi (2015.11.20.1)\nchardet (2.3.0)\nclick (6.2)\ncookiecutter (1.3.0)\ndecorator (4.0.9)\nDjango (1.9.4)\ndjango-extensions (1.6.1)\ndjango-floppyforms (1.6.1)\ndjango-ses (0.7.0)\ndjangorestframework (3.3.2)\ndocopt (0.4.0)\nfunctools32 (3.2.3.post2)\nfuture (0.15.2)\ngnureadline (6.3.3)\nipykernel (4.2.2)\nipython (4.1.1)\nipython-genutils (0.1.0)\nipywidgets (4.1.1)\nJinja2 (2.8)\njsonschema (2.5.1)\njupyter (1.0.0)\njupyter-client (4.1.1)\njupyter-console (4.1.0)\njupyter-core (4.0.6)\nkombu (3.0.33)\nlivereload (2.4.1)\nmandrill (1.0.57)\nMarkdown (2.6.5)\nMarkupSafe (0.23)\nmistune (0.7.1)\nmkdocs (0.15.2)\nmkdocs-bootstrap (0.1.1)\nmkdocs-bootswatch (0.2.0)\nnbconvert (4.1.0)\nnbformat (4.0.1)\nnose (1.3.7)\nnotebook (4.1.0)\npath.py (8.1.2)\npexpect (4.0.1)\npickleshare (0.6)\npip (8.1.1)\npluggy (0.3.1)\nptyprocess (0.5.1)\npy (1.4.31)\nPygments (2.1.1)\npytz (2015.7)\nPyYAML (3.11)\npyzmq (15.2.0)\nqtconsole (4.1.1)\nreadchar (0.7)\nredis (2.10.5)\nrequests (2.9.1)\nruamel.base (1.0.0)\nruamel.ordereddict (0.4.9)\nruamel.yaml (0.10.22)\nselenium (2.52.0)\nsetuptools (20.1.1)\nsimplegeneric (0.8.1)\nsingledispatch (3.4.0.3)\nsix (1.10.0)\nterminado (0.6)\ntornado (4.3)\ntox (2.3.1)\ntraitlets (4.1.0)\nvirtualenv (14.0.6)\nwheel (0.29.0)\nwhichcraft (0.1.1)\n",
+            "name": "pip_test",
+            "output": "amqp (1.4.9)\nanyjson (0.3.3)\nappnope (0.1.0)\nbackports-abc (0.4)\nbackports.ssl-match-hostname (3.5.0.1)\nbilliard (3.3.0.22)\nbinaryornot (0.4.0)\nboto (2.39.0)\ncelery (3.1.20)\ncertifi (2015.11.20.1)\nchardet (2.3.0)\nclick (6.2)\ncookiecutter (1.3.0)\ndecorator (4.0.9)\nDjango (1.9.4)\ndjango-extensions (1.6.1)\ndjango-floppyforms (1.6.1)\ndjango-ses (0.7.0)\ndjangorestframework (3.3.2)\ndocopt (0.4.0)\nfunctools32 (3.2.3.post2)\nfuture (0.15.2)\ngnureadline (6.3.3)\nipykernel (4.2.2)\nipython (4.1.1)\nipython-genutils (0.1.0)\nipywidgets (4.1.1)\nJinja2 (2.8)\njsonschema (2.5.1)\njupyter (1.0.0)\njupyter-client (4.1.1)\njupyter-console (4.1.0)\njupyter-core (4.0.6)\nkombu (3.0.33)\nlivereload (2.4.1)\nmandrill (1.0.57)\nMarkdown (2.6.5)\nMarkupSafe (0.23)\nmistune (0.7.1)\nmkdocs (0.15.2)\nmkdocs-bootstrap (0.1.1)\nmkdocs-bootswatch (0.2.0)\nnbconvert (4.1.0)\nnbformat (4.0.1)\nnose (1.3.7)\nnotebook (4.1.0)\npath.py (8.1.2)\npexpect (4.0.1)\npickleshare (0.6)\npip (8.1.1)\npluggy (0.3.1)\nptyprocess (0.5.1)\npy (1.4.31)\nPygments (2.1.1)\npytz (2015.7)\nPyYAML (3.11)\npyzmq (15.2.0)\nqtconsole (4.1.1)\nreadchar (0.7)\nredis (2.10.5)\nrequests (2.9.1)\nruamel.base (1.0.0)\nruamel.ordereddict (0.4.9)\nruamel.yaml (0.10.22)\nselenium (2.52.0)\nsetuptools (20.1.1)\nsimplegeneric (0.8.1)\nsingledispatch (3.4.0.3)\nsix (1.10.0)\nterminado (0.6)\ntornado (4.3)\ntox (2.3.1)\ntraitlets (4.1.0)\nvirtualenv (14.0.6)\nwheel (0.29.0)\nwhichcraft (0.1.1)\n"
+        },
+        "model": "tool.test",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "expected": "On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n",
+            "name": "version_test",
+            "output": "On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n"
+        },
+        "model": "tool.test",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "expected": ".DS_Store\n.gitignore\n__init__.py\nmanage.py\n.name\ndataSources.ids\ndataSources.local.xml\ndataSources.xml\nencodings.xml\nHammer.iml\nmisc.xml\nmodules.xml\nvcs.xml\nworkspace.xml\n__init__.py\n__init__.pyc\nbash-alias\nbashrc\nbashrc-server\ncmd.py\ncmd.pyc\ncptree\ndata.py\ndata.pyc\ndoc.py\ndoc.pyc\ne\nfunctional_tests.py\nfunctional_tests.pyc\nlog.py\nlog.pyc\npage_tests.py\npath\npip-list\nqt\nrbg\nremote_tests.py\nserver.py\nserver.pyc\nsetup-simple\nshell.py\nshell.pyc\ntodo.py\ntodo.pyc\ntool.py\ntool.pyc\nvc\nweb.py\nweb.pyc\nwelcome\nx\nx.py\ndev-data.json\nhammer.db\nEngineeringLog.md\nFunctionalTest.md\nREADME.md\nToDo.md\nToDo_App.md\nToDo_Data.md\nToDo_Doc.md\nToDo_Hosting.md\nToDo_Project.md\nToDo_Script.md\nToDo_Test.md\nTricks.md\nTricks_App.md\nTricks_Data.md\nTricks_Doc.md\nTricks_Hosting.md\nTricks_Project.md\nTricks_Script.md\nTricks_Test.md\n__init__.py\n__init__.pyc\nsettings.py\nsettings.pyc\nurls.py\nurls.pyc\nwsgi.py\nwsgi.pyc\ndjango.log\nhammer.log\nmanage.py\n__init__.py\n__init__.pyc\nsettings.py\nsettings.pyc\nwsgi.py\nwsgi.pyc\nhammer.css\nSWS_Globe_small.jpg\n.DS_Store\nindex.html\nLICENSE.txt\nREADME.txt\nie8.scssc\nie9 - Copy.scssc\nie9.scssc\nmain.scssc\nnoscript.scssc\n_functions.scssc\n_mixins.scssc\n_skel.scssc\n_vars.scssc\n_copyright.scssc\n_footer.scssc\n_main.scssc\n_wrapper.scssc\n_button.scssc\n_form.scssc\n_icon.scssc\n_list.scssc\n_page.scssc\n_typography.scssc\nfont-awesome.min.css\nie8.css\nie9.css\nmain.css\nnoscript.css\noverlay.png\nfontawesome-webfont.eot\nfontawesome-webfont.svg\nfontawesome-webfont.ttf\nfontawesome-webfont.woff\nfontawesome-webfont.woff2\nFontAwesome.otf\nhtml5shiv.js\nPIE.htc\nrespond.min.js\nie8.scss\nie9.scss\nmain.scss\nnoscript.scss\n_page.scss\n_typography.scss\n_button.scss\n_form.scss\n_icon.scss\n_list.scss\n_footer.scss\n_main.scss\n_wrapper.scss\n_functions.scss\n_mixins.scss\n_skel.scss\n_vars.scss\navatar.jpg\nbg.jpg\n.DS_Store\n__init__.py\n__init__.pyc\nadmin.py\nadmin.pyc\napps.py\nlog.py\nlog.pyc\nmodels.py\nmodels.pyc\ntest_cases.py\ntest_cases.pyc\ntests.py\ntst.py\ntst.pyc\nviews.py\nviews.pyc\n.DS_Store\n__init__.py\n__init__.pyc\n__init__.py\n__init__.pyc\nscriptor.py\nscriptor.pyc\n0001_initial.py\n0001_initial.pyc\n__init__.py\n__init__.pyc\ndir.html\ndoc.html\nlayout.html",
+            "name": "files_test",
+            "output": ".DS_Store\n.gitignore\n__init__.py\nmanage.py\n.name\ndataSources.ids\ndataSources.local.xml\ndataSources.xml\nencodings.xml\nHammer.iml\nmisc.xml\nmodules.xml\nvcs.xml\nworkspace.xml\n__init__.py\n__init__.pyc\nbash-alias\nbashrc\nbashrc-server\ncmd.py\ncmd.pyc\ncptree\ndata.py\ndata.pyc\ndoc.py\ndoc.pyc\ne\nfunctional_tests.py\nfunctional_tests.pyc\nlog.py\nlog.pyc\npage_tests.py\npath\npip-list\nqt\nrbg\nremote_tests.py\nserver.py\nserver.pyc\nsetup-simple\nshell.py\nshell.pyc\ntodo.py\ntodo.pyc\ntool.py\ntool.pyc\nvc\nweb.py\nweb.pyc\nwelcome\nx\nx.py\ndev-data.json\nhammer.db\nEngineeringLog.md\nFunctionalTest.md\nREADME.md\nToDo.md\nToDo_App.md\nToDo_Data.md\nToDo_Doc.md\nToDo_Hosting.md\nToDo_Project.md\nToDo_Script.md\nToDo_Test.md\nTricks.md\nTricks_App.md\nTricks_Data.md\nTricks_Doc.md\nTricks_Hosting.md\nTricks_Project.md\nTricks_Script.md\nTricks_Test.md\n__init__.py\n__init__.pyc\nsettings.py\nsettings.pyc\nurls.py\nurls.pyc\nwsgi.py\nwsgi.pyc\ndjango.log\nhammer.log\nmanage.py\n__init__.py\n__init__.pyc\nsettings.py\nsettings.pyc\nwsgi.py\nwsgi.pyc\nhammer.css\nSWS_Globe_small.jpg\n.DS_Store\nindex.html\nLICENSE.txt\nREADME.txt\nie8.scssc\nie9 - Copy.scssc\nie9.scssc\nmain.scssc\nnoscript.scssc\n_functions.scssc\n_mixins.scssc\n_skel.scssc\n_vars.scssc\n_copyright.scssc\n_footer.scssc\n_main.scssc\n_wrapper.scssc\n_button.scssc\n_form.scssc\n_icon.scssc\n_list.scssc\n_page.scssc\n_typography.scssc\nfont-awesome.min.css\nie8.css\nie9.css\nmain.css\nnoscript.css\noverlay.png\nfontawesome-webfont.eot\nfontawesome-webfont.svg\nfontawesome-webfont.ttf\nfontawesome-webfont.woff\nfontawesome-webfont.woff2\nFontAwesome.otf\nhtml5shiv.js\nPIE.htc\nrespond.min.js\nie8.scss\nie9.scss\nmain.scss\nnoscript.scss\n_page.scss\n_typography.scss\n_button.scss\n_form.scss\n_icon.scss\n_list.scss\n_footer.scss\n_main.scss\n_wrapper.scss\n_functions.scss\n_mixins.scss\n_skel.scss\n_vars.scss\navatar.jpg\nbg.jpg\n.DS_Store\n__init__.py\n__init__.pyc\nadmin.py\nadmin.pyc\napps.py\nlog.py\nlog.pyc\nmodels.py\nmodels.pyc\ntest_cases.py\ntest_cases.pyc\ntests.py\ntst.py\ntst.pyc\nviews.py\nviews.pyc\n.DS_Store\n__init__.py\n__init__.pyc\n__init__.py\n__init__.pyc\nscriptor.py\nscriptor.pyc\n0001_initial.py\n0001_initial.pyc\n__init__.py\n__init__.pyc\ndir.html\ndoc.html\nlayout.html"
+        },
+        "model": "tool.test",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "expected": null,
+            "name": "functional_test",
+            "output": ""
+        },
+        "model": "tool.test",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "codename": "add_logentry",
+            "content_type": 1,
+            "name": "Can add log entry"
+        },
+        "model": "auth.permission",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "codename": "change_logentry",
+            "content_type": 1,
+            "name": "Can change log entry"
+        },
+        "model": "auth.permission",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "codename": "delete_logentry",
+            "content_type": 1,
+            "name": "Can delete log entry"
+        },
+        "model": "auth.permission",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "codename": "add_permission",
+            "content_type": 2,
+            "name": "Can add permission"
+        },
+        "model": "auth.permission",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "codename": "change_permission",
+            "content_type": 2,
+            "name": "Can change permission"
+        },
+        "model": "auth.permission",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "codename": "delete_permission",
+            "content_type": 2,
+            "name": "Can delete permission"
+        },
+        "model": "auth.permission",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "codename": "add_group",
+            "content_type": 3,
+            "name": "Can add group"
+        },
+        "model": "auth.permission",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "codename": "change_group",
+            "content_type": 3,
+            "name": "Can change group"
+        },
+        "model": "auth.permission",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "codename": "delete_group",
+            "content_type": 3,
+            "name": "Can delete group"
+        },
+        "model": "auth.permission",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "codename": "add_user",
+            "content_type": 4,
+            "name": "Can add user"
+        },
+        "model": "auth.permission",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "codename": "change_user",
+            "content_type": 4,
+            "name": "Can change user"
+        },
+        "model": "auth.permission",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "codename": "delete_user",
+            "content_type": 4,
+            "name": "Can delete user"
+        },
+        "model": "auth.permission",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "codename": "add_contenttype",
+            "content_type": 5,
+            "name": "Can add content type"
+        },
+        "model": "auth.permission",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "codename": "change_contenttype",
+            "content_type": 5,
+            "name": "Can change content type"
+        },
+        "model": "auth.permission",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "codename": "delete_contenttype",
+            "content_type": 5,
+            "name": "Can delete content type"
+        },
+        "model": "auth.permission",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "codename": "add_session",
+            "content_type": 6,
+            "name": "Can add session"
+        },
+        "model": "auth.permission",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "codename": "change_session",
+            "content_type": 6,
+            "name": "Can change session"
+        },
+        "model": "auth.permission",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "codename": "delete_session",
+            "content_type": 6,
+            "name": "Can delete session"
+        },
+        "model": "auth.permission",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "codename": "add_test",
+            "content_type": 7,
+            "name": "Can add test"
+        },
+        "model": "auth.permission",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "codename": "change_test",
+            "content_type": 7,
+            "name": "Can change test"
+        },
+        "model": "auth.permission",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "codename": "delete_test",
+            "content_type": 7,
+            "name": "Can delete test"
+        },
+        "model": "auth.permission",
+        "pk": 21
+    },
+    {
+        "fields": {
+            "codename": "add_task",
+            "content_type": 8,
+            "name": "Can add task"
+        },
+        "model": "auth.permission",
+        "pk": 22
+    },
+    {
+        "fields": {
+            "codename": "change_task",
+            "content_type": 8,
+            "name": "Can change task"
+        },
+        "model": "auth.permission",
+        "pk": 23
+    },
+    {
+        "fields": {
+            "codename": "delete_task",
+            "content_type": 8,
+            "name": "Can delete task"
+        },
+        "model": "auth.permission",
+        "pk": 24
+    }
+]

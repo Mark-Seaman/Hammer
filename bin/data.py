@@ -96,32 +96,30 @@ def data_sql(args):
 
 def data_count(args):
     system('''
-        wc -l $pa/data/%s-data.json
-        # cat $pa/data/%s-data.json
+        wc -l $p/data/%s-data.json
+        # cat $p/data/%s-data.json
         ''' % (data_server(args), data_server(args)))
 
 
 def data_load(args):
     system ('''
-        cd $pa &&
-       echo python ./manage.py loaddata  $pa/data/%s-data.json
+        cd $p &&
+       echo python ./manage.py loaddata  $p/data/%s-data.json
         ''' % data_server(args))
 
 
 def data_migrate():
     system ('''
-        cd $pa
+        cd $p
         python ./manage.py makemigrations
-        # python ./manage.py makemigrations w2w
         python ./manage.py migrate
-        # rm */migrations/*
         ''')
 
 
 def data_save(args):
     system ('''
-        cd $pa &&
-        python ./manage.py dumpdata      | python -mjson.tool > $pa/data/%s-data.json
-        python ./manage.py dumpdata auth | python -mjson.tool > $pa/data/%s-auth.json
-        python ./manage.py dumpdata tool | python -mjson.tool > $pa/data/%s-tool.json
+        cd $p &&
+        python ./manage.py dumpdata      | python -mjson.tool > $p/data/%s-data.json
+        python ./manage.py dumpdata auth | python -mjson.tool > $p/data/%s-auth.json
+        python ./manage.py dumpdata tool | python -mjson.tool > $p/data/%s-tool.json
         ''' % (data_server(args),data_server(args),data_server(args)))

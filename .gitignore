@@ -1,5 +1,14 @@
 *.pyc
-bin/pip-list
-data
-log/*.log
+
 .idea
+
+bin/pip-list
+
+data/hammer.db
+Documents/
+
+hammer/db.py
+
+log/*.log
+
+migrations/

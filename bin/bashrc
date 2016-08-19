@@ -7,7 +7,6 @@ export PROJECT_BASE="$HOME/Projects/MyBook"
 # MyBook export DROPLET_IP='45.55.50.13'
 # MyBook export SERVER_DIR=/home/django/MyBook
 
-
 cat $p/bin/welcome
 
 # Path variable
