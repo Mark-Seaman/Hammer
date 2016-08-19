@@ -56,7 +56,7 @@ def web_command(args):
         web('http://seaman-tech.com/tech/collab/%s' % ''.join(args[1:]))
 
     elif cmd=='dev':
-        web('http://localhost:8000/%s' % ''.join(args[1:]))
+        web('http://localhost:8003/%s' % ''.join(args[1:]))
 
     elif cmd=='github':
         web('https://github.com/Shrinking-World/MyBook.git')
