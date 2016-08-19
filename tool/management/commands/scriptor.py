@@ -6,8 +6,6 @@ from tool.log import log_exception, log
 from tool.page import page_command
 from tool.project import project_command
 from tool.tst import tst_command
-from tasks.task import task_command
-from thot.thot import thot_command
 
 
 class Command(BaseCommand):
@@ -29,10 +27,6 @@ class Command(BaseCommand):
                 page_command(self, args)
             elif cmd=='project':
                 project_command(self,args)
-            elif cmd=='task':
-                task_command(self, args)
-            elif cmd=='thot':
-                thot_command(self, args)
             elif cmd=='tst':
                 tst_command(self, args)
             else:
