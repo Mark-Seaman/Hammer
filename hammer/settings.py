@@ -9,13 +9,16 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-from os.path import join
 
-import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Build paths inside the project like this: join(BASE_DIR, ...)
+# import os
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from os.path import dirname, join
 
+BASE_DIR = dirname(dirname(__file__))
+DOC_ROOT = join(BASE_DIR, 'Documents')
+LOG_DIR = join(BASE_DIR, 'log')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -26,11 +29,9 @@ SECRET_KEY = 'z=2)ljy@^rnag-#swq9vvv55$tkn-u%y%gtf@u5)w6ee(r=5#o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,71 +43,45 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hammer.urls'
-
+# Loading templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            join(BASE_DIR, "templates"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
 
+ROOT_URLCONF = 'hammer.urls'
+
 WSGI_APPLICATION = 'hammer.wsgi.application'
 
-
 # Database
-
-from platform import node
-if 'iMac' in node() or 'mac' in node():    
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3', 
-            'NAME': 'data/hammer.db',  # Database file
-            'USER': '',             # Not used with sqlite3.
-            'PASSWORD': '',         # Not used with sqlite3.
-            'HOST': '',             # Set to empty string for localhost. 
-            'PORT': '',             # Set to empty string for default. 
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'django',
-            'USER': 'django',
-            'PASSWORD': 'xdfwQKUZIZ',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
-
-# # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
+# Import external settings files
+from db import DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -127,12 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.9/topics/i18n/
+# # Internationalization
+# # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'US/Mountain'
 
 USE_I18N = True
 
@@ -140,11 +115,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+# # Static files (CSS, JavaScript, Images)
+# # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-# Static files (CSS, JavaScript, Images)
+# Static server
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (  BASE_DIR+'/static', )
-
+STATICFILES_DIRS = (BASE_DIR + '/static',)
 
 LOGGING = {
 
@@ -162,8 +138,8 @@ LOGGING = {
             'filename': join(BASE_DIR, 'log', 'hammer.log'),
         },
         'console': {
-           'level': 'DEBUG',
-           'class': 'logging.StreamHandler',
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
         },
     },
     'loggers': {
@@ -175,9 +151,6 @@ LOGGING = {
         'tool': {
             'handlers': ['hammer-file'],
         },
-        'tasks': {
-            'handlers': ['hammer-file'],
-        }
     },
     'root': {'level': 'INFO'},
 }
