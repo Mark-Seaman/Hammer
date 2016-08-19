@@ -1,0 +1,31 @@
+{% extends "project.html" %}
+
+{% block topic_content %}
+
+    <div class="card-header">
+        <h2>Project Detail</h2>
+        <div class="pull-right">
+            <p>
+                <a href="/project/{{ project.pk }}/edit">edit</a> *
+                <a href="/project/{{ project.pk }}/delete">delete</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="card-body card-padding">
+        <ul>
+            <li>
+                ID: {{ project.id }}
+            </li>
+            <li>
+                Name: {{ project.name }}
+            </li>
+            <li>
+                User: {{ project.user }}
+            </li>
+
+        </ul>
+    </div>
+
+{% endblock %}
+

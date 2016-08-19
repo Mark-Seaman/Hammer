@@ -1,0 +1,29 @@
+{% extends "tool_doc.html" %}
+
+{% block content %}
+
+    <h1>TASK VIEW {{ task_id }}</h1>
+    <a href='/show/task/'>Tasks To Do</a>
+
+    {% if task %}
+        <div class="card" style="border: 2px solid teal; border-radius: 20px">
+            <div class="card-header">
+                <h2>{{ task.name }}</h2>
+            </div>
+            <div class="card-body card-padding">
+                {{ task.id }}
+                {{ task.date }}
+                {{ task.hours }}
+            </div>
+        </div>
+    {% endif %}
+
+    <ul>
+        {% for x in list %}
+            <li>
+                {{ x.name }}
+                <a href="/show/task/{{ x.pk }}">{{ x.pk }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

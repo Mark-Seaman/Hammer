@@ -1,0 +1,72 @@
+{% extends "hammer_theme.html" %}
+
+
+{% if settings.css %}
+    {% block libs %}
+
+        <!-- Hammer CSS -->
+        <link href="/static/{{ settings.css }}.css" rel="stylesheet">
+
+    {% endblock %}
+{% endif %}
+
+
+{% block menu %}
+    <aside id="s-main-menu" class="sidebar">
+
+        <div class="smm-header">
+            <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
+        </div>
+
+        <ul class="smm-alerts">
+            <li data-user-alert="sua-tasks" data-ma-action="sidebar-open" data-ma-target="user-alerts">
+                <i class="zmdi zmdi-view-list-alt"></i>
+            </li>
+        </ul>
+
+        <ul class="main-menu">
+            {% for m in settings.menu %}
+                <li {{ m.3 }}>
+                    <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+    </aside>
+{% endblock %}
+
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="c-header">
+                <h2 class="'c-dark bgm-black'">{{ document }}</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="card" {{ page_banner }} brd-20>
+                    <div class="card-header ch-alt">
+                        <h2>{{ card_title }}</h2>
+                        <span class="actions">
+                            {{ settings.label }}
+                        </span>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        {% if card_text %}
+                            {% autoescape off %}
+                                <p>{{ card_text }}</p>
+                            {% endautoescape %}
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

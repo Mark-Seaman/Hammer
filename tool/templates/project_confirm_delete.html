@@ -1,0 +1,16 @@
+{% extends "project.html" %}
+
+{% block topic_content %}
+
+    <div class="card-header">
+        <h2>Project Delete {{ project.pk }}</h2>
+    </div>
+    <div class="card-body card-padding">
+        <form action="" method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <input type="submit" value="Confirm"/>
+        </form>
+    </div>
+
+{% endblock %}
+

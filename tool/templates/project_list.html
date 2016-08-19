@@ -1,0 +1,21 @@
+{% extends "project.html" %}
+
+{% block topic_content %}
+
+    <div class="card-header">
+        <h2>Project List</h2>
+    </div>
+    <div class="card-body card-padding">
+
+        <ul>
+            {% for project in object_list %}
+                <li>
+                    <a href="/project/{{ project.pk }}">{{ project.pk }}. {{ project.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+{% endblock %}
+

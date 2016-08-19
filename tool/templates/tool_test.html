@@ -1,0 +1,28 @@
+{% extends "tool_theme.html" %}
+
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    <p>Theme Selection </p>
+
+    <ul>
+        <li><a href="/static/material/index.html">Theme Interview</a></li>
+        <li><a href="/static/agency/index.html">Theme agency</a></li>
+        <li><a href="/static/freelancer/index.html">Theme freelancer</a></li>
+        <li><a href="/static/creative/index.html">Theme creative</a></li>
+        <li><a href="/static/identity/index.html">Theme identity</a></li>
+    </ul>
+
+
+    <p>List of Files</p>
+    <ul>
+        {% for f in files %}
+            <li>
+                <a href="/{{ f }}">{{ f }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

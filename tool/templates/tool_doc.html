@@ -1,0 +1,54 @@
+{% extends "tool_theme.html" %}
+
+{% block page_content %}
+
+    <div class="card {{ page_banner }} brd-20">
+        <div class="card-header">
+            <h2>{{ page_title }}
+                <small>{{ page_subtitle }}</small>
+            </h2>
+        </div>
+        <div class="card-body card-padding bgm-white">
+            {{ content }}
+        </div>
+    </div>
+
+    {% block content %}
+
+        <div class="card">
+
+            <div class="card-header">
+                <h2>{{ page_title }}
+                    <small>{{ page_subtitle }}</small>
+                </h2>
+                <ul class="actions">
+                    <li>{{ card_action }}</li>
+                </ul>
+            </div>
+
+            <div class="card-body card-padding">
+
+                {% if card_text %}
+                    {% autoescape off %}
+                        <p>{{ card_text }}</p>
+                    {% endautoescape %}
+                {% endif %}
+
+                {% for item in card_list %}
+                    <div class="card" style="border: 2px solid teal; border-radius: 20px">
+                        <div class="card-header">
+                            <h2>{{ item.title }}</h2>
+                        </div>
+                        <div class="card-body card-padding">
+                            {{ item.subtitle }}
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    {% endblock %}
+
+
+{% endblock %}

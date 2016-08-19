@@ -1,0 +1,16 @@
+{% extends "tool_layout.html" %}
+
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for f in files %}
+             <li>
+                <a href="/{{ f }}">{{ f }}</a>
+             </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

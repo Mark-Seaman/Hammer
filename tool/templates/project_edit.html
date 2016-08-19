@@ -1,0 +1,16 @@
+{% extends "project.html" %}
+
+{% block topic_content %}
+
+    <div class="card-header">
+        <h2>Edit form</h2>
+    </div>
+
+    <div class="card-body card-padding">
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save"/>
+        </form>
+    </div>
+
+{% endblock %}

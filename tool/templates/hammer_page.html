@@ -1,0 +1,111 @@
+{% extends "hammer_theme.html" %}
+
+
+{% block menu %}
+          <aside id="s-main-menu" class="sidebar">
+            <div class="smm-header">
+                <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
+            </div>
+
+            <ul class="smm-alerts">
+                <li data-user-alert="sua-tasks" data-ma-action="sidebar-open" data-ma-target="user-alerts">
+                    <i class="zmdi zmdi-view-list-alt"></i>
+                </li>
+            </ul>
+
+            <ul class="main-menu">
+                <li>
+                    <a href="index.html"><i class="zmdi zmdi-home"></i> Home</a>
+                </li>
+                <li class="sub-menu">
+                    <a href="http://shrinking-world.org"><i class="zmdi zmdi-menu"></i>Shrinking World</a>
+                </li>
+                <li class="sub-menu">
+                    <a href="http://exteriorbrain.com"><i class="zmdi zmdi-view-compact"></i>Brain</a>
+                </li>
+            </ul>
+        </aside>
+
+{% endblock %}
+
+
+{% block content %}
+          <section id="content">
+            <div class="container">
+                <div class="c-header">
+                    {{ page_banner }}
+                    <h2>{{ page_title }}
+                        <small>{{ page_subtitle }}</small>
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="card">
+                            <div class="card-header ch-alt">
+                                <h2>Card 1</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <p>Card text</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header ch-alt">
+                                <h2>Card 2</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <ul>
+                                    <li>Choice 1</li>
+                                    <li>Choice 2</li>
+                                    <li>Choice 3</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <div class="card">
+                            <div class="card-header ch-alt">
+                                <h2>Card 3</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <p>Card text</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header ch-alt">
+                                <h2>Card 4</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <p>Card text</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+
+{% block footer %}
+    <footer id="footer">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body card-padding">
+                        <img src="/static/SWS_Globe_small.jpg">
+                        <p>Copyright &copy; 2016 Shrinking World</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+{% endblock %}

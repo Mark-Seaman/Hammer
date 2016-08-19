@@ -1,0 +1,27 @@
+{% extends "tool_theme.html" %}
+
+{% block page_content %}
+
+    <div class="card">
+        <div class="card-header">
+            <a href="/project/">
+                <h2>Project Demo
+                    <small>Showcase for Projects</small>
+                </h2>
+            </a>
+
+            <p class="actions"> PROJECT DEMO </p>
+        </div>
+        <div class="card-body card-padding">
+
+            <div class="card" style="border: 2px solid teal; border-radius: 20px">
+
+                {% block topic_content %}
+                {% endblock %}
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
