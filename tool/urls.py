@@ -1,6 +1,5 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
 
-from tool.views import spiritual_doc
 from tool.views import tool_doc, tool_home, tool_test, tool_theme
 
 
