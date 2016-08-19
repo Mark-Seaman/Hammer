@@ -1,0 +1,4 @@
+#!/bin/bash
+# Save the thot data as a file
+
+dj runscript records

@@ -1,69 +1,85 @@
-from os import environ, listdir, system
-from os.path import abspath
+#!/usr/bin/env python
+
+from os import environ, system
+from os.path import  join
 from platform import node
-
-from shell import  file_path, file_list, line_count, read_file, shell_command
-from log import log
+from sys import argv
 
 
-def web_command(options):
-    log('web command output %s' % options)
-    if options[0:]:
-        cmd = options[0]
-        args = options[1:]
-        if cmd=='file':
-            web_file(args[0])
-        elif cmd=='firefox':
-            web_firefox(args[0])
-        elif cmd=='index':
-            web_page('http://localhost:8000/README.md')
-        elif cmd=='page':
-            web_page(args[0])
-        elif cmd=='todo':
-            web_page('http://localhost:8000/ToDo.md')
-        else:
-            web_help()
-    else:
-        web_page('localhost:8000')
-
-
-def web_help():
-    print('''
-        usage: x web [command]
-
-        command:
-            file [file] # Show a file in the browser
-            firefox     # Run the firefox browser
-            index       # Show the README page
-            page [page] # Show the remote page in the browser
-            todo        # Show the todo list
-
-        ''')
-
-
-#----------------------------------------------------------------
-# Commands
-
-def web_file(f):
-    f = 'file://'+abspath(f)
-    chrome = '"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
-    system('%s %s' % (chrome,f) )
-
-
-def web_page(page):
+def web(page):
     '''Open a web page in Google Chrome'''
     url = page
     if not page.startswith('http://') and not page.startswith('https://'):
         url = 'http://' + page
-    if 'mac' in node() or 'iMac' in node() or 'us-west' in node():
+    # Use the correct invocation
+    if 'iMac' in node() or 'mac' in node() or 'mini' in node():
         system('open -a "Google Chrome" '+url)
     else:
         system('rbg google-chrome '+url)
 
 
-def web_firefox(page):
-    if 'mac' in node() or 'iMac' in node() or 'us-west' in node():
-        system('open -a "Firefox" '+page)
+def web_path(topic=None):
+    path = environ['pb']
+    if topic:
+        path = join(path,topic)
+    return path
+
+
+def web_help():
+    '''Show all the web webs and their usage.'''
+    print('''
+    usage:  web cmd [args]
+
+    cmd:
+
+        dev         - Local website
+        github      - Go the Github site
+        mandrill    - Email sending service
+        mybook      - My Book Online website
+        tech        - Seaman Tech website
+        time        - Track time for project
+
+            ''')
+
+def web_command(args):
+    '''Execute all of the web specific webs'''
+    if args:
+        cmd = args[0]
     else:
-        system('rbg firefox '+page)
+        web_help()
+        cmd = 'dev'
+
+    if cmd == 'client':
+        web('http://seaman-tech.com/tech/client/%s' % ''.join(args[1:]))
+
+    elif cmd == 'collab':
+        web('http://seaman-tech.com/tech/collab/%s' % ''.join(args[1:]))
+
+    elif cmd=='dev':
+        web('http://localhost:8000/%s' % ''.join(args[1:]))
+
+    elif cmd=='github':
+        web('https://github.com/Shrinking-World/MyBook.git')
+
+    elif cmd=='mandrill':
+        web('http://mandrill.com')
+
+    elif cmd=='mybook':
+        web('http://mybookonline.org')
+
+    elif cmd=='tech':
+        web('http://seaman-tech.com')
+
+    elif cmd=='time':
+        web('http://shrinkingworld.harvestapp.com')
+
+    else:
+        web(cmd)
+
+
+'''
+Create a script that can be run from the shell
+'''
+if __name__=='__main__':
+    web_command(argv)
 

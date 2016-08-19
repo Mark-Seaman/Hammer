@@ -1,21 +1,25 @@
-#!/usr/bin/env python
+from os import  system
 
-from sys import argv
-from os import system, environ
-from os.path import join
+from switches import TODO_FILES
+
 
 def todo_command(options):
+    path = TODO_FILES[0]
 
-    # Extract the input arguments to form new todo item
-    text = ' '.join(options)[:80]
-    print('To Do List: ' + text)
+    if options:    
+        cmd = options[0]
+        if cmd=='send-todo':
+            system('x send doc tech/collab/Client/Today me')
+            system('x send dispatch')
+        elif cmd=='send-done':
+            system('x send doc tech/collab/Client/2016-08 me')
+            system('x send dispatch')
+        elif cmd=='show':
+            print(open(path).read())
+        else:
+            item = ' '.join(options)
+            open(path, 'a').write('* '+item+'\n')
+    else:   
+        for x in TODO_FILES:
+            system('e %s' % x)
 
-    # Append to file
-    f = join(environ['p'], 'Documents', 'app', 'Project', 'ToDo.md')
-    open(f, 'a').write(text+'\n')
-
-    # Show the items
-    print(open(f).read())
-
-    # Edit the items
-    system('e '+f)

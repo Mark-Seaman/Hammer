@@ -1,0 +1,37 @@
+#!/bin/bash
+# Settings for remote server shell
+
+# Vars
+export p='/home/django/MyBook'
+export rediskey='MyBook'
+export DROPLET_IP='45.55.50.13'
+export SERVER_DIR=/home/django/MyBook
+
+. $p/bin/bash-alias
+alias e='vi'
+
+
+# Path variable
+export PATH=\
+$p/bin:\
+/sbin:\
+/usr/bin:\
+/usr/local/bin:\
+/usr/local/sbin:\
+/bin
+
+
+# Python context
+cd $p
+cat bin/welcome-server
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+
+echo "Active python = `which python`"
+echo
+
+path

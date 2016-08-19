@@ -1,4 +1,4 @@
-from shell import  file_path, file_list, line_count, read_file, shell_command
+from shell import file_path, file_list, line_count, read_file, shell
 
 
 def tool_command(options):
@@ -22,7 +22,7 @@ def tool_command(options):
 
 def tool_edit(args):
     path = file_path('tool', args[0]+'.py')
-    print(shell_command('e %s' % path))
+    print(shell('e %s' % path))
     
 
 def tool_help(self):
@@ -31,7 +31,7 @@ def tool_help(self):
 
         command:
             edit     # Edit a specific document file
-            help     # Show the Documents commands
+            help     # Show the doc commands
             list     # List the available documents
             length   # Measure the lines in each documents
             read     # Show the text from all documents

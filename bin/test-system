@@ -1,0 +1,10 @@
+#!/bin/bash
+# Test the entire system and send results by email
+
+# results="$HOME/Projects/MyBook/Documents/tech/test/test-results"
+# x tst > $results
+
+# cat $results
+
+x send doc-text tech/test/test-results test
+x send dispatch

@@ -3,7 +3,11 @@ from os.path import join
 
 
 def log_path():
-    return join(environ['pa'],'log','hammer.log')
+    if environ.get('p'):
+        return join(environ['p'], 'log', 'hammer.log')
+    else:
+        from hammer.settings import BASE_DIR
+        return join(BASE_DIR, 'log', 'hammer.log')
 
 
 def log_command(options):
@@ -19,8 +23,10 @@ def log_command(options):
         log_read()
 
 
-def log(text):
-    open(log_path(), 'a').write(text+'\n')
+def log(label,value=None):
+    if value:
+        label = '%s: %s' % (label, value)
+    open(log_path(), 'a').write(label+'\n')
 
 
 def log_exception():

@@ -1,0 +1,8 @@
+#!/bin/bash
+# Save the authentication data as a file
+
+cd ~django/django_project
+dj loaddata data/thot.json
+
+echo 'data-load successful'
+wc -l data/thot.json

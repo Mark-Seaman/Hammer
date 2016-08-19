@@ -1,0 +1,8 @@
+#!/bin/bash
+# Save the authentication data as a file
+
+cd ~django/django_project
+dj dumpdata thot | python -mjson.tool > data/thot.json
+
+echo 'data-save successful'
+wc -l data/thot.json

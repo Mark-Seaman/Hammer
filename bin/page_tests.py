@@ -6,14 +6,27 @@ from subprocess import Popen,PIPE
 from unittest import TestCase, main
 from time import sleep
 
+from doc import list_documents, doc_list
 
 RUN_WEB_BROWSER = True
+
+LOCAL_HOST = 'localhost:8000'
+REMOTE_HOST = 'mybookonline.org' #environ['DJANGO_IP']
+
+TEST_PAGES = '''
+tech/Index
+spiritual/Index
+spiritual/teaching
+spiritual/prayers
+spiritual/bible
+spiritual/reflect
+'''
 
 
 def run_server():
     system('''
             cd $p;
-            rbg python manage.py runserver;
+            rbg python bin/manage.py runserver;
             sleep 2
            ''')
 
@@ -33,33 +46,33 @@ def webpage_text(browser,url):
 
 #---------------------------------------------------------------------------
 # Test local pages
-
-class PagesTest(TestCase):
-
-    def setUp(self):
-        if RUN_WEB_BROWSER:
-            run_server()
-            self.browser = webdriver.Firefox()
-
-    def tearDown(self):
-        if RUN_WEB_BROWSER:
-            self.browser.quit()
-        
-
-    def assertBetween(self, num, min, max):
-        self.assertGreaterEqual(num, min)
-        self.assertLessEqual(num, max)
-
-    def assertLineCount(self, text, min=1, max=10):
-        self.assertBetween(len(text.split('\n')), min, max)
-
-
-    def test_pages(self):
-        pages = [ 'EngineeringLog', 'FunctionalTest', 'README', 'ToDo']
-        urls = [ 'localhost:8000/%s.md'%p for p in pages ]
-        for url in urls:
-            webpage_text(self.browser,url)
-            sleep(1)
+#
+# class PagesTest(TestCase):
+#
+#     def setUp(self):
+#         if RUN_WEB_BROWSER:
+#             run_server()
+#             self.browser = webdriver.Firefox()
+#
+#     def tearDown(self):
+#         if RUN_WEB_BROWSER:
+#             self.browser.quit()
+#
+#
+#     def assertBetween(self, num, min, max):
+#         self.assertGreaterEqual(num, min)
+#         self.assertLessEqual(num, max)
+#
+#     def assertLineCount(self, text, min=1, max=10):
+#         self.assertBetween(len(text.split('\n')), min, max)
+#
+#
+#     def test_pages(self):
+#         pages = TEST_PAGES.split('\n')[1:-1]
+#         urls = [ join(LOCAL_HOST,p) for p in pages ]
+#         for url in urls:
+#             webpage_text(self.browser,url)
+#             sleep(1)
     
 #---------------------------------------------------------------------------
 # Test remote pages
@@ -75,10 +88,20 @@ class RemoteTest(TestCase):
             self.browser.quit()
     
     def test_pages(self):
-        HOST = '159.203.152.201'
-        webpage_text(self.browser,HOST)
-        sleep(3)
+        #pages = TEST_PAGES.split('\n')[1:-1]
+        pages = list_documents()
+        for p in pages:
+            if not p.startswith('app/'):
+                p = p.replace('.md','')
+            url =  join(REMOTE_HOST,p)
+            webpage_text(self.browser,url)
+            sleep(1)
 
+
+#---------------------------------------------------------------------------
+# Test remote pages
+
+# class RemoteTest(TestCase):
     # def test_visit_google(self):
     #     if RUN_WEB_BROWSER:
     #         self.browser.get('http://google.com')

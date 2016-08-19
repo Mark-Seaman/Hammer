@@ -1,7 +1,26 @@
 #!/bin/bash
 # Commit all files to Git repo
 
-git add -A $p &&
+[ "$#" -lt 1 ] &&
+{
+    cd $p &&
+    echo "Version Control $p" &&
+    git status &&
+    cd $p/Documents &&
+    echo "Version Control $p/Documents" &&
+    git status
+} &&
+exit 
+
+echo 'Committing all changes'
+cd $p &&
+git add -A &&
+git commit -m"$*" &&
+git pull &&
+git push 
+
+cd $p/Documents &&
+git add -A &&
 git commit -m"$*" &&
 git pull &&
 git push 

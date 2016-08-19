@@ -1,49 +1,90 @@
-# Aliases
+# MyBook Aliases
+
+alias app='x app'
 
 alias bl='cd $p/bin && ls *.py'
+
 alias ce='x cmd edit'
 alias cl='x cmd list'
+alias client='x client'
 alias cmd='x cmd'
-alias console='x server console'
+alias collab='x collab'
+alias console='x staging console'
+alias cw='x collab web'
+
+alias data='x data'
 alias de='x doc edit'
-alias deploy='x server deploy'
+alias deploy='x staging deploy'
 alias dj='cd $p && python ./manage.py'
 alias dl='x doc list'
 alias doc='x doc'
-alias ft='python $p/bin/functional_tests.py'
+
+alias ea='e $p/bin/bash-alias'
+alias ep='e $p/bin/bashrc*'
+alias ev='e $p/bin/bash-vars'
+
+alias faceblog='x faceblog'
+
 alias g='grep'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gco='git checkout'
+alias gd='git diff'
+alias gl='git log --name-only'
 alias gs='git status'
+
 alias h='history|tail -40'
 alias hammer=". ~/Projects/Hammer/bin/bashrc"
-alias mybook=". ~/Projects/MyBook/bin/bashrc"
 alias home='. ~/bin/bashrc'
+alias host='hostname'
+
+alias mybook=". ~/Projects/MyBook/bin/bashrc"
+
 alias l='ls -al'
 alias le='less'
 alias ll='ls -l'
 alias log='x log'
+
 alias p='python'
+alias page='x page'
+alias project='x project'
 alias pt='cd $p/bin && python page_tests.py'
-alias restart='x server restart'
+alias pull='git pull'
+alias push='git pull && git push'
+
+alias redeploy='x staging redeploy'
+alias restart='x staging restart'
 alias rt='cd $p/bin && python remote_tests.py'
-alias server='x server'
+
+alias sd='x src diff'
+alias seamanslog='x seamanslog'
+alias send='x send'
+alias sign='. $HOME/Projects/SignSpan/sss/bin/bashrc'
+alias spiritual='x spiritual'
+alias src='x src'
+alias staging='x staging'
+alias syslog='x staging command x log'
+
+alias task='x task'
+alias te='x tst edit'
+alias text='x text'
 alias toole='x tool edit'
 alias tools='x tool list'
 alias tlike='x tst like'
 alias tlist='x tst list'
 alias todo='x todo'
 alias tout='x tst output'
-alias tres='x tst results'
+alias tres='x tst results|less'
 alias trun='x tst run'
-alias tst='x tst run'
+alias tst='x tst'
+
 alias u='cd ..'
+alias w2w='. $HOME/Projects/w2w/bin/bashrc'
 alias web='x web'
+alias x=''; unalias x
 
 function d {
     echo $1; cd $1 
-}
-
-function be {
-    e $p/bin/${1/.py/}.py
 }
 
 function show {

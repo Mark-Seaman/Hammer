@@ -1,0 +1,19 @@
+#!/bin/bash
+# Save the thot data as a file
+
+echo 'PASSWORD: xdfwQKUZIZ'
+
+#dj sqlclear | dj dbshell
+
+
+echo su django
+
+cat <<EOF | dj dbshell
+BEGIN;
+DROP TABLE "w2w_userrole" CASCADE;
+DROP TABLE "w2w_case" CASCADE;
+
+COMMIT;
+EOF
+
+dj syncdb 

@@ -1,9 +1,10 @@
 #!/bin/bash
 # Setup project context
 
-export p=$HOME/Projects/Hammer
-
-. $p/bin/bash-alias
+export p=$HOME/Projects/MyBook
+export PROJECT_BASE="$HOME/Projects/w2w"
+export DROPLET_IP='45.55.50.13'
+export SERVER_DIR=/home/django/MyBook
 
 cat $p/bin/welcome
 
@@ -16,7 +17,7 @@ $p/bin:\
 /usr/local/bin:\
 /opt/local/bin
 
-echo $PATH
+echo 'PATH = ' $PATH
 export _OLD_VIRTUAL_PATH=$PATH
 
 
@@ -24,6 +25,10 @@ export _OLD_VIRTUAL_PATH=$PATH
 . ~/Tools/env-python27/bin/activate
 echo "Active python = `which python`"
 echo
+
+
+. $p/bin/bash-alias
+. ~/bin/bash-prompt
 
 cd $p
 
